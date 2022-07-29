@@ -9,6 +9,7 @@ import { BmwListComponent } from './Components/bmw-list/bmw-list.component';
 import { BmwSingleComponent } from './Components/bmw-single/bmw-single.component';
 import { NewsComponent } from './Shared/header-bar/news/news.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatCardModule} from "@angular/material/card";
 
 @NgModule({
   declarations: [
@@ -19,11 +20,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BmwSingleComponent,
     NewsComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatCardModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
