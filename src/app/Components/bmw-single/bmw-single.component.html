@@ -1,19 +1,26 @@
 <mat-card>
-  <mat-card-title>Vehicle:</mat-card-title>
+  <mat-card-title class="text-white">Bmw M4</mat-card-title>
+  <mat-card-subtitle class="text-white">F32</mat-card-subtitle>
+
   <mat-card class="example-card">
-    <mat-card-title-group>
-      <mat-card-title>Bmw M4</mat-card-title>
-      <mat-card-subtitle>F32</mat-card-subtitle>
-      <img mat-card-xl-image src="assets/m4f32.jpg" >
-    </mat-card-title-group>
-    <mat-card-content>
-      <div class="row">{{"Detail : Description "}}</div>
-      <div class="row">{{"Detail : Description "}}</div>
-      <div class="row">{{"Detail : Description "}}</div>
-      <div class="row">{{"Detail : Description "}}</div>
-      <div class="row">{{"Detail : Description "}}</div>
-      <div class="row">{{"Detail : Description "}}</div>
-      <div class="row">{{"Detail : Description "}}</div>
-    </mat-card-content>
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-6">
+          <mat-card-content>
+            <div class="row">{{"Detail : Description "}}</div>
+            <div class="row">{{"Detail : Description "}}</div>
+            <div class="row">{{"Detail : Description "}}</div>
+            <div class="row">{{"Detail : Description "}}</div>
+            <div class="row">{{"Detail : Description "}}</div>
+            <div class="row">{{"Detail : Description "}}</div>
+            <div class="row">{{"Detail : Description "}}</div>
+          </mat-card-content>
+        </div>
+        <div class="col-md-6">
+          <img alt="m4f32" mat-card-xl-image src="assets/m4f32.jpg">
+        </div>
+      </div>
+    </div>
   </mat-card>
 </mat-card>
