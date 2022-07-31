@@ -2,55 +2,8 @@
   <mat-card-title class="text-white">{{'New Models'}}:</mat-card-title>
 
   <div class="list">
-    <mat-card class="example-card">
-      <mat-card-title-group>
-        <mat-card-title>{{'Bmw M4'}}</mat-card-title>
-        <mat-card-subtitle>{{'F32'}}</mat-card-subtitle>
-        <img mat-card-sm-image src="assets/m4f32.jpg">
-      </mat-card-title-group>
-      <mat-card-content>
-        {{"Desciption:Bmw M4 F32 " +
-      "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum" +
-      "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum"}}
-      </mat-card-content>
-    </mat-card>
-
-    <mat-card class="example-card">
-      <mat-card-title-group>
-        <mat-card-title>{{'Bmw M4'}}</mat-card-title>
-        <mat-card-subtitle>{{'G22'}}</mat-card-subtitle>
-        <img mat-card-sm-image src="assets/m4g22.jpg">
-      </mat-card-title-group>
-      <mat-card-content>
-        {{"Desciption: Bmw M4 G22" +
-      "Lorem Ipsum Lorem Ipsum Lorem Ipsumv Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum" +
-      "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum"}}
-      </mat-card-content>
-    </mat-card>
-    <mat-card class="example-card">
-      <mat-card-title-group>
-        <mat-card-title>{{'Bmw I8'}}</mat-card-title>
-        <mat-card-subtitle>{{'//to see'}}</mat-card-subtitle>
-        <img mat-card-sm-image src="assets/i8.jpg">
-      </mat-card-title-group>
-      <mat-card-content>
-        {{"Desciption: Bmw i8 //... " +
-      "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum" +
-      "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum"}}
-      </mat-card-content>
-    </mat-card>
-    <mat-card class="example-card">
-      <mat-card-title-group>
-        <mat-card-title>{{'Bmw M3'}}</mat-card-title>
-        <mat-card-subtitle>{{'G21'}}</mat-card-subtitle>
-        <img mat-card-sm-image src="assets/m3g21.jpg">
-      </mat-card-title-group>
-      <mat-card-content>
-        {{"Desciption: Bmw M3 G21 " +
-      "Lorem Ipsum Lorem Ipsum Lorem Ipsumv Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum" +
-      "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum"}}
-      </mat-card-content>
-    </mat-card>
+    <app-bmw-single-item *ngFor="let bmw of newModels"
+                         [bmwItem]="bmw"></app-bmw-single-item>
   </div>
 
 </mat-card>
