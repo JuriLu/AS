@@ -1,0 +1,31 @@
+<mat-card class="example-card">
+  <div class="container">
+
+    <div class="row justify-content-center align-items-center">
+      <div class="col">
+        <mat-card-title>{{bmwItem.cModel}}</mat-card-title>
+        <mat-card-subtitle>{{bmwItem.generation}}</mat-card-subtitle>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col">
+        <img mat-card-sm-image [src]="bmwItem.img">
+      </div>
+    </div>
+
+  </div>
+  <mat-card-content class="mt-4">
+    {{"Description : Bmw M4 F32 " +
+  "The F32 was introduced as the successor to the E92/E93 coupé/convertible models of the fifth-generation 3 Series range." +
+  "The F32 is produced alongside - and shares many features with - the F30 3 Series. " +
+  "As with the F30 3 Series range, the F32/F33/F36 is powered by turbocharged petrol and " +
+  "diesel engines with 3 cylinders (petrol only), 4 cylinders, and 6 cylinders."}}
+    {{bmwItem.engineCm3}}
+    {{bmwItem.bodyType}}
+    {{bmwItem.engineCombustion}}
+    {{bmwItem.power}}
+    {{bmwItem.YOP}}
+
+  </mat-card-content>
+</mat-card>
