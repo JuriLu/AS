@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {BmwModel, engComb} from "../../../Models/bmw.model";
+import {BmwModel} from "../../../Models/bmw.model";
 
 @Component({
   selector: 'app-bmw-single-item',
@@ -8,8 +8,7 @@ import {BmwModel, engComb} from "../../../Models/bmw.model";
 })
 export class BmwSingleItemComponent implements OnInit {
 
-    @Input() bmwItem: { img: string, cModel: string, generation: string, engineCm3: number, engineCombustion: engComb, YOP: number, bodyType: string, power: number,
-   }
+    @Input() bmwItem: BmwModel
 
   constructor() { }
 
