@@ -8,5 +8,6 @@ export interface BmwModel{
   engineCombustion:engComb
   YOP: number,                  //Year of production
   bodyType: string,
-  power:number
+  power:number,
+  description: string
 }
