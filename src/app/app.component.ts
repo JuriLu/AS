@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'App';
+  category:string = ''
+
+  onOldSchool(){
+    this.category = 'OldSchool'
+  }
+
+  onNewModels(){
+    this.category = 'NewModels'
+  }
+
 }
