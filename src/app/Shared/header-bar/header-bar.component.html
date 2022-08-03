@@ -1,51 +1,81 @@
-<header class="p-3 text-bg-dark">
-  <div class="container-fluid">
-    <div class="d-flex flex-wrap align-items-center justify-content-start justify-content-lg-start">
-      <div href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-        <img src="assets/BMW.png" alt="bmw logo" class="bi me-2" width="170" height="170" >
-      </div>
+<!--<header class="p-3 text-bg-dark">-->
+<!--  <div class="container-fluid">-->
+<!--    <div class="d-flex flex-wrap align-items-center justify-content-start justify-content-lg-start">-->
+<!--      <div href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">-->
+<!--        <img src="assets/BMW.png" alt="bmw logo" class="bi me-2" width="170" height="170" >-->
+<!--      </div>-->
 
 
-      <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-start mb-md-0">
-        <li><a class="nav-link px-2 text-secondary">Home</a></li>
-        <li><a class="nav-link px-2 text-white">Features</a></li>
-        <li><a class="nav-link px-2 text-white">Pricing</a></li>
-        <li><a class="nav-link px-2 text-white">FAQs</a></li>
-        <li><a class="nav-link px-2 text-white">About</a></li>
-      </ul>
+<!--      <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-start mb-md-0">-->
+<!--        <li><a class="nav-link px-2 text-secondary">Home</a></li>-->
+<!--        <li><a class="nav-link px-2 text-white">Features</a></li>-->
+<!--        <li><a class="nav-link px-2 text-white">Pricing</a></li>-->
+<!--        <li><a class="nav-link px-2 text-white">FAQs</a></li>-->
+<!--        <li><a class="nav-link px-2 text-white">About</a></li>-->
+<!--      </ul>-->
 
-      <div class="col-md-4 align-items-center justify-content-center cuMarg">
+<!--      <div class="col-md-4 align-items-center justify-content-center cuMarg">-->
         <app-news></app-news>
+<!--      </div>-->
+
+<!--&lt;!&ndash;      <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">&ndash;&gt;-->
+<!--&lt;!&ndash;        <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search">&ndash;&gt;-->
+<!--&lt;!&ndash;      </form>&ndash;&gt;-->
+
+
+<!--      <ul class="text-end justify-content-end">-->
+<!--        <button type="button" class="btn btn-outline-light me-2">Login</button>-->
+<!--        <button type="button" class="btn btn-warning">Sign-up</button>-->
+<!--      </ul>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</header>-->
+
+
+<header class="py-1 mb-1 border-bottom bg-white ">
+  <div class="container-fluid  align-items-center row" >
+
+    <div class="col-md-2">
+      <img src="assets/BMW.png" alt="bmw logo" class="bi me-2" width="170" height="170" >
+    </div>
+
+    <div class="container-fluid py-3 pb-3 bg-white col-md-7 justify-content-center">
+      <div>
+        <div class="bg-light border rounded-3">
+<!--          <br><br><br><br><br><br><br><br><br><br>-->
+          <app-news></app-news>
+
+        </div>
+        <!--    <div class="bg-light border rounded-3">-->
+        <!--      <br><br><br><br><br><br><br><br><br><br>-->
+        <!--    </div>-->
       </div>
-
-<!--      <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">-->
-<!--        <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search">-->
-<!--      </form>-->
+    </div>
 
 
-      <ul class="text-end justify-content-end">
-        <button type="button" class="btn btn-outline-light me-2">Login</button>
-        <button type="button" class="btn btn-warning">Sign-up</button>
-      </ul>
+      <div class="col-3 dropdown">
+    <div class="d-flex align-items-center">
+      <form class="w-100 me-3" role="search">
+        <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+      </form>
+        <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+        </a>
+        <ul class="dropdown-menu text-small shadow">
+          <li><a class="dropdown-item" href="#">New project...</a></li>
+          <li><a class="dropdown-item" href="#">Settings</a></li>
+          <li><a class="dropdown-item" href="#">Profile</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="#">Sign out</a></li>
+        </ul>
+      </div>
     </div>
   </div>
 </header>
 
 
-<!--<div class="container">-->
-<!--  <div class="row">-->
 
-<!--    <div class="col-md-2">-->
-<!--      <p>Logo</p>-->
-<!--    </div>-->
+<div class="b-example-divider"></div>
 
-<!--    <div class="col-md-8">-->
-<!--      <app-news></app-news>-->
-<!--    </div>-->
 
-<!--    <div class="col-md-2">-->
-<!--      <p>Login</p>-->
-<!--    </div>-->
 
-<!--  </div>-->
-<!--</div>-->
