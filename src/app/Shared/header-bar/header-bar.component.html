@@ -21,12 +21,12 @@
           </li>
         </ul>
         <form class="d-flex w-25" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
+          <input class="form-control me-1" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-primary" type="submit">Search</button>
         </form>
 
-        <!--Login-->
-        <div class="dropdown px-4">
+        <!--Profile-->
+        <div *ngIf="loggedUser" class="dropdown px-4">
           <div class="d-flex align-items-center">
             <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown"
                aria-expanded="false">
@@ -39,11 +39,20 @@
               <li>
                 <hr class="dropdown-divider">
               </li>
-              <li><a class="dropdown-item" href="#">Sign out</a></li>
+              <li><a class="dropdown-item" (click)="toggleUser()">Sign out</a></li>
             </ul>
           </div>
         </div>
-        <!--Login-->
+        <!--Profile-->
+
+        <div *ngIf="!loggedUser" class="mt-3">
+          <div class="d-flex align-items-center">
+            <ul>
+              <button type="button" class="btn btn-outline-light me-2" (click)="toggleUser()">Login</button>
+              <button type="button" class="btn btn-warning">Sign-up</button>
+            </ul>
+          </div>
+        </div>
 
       </div>
     </div>
@@ -56,15 +65,14 @@
       <div class="carousel-item active">
         <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
              preserveAspectRatio="xMidYMid slice" focusable="false">
-          <rect width="100%" height="100%" fill="#2e2e2e"/>
+          <rect width="100%" height="100%" fill="#16588E"/>
         </svg>
 
         <div class="container">
-          <div class="carousel-caption text-end">
-            <h1>Latest News</h1>
-
-            <p>Test 1</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+          <div class="carousel-caption text-center cuMarCarousel">
+            <h1>BMW Showroom</h1>
+            <p>“Nobody is absolutely perfect but if you drive a BMW, you are pretty close”</p>
+            <!--            <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>-->
           </div>
         </div>
       </div>
@@ -74,25 +82,26 @@
         *ngFor="let news of News">
         <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
              preserveAspectRatio="xMidYMid slice" focusable="false">
-          <rect width="100%" height="100%" fill="#777"/>
+          <rect width="100%" height="100%" fill="#002c76"/>
         </svg>
 
         <div class="container">
-          <div class="carousel-caption text-end">
+          <div class="carousel-caption text-center">
             <h1>{{news.header}}.</h1>
             <p>{{news.content}}.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+            <!--            <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>-->
           </div>
         </div>
       </div>
 
 
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+
+    <button class="carousel-control-prev cuMargBut" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+    <button class="carousel-control-next cuMargBut" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
