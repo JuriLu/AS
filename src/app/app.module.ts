@@ -8,7 +8,7 @@ import {BmwDescriptionComponent} from './Components/bmw-description/bmw-descript
 import {BmwSingleItemComponent} from './Components/bmw-list/bmw-single-item/bmw-single-item.component';
 import {CategoriesBarComponent} from './Shared/categories-bar/categories-bar.component';
 import {HeaderBarComponent} from './Shared/header-bar/header-bar.component';
-import {NewsComponent} from './Shared/header-bar/news/news.component';
+
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatCardModule} from "@angular/material/card";
 
@@ -19,7 +19,6 @@ import {MatCardModule} from "@angular/material/card";
     CategoriesBarComponent,
     BmwListComponent,
     BmwDescriptionComponent,
-    NewsComponent,
     BmwSingleItemComponent
   ],
   imports: [
