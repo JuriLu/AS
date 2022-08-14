@@ -1,25 +1,40 @@
-<mat-card class="example-card">
-  <div class="container">
+<!--<mat-card class="example-card">-->
+<!--  <div class="container">-->
 
-    <div class="row justify-content-center align-items-center">
-      <div class="col">
-        <mat-card-title>{{bmwItem.cModel}}</mat-card-title>
-        <mat-card-subtitle>{{bmwItem.generation}}</mat-card-subtitle>
+<!--    <div class="row justify-content-center align-items-center">-->
+<!--      <div class="col">-->
+<!--        <mat-card-title>{{bmwItem.cModel}}</mat-card-title>-->
+<!--        <mat-card-subtitle>{{bmwItem.generation}}</mat-card-subtitle>-->
+<!--      </div>-->
+<!--    </div>-->
+
+<!--    <div class="row justify-content-center">-->
+<!--      <div class="col">-->
+<!--        <img mat-card-sm-image [src]="bmwItem.img">-->
+<!--      </div>-->
+<!--    </div>-->
+
+<!--  </div>-->
+<!--  <mat-card-content class="mt-4">-->
+<!--    {{bmwItem.description}} <br>-->
+<!--    <strong>Engine :{{bmwItem.engineCm3}} cm3</strong> <br>-->
+<!--    <strong>Body Type:{{bmwItem.bodyType}}</strong> <br>-->
+<!--    <strong>Combusiton: {{bmwItem.engineCombustion}}</strong> <br>-->
+<!--    <strong>Power: {{bmwItem.power}} HP</strong> <br>-->
+<!--  </mat-card-content>-->
+<!--</mat-card>-->
+  <div class="col-md-12">
+    <div class="card mb-4 box-shadow">
+      <img class="card-img-top" src="{{bmwItem.img}}" alt="Card image cap">
+      <div class="card-body">
+        <p class="card-text">{{bmwItem.description}}</p>
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="btn-group">
+            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+          </div>
+          <small class="text-muted">9 mins</small>
+        </div>
       </div>
     </div>
-
-    <div class="row justify-content-center">
-      <div class="col">
-        <img mat-card-sm-image [src]="bmwItem.img">
-      </div>
-    </div>
-
   </div>
-  <mat-card-content class="mt-4">
-    {{bmwItem.description}} <br>
-    <strong>Engine :{{bmwItem.engineCm3}} cm3</strong> <br>
-    <strong>Body Type:{{bmwItem.bodyType}}</strong> <br>
-    <strong>Combusiton: {{bmwItem.engineCombustion}}</strong> <br>
-    <strong>Power: {{bmwItem.power}} HP</strong> <br>
-  </mat-card-content>
-</mat-card>

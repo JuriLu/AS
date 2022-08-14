@@ -1,5 +1,5 @@
 <mat-card>
-  <mat-card-title class="text-white">{{'New Models'}}:</mat-card-title>
+  <mat-card-title class="text-white">{{category}}:</mat-card-title>
 
   <div class="list" *ngIf="category=== 'NewModels'">
     <app-bmw-single-item *ngFor="let bmw of newModels" [bmwItem]="bmw"></app-bmw-single-item>
