@@ -1,5 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {BmwModel} from "../../Models/bmw.model";
+import {BmwService} from "../../services/bmw.service";
+import {map, Observable} from "rxjs";
 
 @Component({
   selector: 'app-bmw-list',
@@ -7,21 +9,32 @@ import {BmwModel} from "../../Models/bmw.model";
   styleUrls: ['./bmw-list.component.scss']
 })
 export class BmwListComponent implements OnInit {
- @Input() category: string
-
-  newModels: BmwModel[] = []
-  oldSchool: BmwModel[] = []
-
+  @Input() category: string
 
   BMWs: BmwModel[];
+  newModels: BmwModel[];
+  oldSchool: BmwModel[];
 
 
-  constructor() {
+  constructor(private bmwService: BmwService) {
   }
 
   ngOnInit(): void {
-    this.newModels = this.BMWs.filter(bmw => bmw.category === 'NewModels')
-    this.oldSchool = this.BMWs.filter(bmw => bmw.category === 'OldSchool')
+
+    const BMWs$ = this.bmwService.loadBMWs()
+
+    BMWs$
+      .pipe(
+        map(BMWs => BMWs.filter(bmw => bmw.category === 'NewModels')),
+      )
+      .subscribe(bmw => this.newModels = bmw)
+
+    BMWs$
+      .pipe(
+        map(BMWs => BMWs.filter(bmw => bmw.category === 'OldSchool')),
+      )
+      .subscribe(bmw => this.oldSchool = bmw)
+
   }
 
 
