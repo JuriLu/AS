@@ -55,15 +55,40 @@
       "category": "NewModels"
     },
     {
-      "img": "assets/m4f32.jpg",
+      "img": "assets/m4g22.jpg",
       "cModel": "M4",
-      "generation": "F32",
-      "engineCm3": 2979,
+      "generation": "G22",
+      "engineCm3": 2993,
       "engineCombustion": "petrol",
-      "YOP": 2013,
+      "YOP": 2020,
       "bodyType": "coupe",
-      "power": 425,
-      "description": "With a fuel consumption of 8.8 litres/100km - 32 mpg UK - 27 mpg US (Average),0 to 100 km/h (62mph) in 4.3 seconds, a maximum top speed of 155 mph (250 km/h), acurb weight of 3466 lbs (1572 kgs), the F32 4 Series Coupe M4 has a turbocharged Inline 6cylinder engine, Petrol motor.",
+      "power": 473,
+      "description": "With a fuel consumption of 10.8 litres/100km - 26 mpg UK - 22 mpg US (Average), 0 to 100 km/h (62mph) in 4.2 seconds, a maximum top speed of 155 mph (250 km/h), a curb weight of 3693 lbs (1675 kgs), the G22 4 Series Coupe M4 has a turbocharged Inline 6 cylinder engine, Petrol motor.",
+      "category": "NewModels"
+    },
+    {
+      "img": "assets/m3g21.jpg",
+      "cModel": "M2",
+      "generation": "G21",
+      "engineCm3": 2998,
+      "engineCombustion": "petrol",
+      "YOP": 2020,
+      "bodyType": "coupe",
+      "power": 3697,
+      "description": "With a fuel consumption of 7.2 litres/100km - 39 mpg UK - 33 mpg US (Average), 0 to 100 km/h (62mph) in 4.5 seconds, a maximum top speed of 155 mph (250 km/h), a curb weight of 3847 lbs (1745 kgs), the G21 3 Series Touring M340i xDrive has a turbocharged Inline 6 cylinder engine, Petrol motor.",
+      "category": "NewModels"
+    },
+    {
+      "img": "assets/i8.jpg",
+      "cModel": "I8",
+      "generation": "I12",
+      "engineCm3": 1500,
+      "engineKWH": 11.6,
+      "engineCombustion": "combined",
+      "YOP": 2020,
+      "bodyType": "coupe",
+      "power": 3697,
+      "description": "With a fuel consumption of 7.2 litres/100km - 39 mpg UK - 33 mpg US (Average), 0 to 100 km/h (62mph) in 4.5 seconds, a maximum top speed of 155 mph (250 km/h), a curb weight of 3847 lbs (1745 kgs), the G21 3 Series Touring M340i xDrive has a turbocharged Inline 6 cylinder engine, Petrol motor.",
       "category": "NewModels"
     },
     {
