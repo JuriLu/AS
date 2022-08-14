@@ -11,6 +11,9 @@ import {HeaderBarComponent} from './Shared/header-bar/header-bar.component';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatCardModule} from "@angular/material/card";
+import {BmwService} from "./services/bmw.service";
+import {HttpClientModule} from "@angular/common/http";
+
 
 @NgModule({
   declarations: [
@@ -25,9 +28,10 @@ import {MatCardModule} from "@angular/material/card";
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatCardModule
+    MatCardModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [BmwService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
