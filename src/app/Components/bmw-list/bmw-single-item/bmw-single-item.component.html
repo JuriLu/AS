@@ -1,12 +1,13 @@
  <div class="col-md-12">
     <div class="card mb-4 box-shadow">
-      <img class="card-img-top" src="{{bmwItem.img}}" alt="Card image cap">
+      <h4 class="card-header p-3">{{bmwItem.cModel}} <h6>{{bmwItem.generation}}</h6></h4>
+      <img class="card-img-top px-3" src="{{bmwItem.img}}" alt="{{bmwItem.cModel + bmwItem.generation}}">
       <div class="card-body">
         <p class="card-text">{{bmwItem.description}}</p>
         <div class="d-flex justify-content-between align-items-center">
           <div class="btn-group">
             <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+            <button type="button" class="btn btn-sm btn-outline-secondary">❤</button>
           </div>
           <small class="text-muted">9 mins</small>
         </div>
