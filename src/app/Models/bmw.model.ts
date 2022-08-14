@@ -1,10 +1,11 @@
-export type engComb = 'diesel' | 'petrol'
+export type engComb = 'diesel' | 'petrol' | 'combined'
 
 export interface BmwModel {
   img: string
   cModel: string,
   generation: string,
   engineCm3: number,
+  engineKWH?:number
   engineCombustion: engComb
   YOP: number,                  //Year of production
   bodyType: string,
