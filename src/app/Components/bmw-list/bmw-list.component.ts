@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {BmwModel} from "../../Models/bmw.model";
 import {BmwService} from "../../services/bmw.service";
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-bmw-list',
@@ -11,22 +12,23 @@ export class BmwListComponent implements OnInit {
   @Input() category: string
 
   BMWs: BmwModel[];
-  newModels: BmwModel[];
-  oldSchool: BmwModel[];
+  newModels$?: Observable<BmwModel[]>;
+  oldSchool$?: Observable<BmwModel[]>;
+  legendary$?: Observable<BmwModel[]>;
 
 
   constructor(private bmwService: BmwService) {
   }
 
   ngOnInit(): void {
+    this.reloadBMW()
 
-    this.bmwService.loadBMWByCategory('NewModels').subscribe(
-      BMWs => this.newModels = BMWs
-    )
+  }
 
-    this.bmwService.loadBMWByCategory('OldSchool').subscribe(
-      BMWs => this.oldSchool = BMWs
-    )
+  reloadBMW(){
+    this.newModels$ = this.bmwService.loadBMWByCategory('NewModel')
+    this.oldSchool$ = this.bmwService.loadBMWByCategory('OldSchool')
+    this.legendary$ = this.bmwService.loadBMWByCategory('Legendary')
   }
 
 

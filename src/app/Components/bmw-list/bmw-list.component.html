@@ -1,11 +1,14 @@
 <mat-card>
-  <mat-card-title class="text-white">{{category}}:</mat-card-title>
+  <mat-card-title class="text-white">{{category}}</mat-card-title>
 
   <div class="list" *ngIf="category=== 'NewModels'">
-    <app-bmw-single-item *ngFor="let bmw of newModels" [bmwItem]="bmw"></app-bmw-single-item>
+    <app-bmw-single-item  [bmwItem]="newModels$ | async"></app-bmw-single-item>
   </div>
   <div class="list" *ngIf="category=== 'OldSchool'">
-    <app-bmw-single-item *ngFor="let bmw of oldSchool" [bmwItem]="bmw"></app-bmw-single-item>
+    <app-bmw-single-item [bmwItem]="oldSchool$ | async"></app-bmw-single-item>
+  </div>
+  <div class="list" *ngIf="category=== 'Legendary'">
+    <app-bmw-single-item [bmwItem]="legendary$ | async"></app-bmw-single-item>
   </div>
 
 </mat-card>
