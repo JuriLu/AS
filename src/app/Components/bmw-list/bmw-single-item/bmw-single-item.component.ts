@@ -8,7 +8,7 @@ import {BmwModel} from "../../../Models/bmw.model";
 })
 export class BmwSingleItemComponent implements OnInit {
 
-    @Input() bmwItem: BmwModel
+    @Input() bmwItem: BmwModel[]
 
   constructor() { }
 
