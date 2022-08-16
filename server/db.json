@@ -52,7 +52,7 @@
       "bodyType": "coupe",
       "power": 425,
       "description":"The first generation of the BMW 4 Series consists of the BMW F32 (coupé version), BMW F33 (convertible version) and BMW F36 (five-door liftback version, marketed as 'Gran Coupé') compact executive cars. The F32/F33/F36 has been produced from 2014 to 2020 and is often collectively referred to as the F32.",
-      "category": "NewModels"
+      "category": "NewModel"
     },
     {
       "img": "assets/m4g22.jpg",
@@ -64,7 +64,7 @@
       "bodyType": "coupe",
       "power": 473,
       "description": "The second generation of the BMW 4 Series consists of the BMW G22 (coupé version) along with the BMW G23 (convertible version) and BMW G26 (saloon version, marketed as the Gran Coupé) compact executive cars. The G22 4 Series was launched in June 2020 and succeeds the F32 4 Series.",
-      "category": "NewModels"
+      "category": "NewModel"
     },
     {
       "img": "assets/m3g21.jpg",
@@ -72,11 +72,11 @@
       "generation": "G21",
       "engineCm3": 2998,
       "engineCombustion": "petrol",
-      "YOP": 2020,
+      "YOP": 2019,
       "bodyType": "touring",
       "power": 369,
       "description": "BMW has revealed the new M3 Touring. It’s based on the M3 xDrive Competition saloon and has the same 3.0-litre straight-six engine, automatic gearbox and all-wheel-drive system.",
-      "category": "NewModels"
+      "category": "NewModel"
     },
     {
       "img": "assets/i8.jpg",
@@ -85,11 +85,23 @@
       "engineCm3": 1500,
       "engineKWH": 11.6,
       "engineCombustion": "combined",
-      "YOP": 2020,
+      "YOP": 2011,
       "bodyType": "coupe",
-      "power": 3697,
+      "power": 220,
       "description": "The BMW i8 is a plug-in hybrid sports car developed by BMW. The i8 was part of BMW's electrified fleet and was marketed under the BMW i sub-brand. The production version of the BMW i8 was unveiled at the 2013 Frankfurt Motor Show and was released in Germany in June 2014.Deliveries to retail customers in the U.S. began in August 2014.A roadster variant was launched in May 2018.Production ended in June 2020.",
-      "category": "NewModels"
+      "category": "NewModel"
+    },
+    {
+      "img": "assets/bmw_3.0_csl.jpg",
+      "cModel": "E9",
+      "generation": "3.0",
+      "engineCm3": 3153,
+      "engineCombustion": "petrol",
+      "YOP": 1973,
+      "bodyType": "coupe",
+      "power": 203,
+      "description": "Everyone knows of the BMW 3.0 CSL. It was famously driven by Brian Redman around Sebring in 1975 for the win and put BMW on the map in Motorsport. It’s shape, racing livery and performance are iconic and unmistakable. This car is easily one of the best looking BMWs of all time, and possibly one of the best looking cars of all time. It’s looks, performance and racing pedigree make this car a legend. Though the CSL was only created as a racing homologation, it’s still one of the most legendary BMWs of all time.",
+      "category": "Legendary"
     },
     {
       "img": "assets/m3 e36.jpg",
@@ -97,10 +109,22 @@
       "generation": "E36",
       "engineCm3": 3201,
       "engineCombustion": "petrol",
-      "YOP": 1995,
+      "YOP": 1973,
       "bodyType": "coupe",
       "power": 321,
       "description": "In 1992, BMW M launched the next generation of its BMW M3 high-performance sports coupe.It was notable for its modern design, significantly higher power and increased comfort. On closer inspection,however, sports car fans quickly realised that the M3 E36 carried the same M specific motorsport DNA as its predecessor.Let’s take a closer look at the first BMW M3 to feature a six-cylinder engine.",
+      "category": "OldSchool"
+    },
+    {
+      "img": "assets/series7_e38.jpg",
+      "cModel": "Series 7",
+      "generation": "E38",
+      "engineCm3": 4398,
+      "engineCombustion": "petrol",
+      "YOP": 1996,
+      "bodyType": "sedan",
+      "power": 286,
+      "description": "What was most impressive about the E38 7 Series wasn’t its straight line speed, though. What impressed most, at least in the performance department, was the handling. With a very innovative, for the time, forged aluminum, double wishbone control arms, shorter springs and a rear multilink suspension, the E38 7 Series could hang in the twisty roads. Combine that with fat tires and it had some serious grip.",
       "category": "OldSchool"
     }
   ]
