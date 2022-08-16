@@ -1,7 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {BmwModel} from "../../Models/bmw.model";
 import {BmwService} from "../../services/bmw.service";
-import {map, Observable} from "rxjs";
 
 @Component({
   selector: 'app-bmw-list',
@@ -21,20 +20,13 @@ export class BmwListComponent implements OnInit {
 
   ngOnInit(): void {
 
-    const BMWs$ = this.bmwService.loadBMWs()
+    this.bmwService.loadBMWByCategory('NewModels').subscribe(
+      BMWs => this.newModels = BMWs
+    )
 
-    BMWs$
-      .pipe(
-        map(BMWs => BMWs.filter(bmw => bmw.category === 'NewModels')),
-      )
-      .subscribe(bmw => this.newModels = bmw)
-
-    BMWs$
-      .pipe(
-        map(BMWs => BMWs.filter(bmw => bmw.category === 'OldSchool')),
-      )
-      .subscribe(bmw => this.oldSchool = bmw)
-
+    this.bmwService.loadBMWByCategory('OldSchool').subscribe(
+      BMWs => this.oldSchool = BMWs
+    )
   }
 
 

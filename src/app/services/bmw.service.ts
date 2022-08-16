@@ -12,14 +12,14 @@ export class BmwService {
   constructor(private http: HttpClient) {
   }
 
-  loadBMWs(): Observable<BmwModel[]>{
+  loadBMWByCategory(category): Observable<BmwModel[]> {
     return this.http.get<BmwModel[]>(environment.apiUrlBMWs)
       .pipe(
-        tap(res => console.log('res',res)),
+        tap(res => console.log('res', res)),
+        map(bmws => bmws.filter(bmw => bmw.category === category)),
         shareReplay()
       )
-
   }
 
 
-}
+  }
