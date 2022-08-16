@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,14 +6,34 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  category:string = 'NewModels'
+  category: string = 'NewModels'
 
-  onOldSchool(){
+  onOldSchool() {
     this.category = 'OldSchool'
   }
 
-  onNewModels(){
+  onNewModels() {
     this.category = 'NewModels'
+  }
+
+  onLegendary() {
+    this.category = 'Legendary'
+  }
+
+  onLeMans() {
+    this.category = 'LeMans'
+  }
+
+  onGoldenDecade() {
+    this.category = 'GoldenDecade'
+  }
+
+  onNewMillenial() {
+    this.category = 'NewMillenial'
+  }
+
+  onBikes(){
+    this.category = 'Bikes'
   }
 
 }

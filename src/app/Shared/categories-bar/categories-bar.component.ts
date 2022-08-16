@@ -9,6 +9,11 @@ export class CategoriesBarComponent implements OnInit {
 
  @Output() oldSchool = new EventEmitter<void>();
  @Output() newModels = new EventEmitter<void>();
+ @Output() legendary = new EventEmitter<void>();
+ @Output() leMans = new EventEmitter<void>();
+ @Output() goldenDecade = new EventEmitter<void>();
+ @Output() newMillenial = new EventEmitter<void>();
+ @Output() Bikes = new EventEmitter<void>();
 
   constructor() { }
 
@@ -22,5 +27,26 @@ export class CategoriesBarComponent implements OnInit {
   categNewModels(){
     this.newModels.emit()
   }
+
+  categLegendary(){
+    this.legendary.emit()
+  }
+
+  categLeMans(){
+    this.leMans.emit()
+  }
+
+  categGoldenDecade(){
+    this.goldenDecade.emit()
+  }
+
+  categNewMillenal(){
+    this.newMillenial.emit()
+  }
+
+  categBikes(){
+    this.Bikes.emit()
+  }
+
 
 }
