@@ -1,5 +1,4 @@
 .mat-cardCU {
-  background-color: #212529;
   color: white;
   border: #16588E 6px solid;  //To be Seen
   margin-left: 510px;
@@ -13,6 +12,8 @@
   width: 17vw;
   background: linear-gradient(90deg, #81C4FF, #16588E, #E7222E);
 }
+
+
 
 .menu {
   position: relative;
@@ -32,11 +33,12 @@
   left: 0;
   transition: 0.5s;
   transition-delay: calc(0.05s * var(--i));
-  transform: rotate(0deg) translateX(80px);
+  transform: rotate(0deg) translateX(70px);
 }
 
 .menu.active li {
-  transform: rotate(calc(360deg / 8 * var(--i)));
+  transform: rotate(calc(360deg / 8 * var(--i))) translateX(-10px);
+//                                                    Try 20^^^^
 }
 
 .menu li a {
@@ -44,32 +46,33 @@
   justify-content: center;
   align-items: center;
   background: #1c75c0;
-  width: 50px;
-  height: 50px;
-  font-size: 25px;
+  border: #16588E 1px solid;
+  width: 55px;
+  height: 55px;
+  font-size: 10px;
   border-radius: 50%;
   transform: rotate(calc(360deg / -8 * var(--i)));
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
   text-decoration: none;
-  color: #111;
+  color: white;
   transition: 0.5s;
   cursor: pointer;
 }
 
 .menu li a:hover {
-  color: #ff1252;
+  color: #E7222E;
 }
 
 .toggle {
   position: absolute;
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   background: #fff;
   border: #16588E 4px solid;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 10000;
+  z-index: 1000;
   border-radius: 50%;
   cursor: pointer;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
