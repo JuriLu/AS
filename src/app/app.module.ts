@@ -13,6 +13,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatCardModule} from "@angular/material/card";
 import {BmwService} from "./services/bmw.service";
 import {HttpClientModule} from "@angular/common/http";
+import {MatIconModule} from "@angular/material/icon";
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import {HttpClientModule} from "@angular/common/http";
     AppRoutingModule,
     BrowserAnimationsModule,
     MatCardModule,
-    HttpClientModule
+    HttpClientModule,
+    MatIconModule
   ],
   providers: [BmwService],
   bootstrap: [AppComponent]

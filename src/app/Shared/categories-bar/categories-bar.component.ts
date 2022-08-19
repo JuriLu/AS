@@ -7,45 +7,56 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 })
 export class CategoriesBarComponent implements OnInit {
 
- @Output() oldSchool = new EventEmitter<void>();
- @Output() newModels = new EventEmitter<void>();
- @Output() legendary = new EventEmitter<void>();
- @Output() leMans = new EventEmitter<void>();
- @Output() goldenDecade = new EventEmitter<void>();
- @Output() newMillenial = new EventEmitter<void>();
- @Output() Bikes = new EventEmitter<void>();
+  @Output() oldSchool = new EventEmitter<void>();
+  @Output() newModels = new EventEmitter<void>();
+  @Output() legendary = new EventEmitter<void>();
+  @Output() leMans = new EventEmitter<void>();
+  @Output() goldenDecade = new EventEmitter<void>();
+  @Output() newMillenial = new EventEmitter<void>();
+  @Output() Bikes = new EventEmitter<void>();
 
-  constructor() { }
+  constructor() {
+  }
+
+  active: boolean = false
 
   ngOnInit(): void {
   }
 
-  categOldSchool(){
+  categOldSchool() {
     this.oldSchool.emit()
   }
 
-  categNewModels(){
+  categNewModels() {
     this.newModels.emit()
   }
 
-  categLegendary(){
+  categLegendary() {
     this.legendary.emit()
   }
 
-  categLeMans(){
+  categLeMans() {
     this.leMans.emit()
   }
 
-  categGoldenDecade(){
+  categGoldenDecade() {
     this.goldenDecade.emit()
   }
 
-  categNewMillenal(){
+  categNewMillenal() {
     this.newMillenial.emit()
   }
 
-  categBikes(){
+  categBikes() {
     this.Bikes.emit()
+  }
+
+  toggleActive() {
+    if (this.active == false) {
+      this.active = true
+    } else if (this.active == true){
+      this.active = false
+    }
   }
 
 

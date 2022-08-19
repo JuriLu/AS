@@ -1,12 +1,50 @@
-<mat-card>
-  <div class="row">
-    <div class="col-2"><h3 class="h2">Categories</h3></div>
-    <div class="col-auto"><button class="btn btn-outline-primary" (click)="categNewModels()">New models 🆕</button></div>
-    <div class="col-auto"><button class="btn btn-outline-primary" (click)="categOldSchool()">Old school 🔥</button></div>
-    <div class="col-auto"><button class="btn btn-outline-primary" (click)="categLegendary()">Legendary 👀</button></div>
-    <div class="col-auto"><button class="btn btn-outline-primary" (click)="categLeMans()">LE Mans 🏁</button></div>
-    <div class="col-auto"><button class="btn btn-outline-primary" (click)="categGoldenDecade()">Golden Decade 🥇</button></div>
-    <div class="col-auto"><button class="btn btn-outline-primary" (click)="categNewMillenal()">New millenial 🚀</button></div>
-    <div class="col-auto"><button class="btn btn-outline-primary" (click)="categBikes()">Bikes 🏍</button></div>
+<div class="mat-cardCU">
+  <!--  <div class="row">-->
+  <div [ngClass]="{'active': active}"  class="menu">
+    <div class="toggle" (click)="toggleActive()"><mat-icon>add</mat-icon></div>
+    <li style="--i:0">
+      <a (click)="categNewModels()">🆕</a>
+    </li>
+    <li style="--i:1">
+      <a (click)="categOldSchool()">🔥</a>
+    </li>
+    <li style="--i:2">
+      <a (click)="categLegendary()">👀</a>
+    </li>
+    <li style="--i:3">
+      <a (click)="categLeMans()">🏁</a>
+    </li>
+    <li style="--i:4">
+      <a (click)="categGoldenDecade()">🥇</a>
+    </li>
+    <li style="--i:5">
+      <a (click)="categNewMillenal()">🚀</a>
+    </li>
+    <li style="--i:6">
+      <a (click)="categBikes()"><mat-icon>sports_motorsports</mat-icon></a>
+    </li>
+    <li style="--i:7">
+      <a>...</a>
+    </li>
   </div>
-</mat-card>
+  <!--    <div class="col-2"><h3 class="h2">Categories</h3></div>-->
+  <!--    <div class="col-auto"><button class="btn btn-outline-primary" (click)="categNewModels()">New models 🆕</button></div>-->
+  <!--    <div class="col-auto"><button class="btn btn-outline-primary" (click)="categOldSchool()">Old school 🔥</button></div>-->
+  <!--    <div class="col-auto"><button class="btn btn-outline-primary" (click)="categLegendary()">Legendary 👀</button></div>-->
+  <!--    <div class="col-auto"><button class="btn btn-outline-primary" (click)="categLeMans()">LE Mans 🏁</button></div>-->
+  <!--    <div class="col-auto"><button class="btn btn-outline-primary" (click)="categGoldenDecade()">Golden Decade 🥇</button></div>-->
+  <!--    <div class="col-auto"><button class="btn btn-outline-primary" (click)="categNewMillenal()">New millenial 🚀</button></div>-->
+  <!--    <div class="col-auto"><button class="btn btn-outline-primary" (click)="categBikes()">Bikes 🏍</button></div>-->
+  <!--  </div>-->
+</div>
+
+<!--<script>-->
+<!--  let toggle = document.querySelector('.toggle');-->
+<!--  let menu = document.querySelector('.menu');-->
+<!--  toggle.onclick = function() {-->
+<!--    menu.classList.toggle('active')-->
+<!--  }-->
+<!--</script>-->
+
+
+
