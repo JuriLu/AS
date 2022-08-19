@@ -68,7 +68,7 @@
     },
     {
       "img": "assets/m3g21.jpg",
-      "cModel": "M2",
+      "cModel": "M3",
       "generation": "G21",
       "engineCm3": 2998,
       "engineCombustion": "petrol",
