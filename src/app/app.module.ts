@@ -14,6 +14,7 @@ import {MatCardModule} from "@angular/material/card";
 import {BmwService} from "./services/bmw.service";
 import {HttpClientModule} from "@angular/common/http";
 import {MatIconModule} from "@angular/material/icon";
+import {DragDropModule} from "@angular/cdk/drag-drop";
 
 
 @NgModule({
@@ -25,14 +26,15 @@ import {MatIconModule} from "@angular/material/icon";
     BmwDescriptionComponent,
     BmwSingleItemComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatCardModule,
-    HttpClientModule,
-    MatIconModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatCardModule,
+        HttpClientModule,
+        MatIconModule,
+        DragDropModule
+    ],
   providers: [BmwService],
   bootstrap: [AppComponent]
 })

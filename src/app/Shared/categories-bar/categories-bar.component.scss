@@ -1,7 +1,14 @@
+//First initial toggle position
+.cuMarginDrag{
+  margin-left: 135px;
+  margin-top: 500px;
+}
+
+
+//background with bmw M badge gradient
 .mat-cardCU {
   color: white;
   border: #16588E 6px solid;  //To be Seen
-  margin-left: 510px;
   border-radius: 130px;
   padding: 0;
   box-sizing: border-box;
@@ -11,9 +18,8 @@
   min-height: 33vh;
   width: 17vw;
   background: linear-gradient(90deg, #81C4FF, #16588E, #E7222E);
+  transition: 0.1s;
 }
-
-
 
 .menu {
   position: relative;
@@ -23,8 +29,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 0.5s;
 }
 
+// Elements of the category
 .menu li {
   position: absolute;
   list-style: none;
@@ -39,6 +47,7 @@
 .menu.active li {
   transform: rotate(calc(360deg / 8 * var(--i))) translateX(-10px);
 //                                                    Try 20^^^^
+  transition: 0.5s;
 }
 
 .menu li a {
@@ -77,11 +86,12 @@
   cursor: pointer;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
   font-size: 2em;
-  transition: transform 0.75s;
+  transition: 0.75s;
 }
 
 .menu.active .toggle {
   transform: rotate(360deg);
+  transition: 0.5s;
 }
 
 button {
@@ -93,9 +103,22 @@ mat-icon {
 }
 
 img{
-  width: 60px;
-  height: 60px;
-  border-radius: 50%
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: #16588E 4px solid;
+  transition: 0.5s;
+}
+
+img:hover{
+  transform: scale(110%);
+  //border: #16588E 2px solid;
+  transition: 0.5s;
+}
+
+img .active{
+  pointer-events: none;
+  transition: 0.5s;
 }
 
 
