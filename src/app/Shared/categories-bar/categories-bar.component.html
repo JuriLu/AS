@@ -1,7 +1,6 @@
-<div [ngClass]="{'mat-cardCU': active}" class="fixed-top cuMarginDrag" cdkDragBoundary=".example-boundary" cdkDrag>
-
-  <div [ngClass]="{'active': active}"  class="menu">
-    <div class="toggle" (click)="toggleActive()"><img src="assets/BMWv2.png" alt="menu-logo"></div>
+<div class="fixed-top initPos" cdkDrag>
+  <div [ngClass]="{'active':active}" class="menu">
+    <div [ngClass]="{'active':active}" class="toggle" (click)="toggleActive()"><img src="assets/BMWv2.png" alt="menu-logo"></div>
     <li style="--i:0">
       <a (click)="categNewModels()"><span class="mx-2">New Model</span></a>
     </li>
@@ -27,7 +26,6 @@
       <a>...</a>
     </li>
   </div>
-
 </div>
 
 

@@ -1,35 +1,30 @@
 //First initial toggle position
-.cuMarginDrag{
+.initPos{
   margin-left: 135px;
-  margin-top: 500px;
+  margin-top: 530px;
 }
 
-
-//background with bmw M badge gradient
-.mat-cardCU {
-  color: white;
-  border: #16588E 6px solid;  //To be Seen
-  border-radius: 130px;
-  padding: 0;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 33vh;
-  width: 17vw;
-  background: linear-gradient(90deg, #81C4FF, #16588E, #E7222E);
-  transition: 0.1s;
-}
-
+//The Entire Menu with the toggle and small a
 .menu {
   position: relative;
-  width: 200px;
-  height: 200px;
+  width: 230px;
+  height: 230px;
+  border-radius: 130px;
   background: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: 0.5s;
+}
+
+//background with bmw M badge gradient
+.menu.active{          //Can Also be With no background    To INSPECT
+  width: 230px;
+  height: 230px;
+  border-radius: 130px;
+  background: linear-gradient(90deg, #81C4FF, #16588E, #E7222E);
+  transition: 0.5s;
+  //border: #16588E 2px solid;   To INSPECT
 }
 
 // Elements of the category
@@ -38,16 +33,15 @@
   list-style: none;
   transform: rotate(calc(360deg / 8 * var(--i)));
   transform-origin: 100px;
-  left: 0;
+  left: 14px;    //moves the circle a left
   transition: 0.5s;
   transition-delay: calc(0.05s * var(--i));
   transform: rotate(0deg) translateX(70px);
 }
 
 .menu.active li {
-  transform: rotate(calc(360deg / 8 * var(--i))) translateX(-10px);
-//                                                    Try 20^^^^
-  transition: 0.5s;
+  transform: rotate(calc(360deg / 8 * var(--i))) translateX(-13px);
+//                                                    Try 20^^^^//  transition: 0.5s;
 }
 
 .menu li a {
@@ -91,33 +85,23 @@
 
 .menu.active .toggle {
   transform: rotate(360deg);
-  transition: 0.5s;
-}
-
-button {
-  width: auto;
-}
-
-mat-icon {
-  color: black;
 }
 
 img{
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  border: #16588E 4px solid;
   transition: 0.5s;
 }
 
 img:hover{
-  transform: scale(110%);
-  //border: #16588E 2px solid;
+  border: white 2px solid;
   transition: 0.5s;
 }
 
-img .active{
+toggle .active{
   pointer-events: none;
+  cursor:move;
   transition: 0.5s;
 }
 
