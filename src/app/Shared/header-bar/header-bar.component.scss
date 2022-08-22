@@ -1,23 +1,23 @@
-.cuMarCarousel{
+.cuMarCarousel {
   margin-bottom: 50px;
 }
 
-.cuMargBut{
-  margin-top:150px;
+.cuMargBut {
+  margin-top: 150px;
 }
 
-.bg-custom{
+.bg-custom {
   background-color: #00457d;
 }
 
 // Bootstrap Header Template Styles
- .bd-placeholder-img {
-   font-size: 1.125rem;
-   text-anchor: middle;
-   -webkit-user-select: none;
-   -moz-user-select: none;
-   user-select: none;
- }
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
 
 @media (min-width: 768px) {
   .bd-placeholder-img-lg {
@@ -65,6 +65,7 @@
 .form-control-dark {
   border-color: var(--bs-gray);
 }
+
 .form-control-dark:focus {
   border-color: #fff;
   box-shadow: 0 0 0 .25rem rgba(255, 255, 255, .25);
@@ -77,9 +78,10 @@
 .dropdown-toggle {
   outline: 0;
 }
+
 // Bootstrap Header Template Styles
 
-img{
+img {
   border-radius: 50px;
 }
 
@@ -90,6 +92,7 @@ img{
 .carousel {
   margin-bottom: 4rem;
 }
+
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
   bottom: 3rem;
@@ -110,11 +113,13 @@ img{
   margin-bottom: 1.5rem;
   text-align: center;
 }
+
 /* rtl:begin:ignore */
 .marketing .col-lg-4 p {
   margin-right: .75rem;
   margin-left: .75rem;
 }
+
 /* rtl:end:ignore */
 
 
@@ -155,6 +160,6 @@ img{
   }
 }
 
-.logo{
+.logo {
   border: white 2px solid;
 }
