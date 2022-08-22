@@ -1,0 +1,47 @@
+ColorList:   BMW M Badge
+
+#81C4FF   Lighter blue
+#16588E   Darker Blue
+#E7222E   Red
+
+MEDIA QUERIES FOR ALL DEVICES
+
+//Mobile S
+@media (max-width: 320.98px) {
+
+}
+
+//Mobile M
+@media (min-width: 375px) {
+
+}
+
+//Mobile L
+@media (min-width: 425px) {
+
+}
+
+//Tablet
+@media (min-width: 768px) {
+
+}
+
+//Lap Top 1024px
+@media (min-width: 1024px) {
+
+}
+
+//Lap Top 1440px
+@media (min-width: 1440px) {
+
+}
+
+//Current Lap Top
+@media (min-width: 1920px) {
+
+}
+
+//4K 2560px
+@media (min-width: 2560px) {
+
+}
