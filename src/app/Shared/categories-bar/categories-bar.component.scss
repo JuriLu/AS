@@ -1,7 +1,69 @@
-.initPos{
-  margin-left: 1360px;
-  margin-top: 520px;
+//Initial position
+
+//Mobile S
+@media (max-width: 320.98px) {
+  .initPos {
+    margin-left: 50px;
+    margin-top: 400px;
+  }
 }
+
+//Mobile M
+@media (min-width: 375px) {
+  .initPos {
+    margin-left: 80px;
+    margin-top: 400px;
+  }
+}
+
+//Mobile L
+@media (min-width: 425px) {
+  .initPos {
+    margin-left: 100px;
+    margin-top: 400px;
+  }
+}
+
+//Tablet
+@media (min-width: 768px) {
+  .initPos {
+    margin-left: 270px;
+    margin-top: 390px;
+  }
+}
+
+//Lap Top 1024px
+@media (min-width: 1024px) {
+  .initPos {
+    margin-left: 780px;
+    margin-top: 470px;
+  }
+}
+
+//Lap Top 1440px
+@media (min-width: 1440px) {
+  .initPos {
+    margin-left: 1130px;
+    margin-top: 540px;
+  }
+}
+
+//Current Lap Top
+@media (min-width: 1920px) {
+  .initPos {
+    margin-left: 1360px;
+    margin-top: 520px;
+  }
+}
+
+//4K 2560px
+@media (min-width: 2560px) {
+  .initPos {
+    margin-left: 1700px;
+    margin-top: 520px;
+  }
+}
+
 
 .menu {
   position: relative;
@@ -17,7 +79,7 @@
 
 }
 
-.menu.active{
+.menu.active {
   width: 230px;
   height: 230px;
   border-radius: 130px;
@@ -82,21 +144,21 @@
   transform: rotate(360deg);
 }
 
-img{
+img {
   width: 100px;
   height: 100px;
   border-radius: 50%;
   transition: 0.5s;
 }
 
-img:hover{
+img:hover {
   border: white 2px solid;
   transition: 0.5s;
 }
 
-toggle .active{
+toggle .active {
   pointer-events: none;
-  cursor:move;
+  cursor: move;
   transition: 0.5s;
 }
 
