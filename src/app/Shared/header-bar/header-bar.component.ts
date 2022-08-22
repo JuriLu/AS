@@ -43,7 +43,7 @@ export class HeaderBarComponent implements OnInit {
       content: 'With the i4 and iX, BMW currently has two of the hottest products on the EV market. These will be joined by a new generation of zero-emissions vehicles towards the middle of the decade, underpinned by what the Bavarian company calls Neue Klasse. It is a new architecture that is currently under development and we will first see it under the skin of an electric sedan and an electric SUV.',
     },
     {
-      header: 'Next stop Japan: BMW Motorrad World Endurance Team to debut at the Suzuka 8 Hours.',
+      header: 'Next stop Japan: BMW Motorrad World Endurance Team to debut at the Suzuka 8 Hours',
       content: 'The third round of the FIM Endurance World Championship 2022 (FIM EWC) takes the BMW Motorrad World Endurance Team to Japan. The Suzuka 8 Hours is coming up next weekend (5th to 7th August), another classic event on the schedule. Having celebrated victory at the home race in early June, the 24H SPA EWC Motos (BEL), the team is aiming to claim a strong result also in Japan.',
     },
     {
