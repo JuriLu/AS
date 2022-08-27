@@ -19,9 +19,9 @@
       "password": "123"
     },
     {
+      "id": 4,
       "username": "test2",
-      "password": "123",
-      "id": 4
+      "password": "123"
     }
   ],
   "profiles": [

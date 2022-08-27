@@ -44,11 +44,19 @@
 @media (min-width: 1440px) {
   .initPos {
     margin-left: 1130px;
-    margin-top: 540px;
+    margin-top: 450px;
   }
 }
 
-//Current Lap Top
+//Lap Top 1536px
+@media (min-width: 1536px) {
+  .initPos {
+    margin-left: 1170px;
+    margin-top: 520px;
+  }
+}
+
+//Lap Top 1920
 @media (min-width: 1920px) {
   .initPos {
     margin-left: 1360px;
