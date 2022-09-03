@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  apiUrlBMWs: 'http://localhost:3000/BMWs'
+  apiUrlBMWs: 'http://localhost:3000/BMWs',
+  apiUrlNews: 'http://localhost:3000/news'
 };
 
 /*

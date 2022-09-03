@@ -15,6 +15,10 @@ export class BmwListComponent implements OnInit {
   newModels$?: Observable<BmwModel[]>;
   oldSchool$?: Observable<BmwModel[]>;
   legendary$?: Observable<BmwModel[]>;
+  leMans$?: Observable<BmwModel[]>;
+  goldenDecade$?: Observable<BmwModel[]>;
+  newMillenial$?: Observable<BmwModel[]>;
+  bikes$?: Observable<BmwModel[]>;
 
 
   constructor(private bmwService: BmwService) {
@@ -29,6 +33,10 @@ export class BmwListComponent implements OnInit {
     this.newModels$ = this.bmwService.loadBMWByCategory('NewModel')
     this.oldSchool$ = this.bmwService.loadBMWByCategory('OldSchool')
     this.legendary$ = this.bmwService.loadBMWByCategory('Legendary')
+    this.leMans$ = this.bmwService.loadBMWByCategory('LeMans')
+    this.goldenDecade$ = this.bmwService.loadBMWByCategory('GoldenDecade')
+    this.newMillenial$ = this.bmwService.loadBMWByCategory('NewMillenial')
+    this.bikes$ = this.bmwService.loadBMWByCategory('Bikes')
   }
 
 

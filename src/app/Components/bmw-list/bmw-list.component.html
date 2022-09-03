@@ -1,14 +1,27 @@
 <mat-card>
   <mat-card-title class="text-white">{{category}}</mat-card-title>
 
-  <div class="list" *ngIf="category=== 'NewModels'">
-    <app-bmw-single-item  [bmwItem]="newModels$ | async"></app-bmw-single-item>
+  <div class="list" *ngIf="category === 'NewModels'">
+    <app-bmw-single-item [bmwItem]="newModels$ | async"></app-bmw-single-item>
   </div>
-  <div class="list" *ngIf="category=== 'OldSchool'">
+  <div class="list" *ngIf="category === 'OldSchool'">
     <app-bmw-single-item [bmwItem]="oldSchool$ | async"></app-bmw-single-item>
   </div>
-  <div class="list" *ngIf="category=== 'Legendary'">
+  <div class="list" *ngIf="category === 'Legendary'">
     <app-bmw-single-item [bmwItem]="legendary$ | async"></app-bmw-single-item>
   </div>
+  <div class="list" *ngIf="category === 'LeMans'">
+    <app-bmw-single-item [bmwItem]="leMans$ | async"></app-bmw-single-item>
+  </div>
+  <div class="list" *ngIf="category === 'GoldenDecade'">
+    <app-bmw-single-item [bmwItem]="goldenDecade$ | async"></app-bmw-single-item>
+  </div>
+  <div class="list" *ngIf="category === 'NewMillenial'">
+    <app-bmw-single-item [bmwItem]="newMillenial$ | async"></app-bmw-single-item>
+  </div>
+  <div class="list" *ngIf="category === 'Bikes'">
+    <app-bmw-single-item [bmwItem]="bikes$ | async"></app-bmw-single-item>
+  </div>
+
 
 </mat-card>
