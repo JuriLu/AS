@@ -52,11 +52,12 @@ export class CategoriesBarComponent implements OnInit {
   }
 
   toggleActive() {
-    if (this.active == false) {
-      this.active = true
-    } else if (this.active == true){
-      this.active = false
-    }
+    // if (this.active == false) {
+    //   this.active = true
+    // } else if (this.active == true){
+    //   this.active = false
+    // }x
+    this.active = !this.active
   }
 
 
