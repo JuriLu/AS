@@ -1,0 +1,63 @@
+<h2 mat-dialog-title>Add Model</h2>
+
+<mat-dialog-content class="mat-typography">
+  <mat-form-field appearance="outline">
+    <mat-label>Image</mat-label>
+    <input matInput placeholder="Image">
+    <mat-hint>Url</mat-hint>
+  </mat-form-field>
+  <mat-form-field class="mx-4" appearance="outline">
+    <mat-label>cModel</mat-label>
+    <input matInput placeholder="cModel">
+    <mat-hint>M4 e.g</mat-hint>
+  </mat-form-field><br>
+  <mat-form-field appearance="outline">
+    <mat-label>generation</mat-label>
+    <input matInput placeholder="generation">
+    <mat-hint>g22  e.g</mat-hint>
+  </mat-form-field>
+  <mat-form-field class="mx-4" appearance="outline">
+    <mat-label>engineCm3</mat-label>
+    <input matInput placeholder="engineCm3">
+    <mat-hint>Number</mat-hint>
+  </mat-form-field><br>
+  <mat-form-field appearance="outline">
+    <mat-label>engineKWH</mat-label>
+    <input matInput placeholder="engineKWH">
+    <mat-hint>Number ,IF applied</mat-hint>
+  </mat-form-field>
+  <mat-form-field class="mx-4" appearance="outline">
+    <mat-label> engineCombustion</mat-label>
+    <input matInput placeholder="engineCombustion">
+    <mat-hint>Type OPtion</mat-hint>
+  </mat-form-field><br>
+  <mat-form-field appearance="outline">
+    <mat-label>Year of Production</mat-label>
+    <input matInput placeholder="Year of Production">
+    <mat-hint>year</mat-hint>
+  </mat-form-field>
+  <mat-form-field class="mx-4" appearance="outline">
+    <mat-label>category</mat-label>
+    <input matInput placeholder="category">
+    <mat-hint>Option</mat-hint>
+  </mat-form-field><br>
+  <mat-form-field appearance="outline">
+    <mat-label> bodyType</mat-label>
+    <input matInput placeholder="bodyType">
+    <mat-hint>Body Type Option</mat-hint>
+  </mat-form-field>
+  <mat-form-field class="mx-4" appearance="outline">
+    <mat-label>power</mat-label>
+    <input matInput placeholder="power">
+    <mat-hint>Number</mat-hint>
+  </mat-form-field><br>
+  <mat-form-field appearance="outline">
+    <mat-label>description</mat-label>
+    <input matInput placeholder="description">
+    <mat-hint>Text</mat-hint>
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Add</button>
+</mat-dialog-actions>

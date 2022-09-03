@@ -15,6 +15,12 @@ import {BmwService} from "./services/bmw.service";
 import {HttpClientModule} from "@angular/common/http";
 import {MatIconModule} from "@angular/material/icon";
 import {DragDropModule} from "@angular/cdk/drag-drop";
+import {MatButtonModule} from "@angular/material/button";
+import {MatDialogModule} from "@angular/material/dialog";
+import {DialogComponent} from "./Shared/header-bar/AddBMWDialog/dialog-component";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatInputModule} from "@angular/material/input";
+import {FormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -24,17 +30,24 @@ import {DragDropModule} from "@angular/cdk/drag-drop";
     CategoriesBarComponent,
     BmwListComponent,
     BmwDescriptionComponent,
-    BmwSingleItemComponent
+    BmwSingleItemComponent,
+    DialogComponent
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        BrowserAnimationsModule,
-        MatCardModule,
-        HttpClientModule,
-        MatIconModule,
-        DragDropModule
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatCardModule,
+    HttpClientModule,
+    MatIconModule,
+    DragDropModule,
+    MatFormFieldModule,
+    MatButtonModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule
+  ],
   providers: [BmwService],
   bootstrap: [AppComponent]
 })
