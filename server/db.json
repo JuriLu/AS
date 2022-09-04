@@ -43,6 +43,7 @@
   ],
   "BMWs": [
     {
+      "id": "1",
       "img": "assets/m4f32.jpg",
       "cModel": "M4",
       "generation": "F32",
@@ -51,7 +52,7 @@
       "YOP": 2013,
       "bodyType": "coupe",
       "power": 425,
-      "description":"The first generation of the BMW 4 Series consists of the BMW F32 (coupé version), BMW F33 (convertible version) and BMW F36 (five-door liftback version, marketed as 'Gran Coupé') compact executive cars. The F32/F33/F36 has been produced from 2014 to 2020 and is often collectively referred to as the F32.",
+      "description": "The first generation of the BMW 4 Series consists of the BMW F32 (coupé version), BMW F33 (convertible version) and BMW F36 (five-door liftback version, marketed as 'Gran Coupé') compact executive cars. The F32/F33/F36 has been produced from 2014 to 2020 and is often collectively referred to as the F32.",
       "category": "NewModel"
     },
     {
@@ -126,6 +127,34 @@
       "power": 286,
       "description": "What was most impressive about the E38 7 Series wasn’t its straight line speed, though. What impressed most, at least in the performance department, was the handling. With a very innovative, for the time, forged aluminum, double wishbone control arms, shorter springs and a rear multilink suspension, the E38 7 Series could hang in the twisty roads. Combine that with fat tires and it had some serious grip.",
       "category": "OldSchool"
+    },
+    {
+      "image": "https://i.ytimg.com/vi/gG7olG-Bjmk/maxresdefault.jpg",
+      "model": "R",
+      "generation": "GS",
+      "cubature": "1300",
+      "kWh": "",
+      "combustion": "",
+      "YOP": "2022",
+      "category": "Bikes",
+      "bodyType": "Bike",
+      "power": "160",
+      "description": "Lorem Ipsum",
+      "id": "3H-QBC7"
+    },
+    {
+      "img": "https://i.ytimg.com/vi/gG7olG-Bjmk/maxresdefault.jpg",
+      "cModel": "R",
+      "generation": "GS",
+      "engineCm3": "1300",
+      "engineKWH": "",
+      "engineCombustion": "petrol",
+      "YOP": "2022",
+      "bodyType": "Bike",
+      "power": "160",
+      "description": "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum ",
+      "category": "Bikes",
+      "id": "jwXATdy"
     }
   ],
   "news": [

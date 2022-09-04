@@ -8,40 +8,51 @@ MEDIA QUERIES FOR ALL DEVICES
 
 //Mobile S
 @media (max-width: 320.98px) {
-
+  //Code
 }
 
 //Mobile M
 @media (min-width: 375px) {
-
+  //Code
 }
 
 //Mobile L
 @media (min-width: 425px) {
-
+  //Code
 }
 
 //Tablet
 @media (min-width: 768px) {
-
+  //Code
 }
 
 //Lap Top 1024px
 @media (min-width: 1024px) {
-
+  //Code
 }
 
 //Lap Top 1440px
 @media (min-width: 1440px) {
-
+  //Code
 }
 
-//Current Lap Top
-@media (min-width: 1920px) {
+//Lap Top 1536px My Lap Top
+@media (min-width: 1536px) {
+  //Code
+}
 
+//Lap Top 1920
+@media (min-width: 1920px) {
+  //Code
 }
 
 //4K 2560px
 @media (min-width: 2560px) {
-
+  //Code
 }
+
+
+
+1. Add Options to dialog component
+2. Make the formGroup
+3. Create Service Function to push the form group to server

@@ -20,7 +20,8 @@ import {MatDialogModule} from "@angular/material/dialog";
 import {DialogComponent} from "./Shared/header-bar/AddBMWDialog/dialog-component";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {MatSelectModule} from "@angular/material/select";
 
 
 @NgModule({
@@ -46,7 +47,9 @@ import {FormsModule} from "@angular/forms";
     MatDialogModule,
     MatFormFieldModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    MatSelectModule
   ],
   providers: [BmwService],
   bootstrap: [AppComponent]

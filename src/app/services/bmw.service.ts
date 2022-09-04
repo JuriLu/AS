@@ -21,5 +21,9 @@ export class BmwService {
       )
   }
 
-
+  AddBmw(model: Partial<BmwModel>): Observable<Partial<BmwModel>> {
+    return this.http.post<Partial<BmwModel>>(environment.apiUrlBMWs,model)
   }
+
+
+}
