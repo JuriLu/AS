@@ -1,5 +1,5 @@
-<h2 mat-dialog-title>Add Model</h2>
-
+<h2 class="p-0 m-0" mat-dialog-title>Add Model</h2>
+<hr>
 <mat-dialog-content class="mat-typography" [formGroup]="bmwForm">
 
   <!--  Image and Model-->
@@ -39,7 +39,7 @@
       <!--  engine cm3-->
       <mat-form-field class="mx-4" appearance="outline">
         <mat-label>Engine Cm3</mat-label>
-        <input matInput placeholder="No." formControlName="engineCm3">
+        <input matInput placeholder="2998 e.g" formControlName="engineCm3">
         <mat-hint *ngIf="bmwForm.get('engineCm3').hasError('pattern') && bmwForm.get('engineCm3').touched">Only Numbers
           allowed
         </mat-hint>
@@ -104,7 +104,7 @@
           <option value="NewMillenial">New Millenial</option>
           <option value="Bikes">Bikes</option>
         </select>
-        <mat-hint *ngIf="bmwForm.get('YOP').hasError('required') && bmwForm.get('YOP').touched">Required</mat-hint>
+        <mat-hint *ngIf="bmwForm.get('category').hasError('required') && bmwForm.get('category').touched">Required</mat-hint>
       </mat-form-field>
 
       <br>
@@ -126,7 +126,7 @@
       <!--  power-->
       <mat-form-field class="mx-4" appearance="outline">
         <mat-label>HP</mat-label>
-        <input matInput placeholder="No." formControlName="power">
+        <input matInput placeholder="400 e.g" formControlName="power">
         <mat-hint *ngIf="bmwForm.get('power').hasError('pattern') && bmwForm.get('power').touched">Only Numbers
           allowed
         </mat-hint>
