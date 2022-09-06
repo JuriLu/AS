@@ -91,7 +91,7 @@
   width: 230px;
   height: 230px;
   border-radius: 130px;
-  background: linear-gradient(90deg, #81C4FF, #16588E, #E7222E);
+  //background: linear-gradient(90deg, #81C4FF, #16588E, #E7222E);
 }
 
 .menu li {
@@ -153,15 +153,18 @@
 }
 
 img {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
+  border: white 2px solid;
   border-radius: 50%;
   transition: 0.5s;
 }
 
-img:hover {
-  border: white 2px solid;
-  transition: 0.5s;
+.activeImg {
+  width: 100px;
+  height: 100px;
+  border: 	#81C4FF 4px solid;
+  transition: 0.8s;
 }
 
 toggle .active {
