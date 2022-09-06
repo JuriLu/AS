@@ -2,79 +2,93 @@
 
 <mat-dialog-content class="mat-typography" [formGroup]="bmwForm">
 
-<!--  Image and Model-->
+  <!--  Image and Model-->
   <div class="row">
     <div class="col">
       <!--  Image-->
       <mat-form-field appearance="outline">
         <mat-label>Image</mat-label>
-        <input matInput placeholder="Image" formControlName="img">
-        <mat-hint>Url</mat-hint>
+        <input matInput placeholder="URL" formControlName="img">
+        <mat-hint *ngIf="bmwForm.get('img').hasError('required') && bmwForm.get('img').touched">Required</mat-hint>
       </mat-form-field>
     </div>
     <div class="col">
       <!--  Model-->
       <mat-form-field class="mx-4" appearance="outline">
-        <mat-label>cModel</mat-label>
-        <input matInput placeholder="cModel" formControlName="cModel">
-        <mat-hint>M4 e.g</mat-hint>
+        <mat-label>Model</mat-label>
+        <input matInput placeholder="M4 e.g" formControlName="cModel">
+        <mat-hint *ngIf="bmwForm.get('cModel').hasError('required') && bmwForm.get('cModel').touched">Required
+        </mat-hint>
       </mat-form-field>
       <br>
     </div>
   </div>
 
-<!--  Generation and Engine-->
+  <!--  Generation and Engine-->
   <div class="row mx">
     <div class="col">
       <!--  generation-->
       <mat-form-field appearance="outline">
-        <mat-label>generation</mat-label>
-        <input matInput placeholder="generation" formControlName="generation">
-        <mat-hint>g22 e.g</mat-hint>
+        <mat-label>Generation</mat-label>
+        <input matInput placeholder="G22 e.g" formControlName="generation">
+        <mat-hint *ngIf="bmwForm.get('generation').hasError('required') && bmwForm.get('generation').touched">Required
+        </mat-hint>
       </mat-form-field>
     </div>
     <div class="col">
       <!--  engine cm3-->
       <mat-form-field class="mx-4" appearance="outline">
-        <mat-label>engineCm3</mat-label>
-        <input matInput placeholder="engineCm3" formControlName="engineCm3">
-        <mat-hint>Number</mat-hint>
+        <mat-label>Engine Cm3</mat-label>
+        <input matInput placeholder="No." formControlName="engineCm3">
+        <mat-hint *ngIf="bmwForm.get('engineCm3').hasError('pattern') && bmwForm.get('engineCm3').touched">Only Numbers
+          allowed
+        </mat-hint>
+        <mat-hint *ngIf="bmwForm.get('engineCm3').hasError('required') && bmwForm.get('engineCm3').touched">Required
+        </mat-hint>
       </mat-form-field>
       <br>
     </div>
   </div>
 
-<!--  Engine Type and kWh-->
+  <!--  Engine Type and kWh-->
   <div class="row">
     <div class="col">
-      <mat-form-field  appearance="outline">
+      <mat-form-field appearance="outline">
         <!--  engine combustion-->
-        <mat-label>Combustion</mat-label>
+        <mat-label>Engine Type</mat-label>
         <select matNativeControl required formControlName="engineCombustion">
           <option value="diesel">Diesel</option>
           <option value="petrol">Petrol</option>
           <option value="combined">Hybrid</option>
         </select>
+        <mat-hint
+          *ngIf="bmwForm.get('engineCombustion').hasError('required') && bmwForm.get('engineCombustion').touched">
+          Required
+        </mat-hint>
       </mat-form-field>
     </div>
     <div class="col-6">
       <!--  engine kWH-->
       <mat-form-field *ngIf="bmwForm.get('engineCombustion').value ==='combined'" appearance="outline">
-        <mat-label>engineKWH</mat-label>
-        <input matInput placeholder="engineKWH" formControlName="engineKWH">
-        <mat-hint>Number ,IF applied</mat-hint>
+        <mat-label>Engine KWH</mat-label>
+        <input matInput placeholder="No." formControlName="engineKWH">
+        <mat-hint *ngIf="bmwForm.get('engineKWH').hasError('pattern') && bmwForm.get('engineKWH').touched">Only Numbers
+          allowed
+        </mat-hint>
+        <mat-hint *ngIf="bmwForm.get('engineKWH').hasError('required') && bmwForm.get('engineKWH').touched">Required
+        </mat-hint>
       </mat-form-field>
     </div>
   </div>
 
-<!--  YOP and Category-->
+  <!--  YOP and Category-->
   <div class="row">
     <div class="col">
       <!--  Year of production-->
       <mat-form-field appearance="outline">
-        <mat-label>Year of Production</mat-label>
+        <mat-label>YOP</mat-label>
         <input matInput placeholder="Year of Production" formControlName="YOP">
-        <mat-hint>year</mat-hint>
+        <mat-hint *ngIf="bmwForm.get('YOP').hasError('required') && bmwForm.get('YOP').touched">Required</mat-hint>
       </mat-form-field>
     </div>
     <div class="col">
@@ -90,26 +104,34 @@
           <option value="NewMillenial">New Millenial</option>
           <option value="Bikes">Bikes</option>
         </select>
+        <mat-hint *ngIf="bmwForm.get('YOP').hasError('required') && bmwForm.get('YOP').touched">Required</mat-hint>
       </mat-form-field>
+
       <br>
     </div>
   </div>
 
-<!--  Body Type and Power-->
+  <!--  Body Type and Power-->
   <div class="row">
     <div class="col">
       <!--  bodyType-->
       <mat-form-field appearance="outline">
-        <mat-label> bodyType</mat-label>
-        <input matInput placeholder="bodyType" formControlName="bodyType">
-        <mat-hint>Body Type Option</mat-hint>
-      </mat-form-field></div>
+        <mat-label>Body Type</mat-label>
+        <input matInput placeholder="Coupe e.g" formControlName="bodyType">
+        <mat-hint *ngIf="bmwForm.get('bodyType').hasError('required') && bmwForm.get('bodyType').touched">Required
+        </mat-hint>
+      </mat-form-field>
+    </div>
     <div class="col">
       <!--  power-->
       <mat-form-field class="mx-4" appearance="outline">
-        <mat-label>power</mat-label>
-        <input matInput placeholder="power" formControlName="power">
-        <mat-hint>Number</mat-hint>
+        <mat-label>HP</mat-label>
+        <input matInput placeholder="No." formControlName="power">
+        <mat-hint *ngIf="bmwForm.get('power').hasError('pattern') && bmwForm.get('power').touched">Only Numbers
+          allowed
+        </mat-hint>
+        <mat-hint *ngIf="bmwForm.get('power').hasError('required') && bmwForm.get('power').touched">Required</mat-hint>
+
       </mat-form-field>
       <br>
     </div>
@@ -118,22 +140,23 @@
 
   <!--  description-->
   <mat-form-field class="col-12" appearance="outline">
-    <mat-label>description</mat-label>
-    <textarea matInput placeholder="description" formControlName="description"></textarea>
-    <mat-hint>Text</mat-hint>
+    <mat-label>History</mat-label>
+    <textarea rows="6" matInput placeholder="Description" formControlName="description"></textarea>
+    <mat-hint *ngIf="bmwForm.get('description').hasError('required') && bmwForm.get('description').touched">Required
+    </mat-hint>
   </mat-form-field>
 
 </mat-dialog-content>
-  <mat-dialog-actions align="end">
-    <button mat-raised-button color="warn" mat-dialog-close>Cancel</button>
-    <button
-      mat-raised-button
-      color="primary"
-      [mat-dialog-close]="true"
-      cdkFocusInitial
-      (click)="sendForm()"
-    >Add
-    </button>
-  </mat-dialog-actions>
-<!--      [disabled]="bmwForm.invalid"-->
+<mat-dialog-actions align="end">
+  <button mat-raised-button color="warn" mat-dialog-close>Cancel</button>
+  <button
+    mat-raised-button
+    color="primary"
+    [mat-dialog-close]="true"
+    cdkFocusInitial
+    (click)="sendForm()"
+    [disabled]="bmwForm.invalid"
+  >Add
+  </button>
+</mat-dialog-actions>
 
