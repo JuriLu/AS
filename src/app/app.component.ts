@@ -24,8 +24,8 @@ export class AppComponent {
     this.category = 'LeMans'
   }
 
-  onGoldenDecade() {
-    this.category = 'GoldenDecade'
+  onElectric() {
+    this.category = 'Electric'
   }
 
   onNewMillenial() {

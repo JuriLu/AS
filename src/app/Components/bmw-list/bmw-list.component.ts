@@ -16,7 +16,7 @@ export class BmwListComponent implements OnInit {
   oldSchool$?: Observable<BmwModel[]>;
   legendary$?: Observable<BmwModel[]>;
   leMans$?: Observable<BmwModel[]>;
-  goldenDecade$?: Observable<BmwModel[]>;
+  electric$?: Observable<BmwModel[]>;
   newMillenial$?: Observable<BmwModel[]>;
   bikes$?: Observable<BmwModel[]>;
 
@@ -34,7 +34,7 @@ export class BmwListComponent implements OnInit {
     this.oldSchool$ = this.bmwService.loadBMWByCategory('OldSchool')
     this.legendary$ = this.bmwService.loadBMWByCategory('Legendary')
     this.leMans$ = this.bmwService.loadBMWByCategory('LeMans')
-    this.goldenDecade$ = this.bmwService.loadBMWByCategory('GoldenDecade')
+    this.electric$ = this.bmwService.loadBMWByCategory('Electric')
     this.newMillenial$ = this.bmwService.loadBMWByCategory('NewMillenial')
     this.bikes$ = this.bmwService.loadBMWByCategory('Bikes')
   }

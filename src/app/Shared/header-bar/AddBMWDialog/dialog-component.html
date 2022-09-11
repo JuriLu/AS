@@ -24,11 +24,44 @@
   </div>
 
 
+  <!--  Engine Type and kWh-->
+  <div class="row">
+
+    <!--  engine combustion-->
+    <mat-form-field class="{{bmwForm.get('engineCombustion').value ==='hybrid' || bmwForm.get('engineCombustion').value ==='electric' ? 'col-6':'col-12'}}"
+                    appearance="outline">
+      <mat-label>Engine Type</mat-label>
+      <select matNativeControl required formControlName="engineCombustion">
+        <option value="diesel">Diesel</option>
+        <option value="petrol">Petrol</option>
+        <option value="hybrid">Hybrid</option>
+        <option value="electric">Electric</option>
+      </select>
+      <mat-hint
+        *ngIf="bmwForm.get('engineCombustion').hasError('required') && bmwForm.get('engineCombustion').touched">
+        Required
+      </mat-hint>
+    </mat-form-field>
+
+    <!--  engine kWH-->
+    <mat-form-field class="col-6" *ngIf="bmwForm.get('engineCombustion').value ==='hybrid' || bmwForm.get('engineCombustion').value ==='electric' " appearance="outline">
+      <mat-label>Battery Capacity KWH</mat-label>
+      <input matInput placeholder="No." formControlName="engineKWH">
+      <mat-hint *ngIf="bmwForm.get('engineKWH').hasError('pattern') && bmwForm.get('engineKWH').touched">Only Numbers
+        allowed
+      </mat-hint>
+      <mat-hint *ngIf="bmwForm.get('engineKWH').hasError('required') && bmwForm.get('engineKWH').touched">Required
+      </mat-hint>
+    </mat-form-field>
+
+  </div>
+
+
   <!--  Generation and Engine-->
   <div class="row">
 
     <!--  generation-->
-    <mat-form-field class="col-6" appearance="outline">
+    <mat-form-field class="{{bmwForm.get('engineCombustion').value ==='electric' ? 'col-12':'col-6'}}" appearance="outline">
       <mat-label>Generation</mat-label>
       <input matInput placeholder="G22 e.g" formControlName="generation">
       <mat-hint *ngIf="bmwForm.get('generation').hasError('required') && bmwForm.get('generation').touched">Required
@@ -37,7 +70,7 @@
 
 
     <!--  engine cm3-->
-    <mat-form-field class="col-6" s appearance="outline">
+    <mat-form-field *ngIf="bmwForm.get('engineCombustion').value !=='electric'"  class="col-6"  appearance="outline">
       <mat-label>Engine Cm3</mat-label>
       <input matInput placeholder="2998 e.g" formControlName="engineCm3">
       <mat-hint *ngIf="bmwForm.get('engineCm3').hasError('pattern') && bmwForm.get('engineCm3').touched">Only Numbers
@@ -47,38 +80,6 @@
       </mat-hint>
     </mat-form-field>
     <br>
-  </div>
-
-
-  <!--  Engine Type and kWh-->
-  <div class="row">
-
-    <mat-form-field class="{{bmwForm.get('engineCombustion').value ==='combined' ? 'col-6':'col-12'}}"
-                    appearance="outline">
-      <!--  engine combustion-->
-      <mat-label>Engine Type</mat-label>
-      <select matNativeControl required formControlName="engineCombustion">
-        <option value="diesel">Diesel</option>
-        <option value="petrol">Petrol</option>
-        <option value="combined">Hybrid</option>
-      </select>
-      <mat-hint
-        *ngIf="bmwForm.get('engineCombustion').hasError('required') && bmwForm.get('engineCombustion').touched">
-        Required
-      </mat-hint>
-    </mat-form-field>
-
-
-    <!--  engine kWH-->
-    <mat-form-field class="col-6" *ngIf="bmwForm.get('engineCombustion').value ==='combined'" appearance="outline">
-      <mat-label>Engine KWH</mat-label>
-      <input matInput placeholder="No." formControlName="engineKWH">
-      <mat-hint *ngIf="bmwForm.get('engineKWH').hasError('pattern') && bmwForm.get('engineKWH').touched">Only Numbers
-        allowed
-      </mat-hint>
-      <mat-hint *ngIf="bmwForm.get('engineKWH').hasError('required') && bmwForm.get('engineKWH').touched">Required
-      </mat-hint>
-    </mat-form-field>
 
   </div>
 
@@ -109,7 +110,7 @@
         <option value="OldSchool">Old School</option>
         <option value="Legendary">Legendary</option>
         <option value="LeMans">Le Mans</option>
-        <option value="GoldenDecade">Golden Decade</option>
+        <option value="Electric">Electric</option>
         <option value="NewMillenial">New Millenial</option>
         <option value="Bikes">Bikes</option>
       </select>
@@ -147,7 +148,6 @@
     </div>
 
 
-
   <!--  description-->
   <mat-form-field class="col-12" appearance="outline">
     <mat-label>History</mat-label>
@@ -157,6 +157,7 @@
   </mat-form-field>
 
 </mat-dialog-content>
+
 <mat-dialog-actions align="end">
   <button mat-raised-button color="warn" mat-dialog-close>Cancel</button>
   <button

@@ -5,7 +5,7 @@
       <div class="card-body">
         <p class="card-text">{{bmw.description}}</p>
         <ul class="mt-2">
-          <li>Engine: {{bmw.engineCm3}} cm3</li>
+          <li *ngIf="bmw.engineCm3">Engine: {{bmw.engineCm3}} cm3</li>
           <li *ngIf="bmw.engineKWH">Electric Engine: {{bmw.engineKWH}} Kwh</li>
           <li>Fuel Type: {{bmw.engineCombustion | titlecase}}</li>
           <li>Power: {{bmw.power}} HP</li>

@@ -13,8 +13,8 @@
   <div class="list" *ngIf="category === 'LeMans'">
     <app-bmw-single-item [bmwItem]="leMans$ | async"></app-bmw-single-item>
   </div>
-  <div class="list" *ngIf="category === 'GoldenDecade'">
-    <app-bmw-single-item [bmwItem]="goldenDecade$ | async"></app-bmw-single-item>
+  <div class="list" *ngIf="category === 'Electric'">
+    <app-bmw-single-item [bmwItem]="electric$ | async"></app-bmw-single-item>
   </div>
   <div class="list" *ngIf="category === 'NewMillenial'">
     <app-bmw-single-item [bmwItem]="newMillenial$ | async"></app-bmw-single-item>
