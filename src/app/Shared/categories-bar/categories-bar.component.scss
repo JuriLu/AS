@@ -4,7 +4,7 @@
 @media (max-width: 320.98px) {
   .initPos {
     margin-left: 50px;
-    margin-top: 400px;
+    margin-top: 200px;
   }
 }
 
@@ -12,7 +12,7 @@
 @media (min-width: 375px) {
   .initPos {
     margin-left: 80px;
-    margin-top: 400px;
+    margin-top: 200px;
   }
 }
 
@@ -20,15 +20,15 @@
 @media (min-width: 425px) {
   .initPos {
     margin-left: 100px;
-    margin-top: 400px;
+    margin-top: 200px;
   }
 }
 
 //Tablet
 @media (min-width: 768px) {
   .initPos {
-    margin-left: 270px;
-    margin-top: 390px;
+    margin-left: 280px;
+    margin-top: 190px;
   }
 }
 
@@ -36,6 +36,14 @@
 @media (min-width: 1024px) {
   .initPos {
     margin-left: 780px;
+    margin-top: 385px;
+  }
+}
+
+//TV 1360px
+@media (min-width: 1360px) {
+  .initPos {
+    margin-left: 1050px;
     margin-top: 385px;
   }
 }
@@ -106,7 +114,7 @@
 }
 
 .menu.active li {
-  transform: rotate(calc(360deg / 8 * var(--i))) translateX(-10px);
+  transform: rotate(calc(360deg / 8 * var(--i))) translateX(10px);
 }
 
 .menu li a {
@@ -115,9 +123,9 @@
   align-items: center;
   background: #1c75c0;
   border: #16588E 1px solid;
-  width: 55px;
-  height: 55px;
-  font-size: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 55%;
   border-radius: 50%;
   transform: rotate(calc(360deg / -8 * var(--i)));
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
@@ -153,15 +161,18 @@
 }
 
 img {
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
+  border: white 2px solid;
   border-radius: 50%;
   transition: 0.5s;
 }
 
-img:hover {
-  border: white 2px solid;
-  transition: 0.5s;
+.activeImg {
+  width: 80px;
+  height: 80px;
+  border: 	#81C4FF 4px solid;
+  transition: 0.8s;
 }
 
 toggle .active {
