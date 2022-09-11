@@ -9,7 +9,7 @@
           <li *ngIf="bmw.engineKWH">Electric Engine: {{bmw.engineKWH}} Kwh</li>
           <li>Fuel Type: {{bmw.engineCombustion | titlecase}}</li>
           <li>Power: {{bmw.power}} HP</li>
-          <li>First Production year: {{bmw.YOP}}</li>
+          <li>First Production year: {{bmw.YOP | date:'MM/YYYY' }}</li>
           <li>Body Type: {{bmw.bodyType | titlecase}}</li>
         </ul>
         <div class="d-flex justify-content-between align-items-center">
