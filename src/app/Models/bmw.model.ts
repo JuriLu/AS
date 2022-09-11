@@ -12,5 +12,5 @@ export interface BmwModel {
   power: number,
   description: string,
   category: string
-  id?
+  id?: any
 }

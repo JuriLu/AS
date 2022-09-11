@@ -129,23 +129,9 @@
       "category": "OldSchool"
     },
     {
-      "image": "https://i.ytimg.com/vi/gG7olG-Bjmk/maxresdefault.jpg",
-      "model": "R",
-      "generation": "GS",
-      "cubature": "1300",
-      "kWh": "",
-      "combustion": "",
-      "YOP": "2022",
-      "category": "Bikes",
-      "bodyType": "Bike",
-      "power": "160",
-      "description": "Lorem Ipsum",
-      "id": "3H-QBC7"
-    },
-    {
       "img": "https://i.ytimg.com/vi/gG7olG-Bjmk/maxresdefault.jpg",
-      "cModel": "R",
-      "generation": "GS",
+      "cModel": "M",
+      "generation": "GS1300",
       "engineCm3": "1300",
       "engineKWH": "",
       "engineCombustion": "petrol",
