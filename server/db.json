@@ -141,6 +141,62 @@
       "description": "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum ",
       "category": "Bikes",
       "id": "jwXATdy"
+    },
+    {
+      "img": "https://cdn.bmwblog.com/wp-content/uploads/2015/06/bmw-z3-m-coupe.jpg",
+      "cModel": "Z3",
+      "generation": "E36",
+      "engineCm3": "3246",
+      "engineKWH": "",
+      "engineCombustion": "petrol",
+      "YOP": "1998",
+      "bodyType": "Coupe",
+      "power": "325",
+      "description": " Z3 M Coupe is a car that would be most enjoyable to own. Firstly, it’s rare. Just a hair over 10,000 units were produced worldwide. So you’d be hard pressed see another on the road, and that exclusivity makes it cool. Secondly, it’s incredibly fun to drive. It has the same 3.2 liter I6 engine as in the E36 M3. ",
+      "category": "Legendary",
+      "id": "2epLlz1"
+    },
+    {
+      "img": "https://www.auto-data.net/images/f77/BMW-Z8-E52_1.jpg",
+      "cModel": "Z8",
+      "generation": "E52",
+      "engineCm3": "4941",
+      "engineKWH": "",
+      "engineCombustion": "petrol",
+      "YOP": "2000",
+      "bodyType": "Cabriolet",
+      "power": "400",
+      "description": "The BMW Z8 is a roadster produced by German automotive manufacturer BMW from 1998 to 2006. The Z8 was developed under the codename \"E52\" between 1993 and 1999, through the efforts of a design team led by Chris Bangle from 1993 to 1995.[2] The exterior was designed by Henrik Fisker and the interior by Scott Lempert",
+      "category": "Legendary",
+      "id": "bZnCJAt"
+    },
+    {
+      "img": "https://cdp.azureedge.net/products/USA/BM/2023/MC/BMWR/R_NINET_URBAN_G-S/50/IMPERIAL_BLUE_METALLIC/2000000001.jpg",
+      "cModel": "R nineT",
+      "generation": "Urban G/S",
+      "engineCm3": "1170",
+      "engineKWH": "",
+      "engineCombustion": "petrol",
+      "YOP": "2023",
+      "bodyType": "Bike",
+      "power": "109",
+      "description": "As the crow flies? No, the detour is the destination. And when it comes to gravel, the R nineT Urban G/S is also in its element. Its design is reminiscent of the first G/S models, the legendary BMW R 80 G/S. And with it, the idea that simply anything is possible.",
+      "category": "Bikes",
+      "id": "Lo_sIOH"
+    },
+    {
+      "img": "Lorem Ipsum",
+      "cModel": "Lorem Ipsum",
+      "generation": "Lorem Ipsum",
+      "engineCm3": "1300",
+      "engineKWH": "",
+      "engineCombustion": "diesel",
+      "YOP": "2022-09-11T09:36:46.632Z",
+      "bodyType": "asdfddd",
+      "power": "160",
+      "description": "agsgwegwegwgw",
+      "category": "NewModel",
+      "id": "OA6stdI"
     }
   ],
   "news": [
