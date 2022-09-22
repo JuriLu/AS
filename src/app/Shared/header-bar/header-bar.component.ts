@@ -2,7 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {News} from "../../Models/news.model";
 import {NewsService} from "../../services/news.service";
 import {MatDialog} from "@angular/material/dialog";
-import {DialogComponent} from "./AddBMWDialog/dialog-component";
+import {DialogComponent} from "../../Components/AddBMWDialog/dialog-component";
+import {BmwService} from "../../services/bmw.service";
 
 @Component({
   selector: 'app-header-bar',
@@ -20,14 +21,17 @@ export class HeaderBarComponent implements OnInit {
 
   News: News[] = []
 
-  constructor(private newsService: NewsService,public dialog: MatDialog) {
+  constructor(
+    private newsService: NewsService,
+    public dialog: MatDialog,
+    private bmwService:BmwService) {
   }
 
   openDialog() {
     const dialogRef = this.dialog.open(DialogComponent);
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
+    dialogRef.afterClosed().subscribe(() => {
+      this.bmwService.loadBMWByCategory('NewModel').subscribe()
     });
   }
 
