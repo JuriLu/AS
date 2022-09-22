@@ -1,6 +1,6 @@
 import {Component} from "@angular/core";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
-import {BmwService} from "../../../services/bmw.service";
+import {BmwService} from "../../services/bmw.service";
 
 import * as _moment from 'moment';
 // tslint:disable-next-line:no-duplicate-imports
@@ -61,7 +61,7 @@ export class DialogComponent {
       img: new FormControl('',[Validators.required]),
       cModel: new FormControl('',[Validators.required]),
       generation: new FormControl('',[Validators.required]),
-      engineCm3: new FormControl('',[Validators.required,Validators.pattern('(\\d{1,}).*(\\d{1,})')]),
+      engineCm3: new FormControl('',[Validators.pattern('(\\d{1,}).*(\\d{1,})')]),
       engineKWH: new FormControl('',[Validators.pattern('(\\d{1,}).*(\\d{1,})')]),
       engineCombustion: new FormControl('',[Validators.required]),
       YOP: this.date,
