@@ -53,6 +53,7 @@ MEDIA QUERIES FOR ALL DEVICES
 
 
 
-1. Add Options to dialog component
-2. Make the formGroup
-3. Create Service Function to push the form group to server
+1.Make a logic to load all cars after adding a new car
+2.Make a logic to show all card of single vehcicle in 1 row of 3 columns
+3.Change name of files and functions, and project.
+THIS IS NOW PROJECT    "ALBANIA SHOWROOM"

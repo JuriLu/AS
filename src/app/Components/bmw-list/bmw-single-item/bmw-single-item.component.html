@@ -1,24 +1,27 @@
- <div class="col-md-12 px-4 All" *ngFor="let bmw of bmwItem">
-    <div class="card mb-4 box-shadow">
-      <h4 class="card-header p-3">{{bmw.cModel}} <h6>{{bmw.generation}}</h6></h4>
-      <img class=" col-md-12 card-img-top justify-content-center align-items-center pt-3 px-3" src="{{bmw.img}}" alt="{{bmw.cModel + bmw.generation}}">
-      <div class="card-body">
-        <p class="card-text">{{bmw.description}}</p>
-        <ul class="mt-2">
-          <li *ngIf="bmw.engineCm3">Engine: {{bmw.engineCm3}} cm3</li>
-          <li *ngIf="bmw.engineKWH">Electric Engine: {{bmw.engineKWH}} Kwh</li>
-          <li>Fuel Type: {{bmw.engineCombustion | titlecase}}</li>
-          <li>Power: {{bmw.power}} HP</li>
-          <li>First Production year: {{bmw.YOP | date:'MM/YYYY' }}</li>
-          <li>Body Type: {{bmw.bodyType | titlecase}}</li>
-        </ul>
-        <div class="d-flex justify-content-between align-items-center">
-          <div class="btn-group">
-            <button type="button" class="btn btn-sm btn-outline-secondary">View <strong>HC</strong></button>
-            <button type="button" class="btn btn-sm btn-outline-secondary">❤ <strong>HC</strong></button>
-          </div>
-          <small class="text-muted">9 mins <strong>HC</strong></small>
+<div class="col-md-12 px-4 All" *ngFor="let bmw of bmwItem">
+  <div class="card mb-4 box-shadow">
+    <h4 class="card-header p-3">{{bmw.cModel}} <h6>{{bmw.generation}}</h6></h4>
+    <img class=" col-md-12 card-img-top justify-content-center align-items-center mt-3" src="{{bmw.img}}"
+         alt="{{bmw.cModel + bmw.generation}}">
+    <div class="card-body">
+      <p class="card-text">{{bmw.description}}</p>
+      <ul class="mt-2">
+        <li *ngIf="bmw.engineCm3">Engine: {{bmw.engineCm3}} cm3</li>
+        <li *ngIf="bmw.engineKWH">Electric Engine: {{bmw.engineKWH}} Kwh</li>
+        <li>Fuel Type: {{bmw.engineCombustion | titlecase}}</li>
+        <li>Power: {{bmw.power}} HP</li>
+        <li>First Production year: {{bmw.YOP | date:'MM/YYYY' }}</li>
+        <li>Body Type: {{bmw.bodyType | titlecase}}</li>
+      </ul>
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="btn-group">
+          <button type="button" class="btn btn-sm btn-outline-secondary">View <strong>HC</strong></button>
+          <button type="button" class="btn btn-sm btn-outline-secondary">❤ <strong>HC</strong></button>
         </div>
+        <small class="text-muted">9 mins <strong>HC</strong></small>
       </div>
     </div>
   </div>
+</div>
+
+
