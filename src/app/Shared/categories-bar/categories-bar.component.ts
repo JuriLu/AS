@@ -26,50 +26,14 @@ export class CategoriesBarComponent implements OnInit {
   constructor(private categoryService: CategoryService) {
   }
 
-
   ngOnInit(): void {
   }
 
   navigateCategory(category:CategoryCars):void{
     this.categoryService.selectingCategory(category);
-
   }
-
-  NewModels() {
-    this.categoryService.selectingCategory(CategoryCars.NEWMODEL);
-  }
-
-  OldSchool() {
-    this.categoryService.selectingCategory(CategoryCars.OLDSCHOOL);
-  }
-
-  Legend() {
-    this.categoryService.selectingCategory(CategoryCars.LEGEND);
-  }
-
-  LeMans() {
-    this.categoryService.selectingCategory(CategoryCars.LEMANS);
-  }
-
-  Electric() {
-    this.categoryService.selectingCategory(CategoryCars.ELECTRIC);
-  }
-
-  Bikes() {
-    this.categoryService.selectingCategory(CategoryCars.BIKES);
-  }
-
-  // NewMillenal() {
-  //   this.newMillenial.emit()
-  // }
-
 
   toggleActive() {
-    // if (this.active == false) {
-    //   this.active = true
-    // } else if (this.active == true){
-    //   this.active = false
-    // }x
     this.active = !this.active
   }
 

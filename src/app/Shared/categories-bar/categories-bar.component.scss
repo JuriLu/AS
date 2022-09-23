@@ -127,7 +127,7 @@
   height: 50px;
   font-size: 55%;
   border-radius: 50%;
-  transform: rotate(calc(360deg / -8 * var(--i)));
+  transform: rotate(calc(360deg / -8 * var(--i))); // number here changes for as many elements there are
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
   text-decoration: none;
   color: white;
