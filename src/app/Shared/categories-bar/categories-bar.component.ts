@@ -1,4 +1,4 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {AScarsService} from "../../services/AScars.service";
 import {CategoryCars} from "../../Models/AScars.model";
 
@@ -8,45 +8,35 @@ import {CategoryCars} from "../../Models/AScars.model";
   styleUrls: ['./categories-bar.component.scss']
 })
 export class CategoriesBarComponent implements OnInit {
-
-  // @Output() oldSchool = new EventEmitter<void>();
-  // @Output() newModels = new EventEmitter<void>();
-  // @Output() legendary = new EventEmitter<void>();
-  // @Output() leMans = new EventEmitter<void>();
-  // @Output() electric = new EventEmitter<void>();
-  // @Output() newMillenial = new EventEmitter<void>();
-  // @Output() Bikes = new EventEmitter<void>();
-
-  constructor(private AScars : AScarsService) {
-  }
-
   active: boolean = false
 
-  ngOnInit(): void {
-  }
+  constructor(private AScars : AScarsService) {}
+
+
+  ngOnInit(): void {}
 
   NewModels() {
-    this.AScars.giveValue(CategoryCars.NEWMODEL);
+    this.AScars.selectingCategory(CategoryCars.NEWMODEL);
   }
 
   OldSchool() {
-    this.AScars.giveValue(CategoryCars.OLDSCHOOL);
+    this.AScars.selectingCategory(CategoryCars.OLDSCHOOL);
   }
 
   Legend() {
-    this.AScars.giveValue(CategoryCars.LEGEND);
+    this.AScars.selectingCategory(CategoryCars.LEGEND);
   }
 
   LeMans() {
-    this.AScars.giveValue(CategoryCars.LEMANS);
+    this.AScars.selectingCategory(CategoryCars.LEMANS);
   }
 
   Electric() {
-    this.AScars.giveValue(CategoryCars.ELECTRIC);
+    this.AScars.selectingCategory(CategoryCars.ELECTRIC);
   }
 
   Bikes() {
-    this.AScars.giveValue(CategoryCars.BIKES);
+    this.AScars.selectingCategory(CategoryCars.BIKES);
   }
 
   // NewMillenal() {

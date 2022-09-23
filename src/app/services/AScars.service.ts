@@ -29,8 +29,8 @@ export class AScarsService {
     return this.http.post<Partial<AScarsModel>>(environment.apiUrlBMWs, model)
   }
 
-  giveValue(categ) {
-    this.categorySubject.next(categ)
+  selectingCategory(category) {
+    this.categorySubject.next(category)
   }
 
 

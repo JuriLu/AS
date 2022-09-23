@@ -18,7 +18,6 @@ export class HeaderBarComponent implements OnInit {
     this.loggedUser = !this.loggedUser
   }
 
-
   News: News[] = []
 
   constructor(

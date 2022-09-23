@@ -1,7 +1,7 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {AScarsModel} from "../../Models/AScars.model";
 import {AScarsService} from "../../services/AScars.service";
-import {Observable, Subscription} from "rxjs";
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-bmw-list',
@@ -27,7 +27,6 @@ export class BmwListComponent implements OnInit {
 
   ngOnInit(): void {
     this.reloadBMW()
-    console.log(this.category)
   }
 
   reloadBMW(){

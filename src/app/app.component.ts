@@ -6,34 +6,4 @@ import {Component} from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  category: string = 'NewModels'
-
-  onOldSchool() {
-    this.category = 'OldSchool'
-  }
-
-  onNewModels() {
-    this.category = 'NewModels'
-  }
-
-  onLegendary() {
-    this.category = 'Legendary'
-  }
-
-  onLeMans() {
-    this.category = 'LeMans'
-  }
-
-  onElectric() {
-    this.category = 'Electric'
-  }
-
-  onNewMillenial() {
-    this.category = 'NewMillenial'
-  }
-
-  onBikes(){
-    this.category = 'Bikes'
-  }
-
 }
