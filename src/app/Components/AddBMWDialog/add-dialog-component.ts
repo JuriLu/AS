@@ -1,6 +1,6 @@
 import {Component} from "@angular/core";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
-import {BmwService} from "../../services/bmw.service";
+import {AScarsService} from "../../services/AScars.service";
 
 import * as _moment from 'moment';
 // tslint:disable-next-line:no-duplicate-imports
@@ -27,8 +27,8 @@ export const MY_FORMATS = {
 
 @Component({
   selector: 'dialog-component',
-  templateUrl: 'dialog-component.html',
-  styleUrls: ['./dialog.component.scss'],
+  templateUrl: 'add-dialog-component.html',
+  styleUrls: ['./add-dialog.component.scss'],
   providers: [
     // `MomentDateAdapter` can be automatically provided by importing `MomentDateModule` in your
     // application's root module. We provide it at the component level here, due to limitations of
@@ -42,7 +42,7 @@ export const MY_FORMATS = {
     {provide: MAT_DATE_FORMATS, useValue: MY_FORMATS},
   ],
 })
-export class DialogComponent {
+export class AddDialogComponent {
 
   date = new FormControl(moment(),[Validators.required] );
 
@@ -56,7 +56,7 @@ export class DialogComponent {
 
   bmwForm: FormGroup;
 
-  constructor(private bmwService:BmwService) {
+  constructor(private bmwService:AScarsService) {
     this.bmwForm = new FormGroup({
       img: new FormControl('',[Validators.required]),
       cModel: new FormControl('',[Validators.required]),

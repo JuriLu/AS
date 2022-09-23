@@ -183,6 +183,34 @@
       "description": "As the crow flies? No, the detour is the destination. And when it comes to gravel, the R nineT Urban G/S is also in its element. Its design is reminiscent of the first G/S models, the legendary BMW R 80 G/S. And with it, the idea that simply anything is possible.",
       "category": "Bikes",
       "id": "Lo_sIOH"
+    },
+    {
+      "img": "test",
+      "cModel": "NewModelTEst",
+      "generation": "G44",
+      "engineCm3": "51465",
+      "engineKWH": "",
+      "engineCombustion": "diesel",
+      "YOP": "2022-09-23T09:11:39.347Z",
+      "bodyType": "ab",
+      "power": "537",
+      "description": "sdfhd",
+      "category": "NewModel",
+      "id": "gwsz0RL"
+    },
+    {
+      "img": "qqgrq",
+      "cModel": "elet",
+      "generation": "asgd",
+      "engineCm3": "",
+      "engineKWH": "1234",
+      "engineCombustion": "electric",
+      "YOP": "2022-09-23T09:13:04.510Z",
+      "bodyType": "awge",
+      "power": "3241",
+      "description": "asge",
+      "category": "Electric",
+      "id": "-WHZtI4"
     }
   ],
   "news": [

@@ -1,4 +1,6 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {AScarsService} from "../../services/AScars.service";
+import {CategoryCars} from "../../Models/AScars.model";
 
 @Component({
   selector: 'app-categories-bar',
@@ -7,15 +9,15 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 })
 export class CategoriesBarComponent implements OnInit {
 
-  @Output() oldSchool = new EventEmitter<void>();
-  @Output() newModels = new EventEmitter<void>();
-  @Output() legendary = new EventEmitter<void>();
-  @Output() leMans = new EventEmitter<void>();
-  @Output() electric = new EventEmitter<void>();
-  @Output() newMillenial = new EventEmitter<void>();
-  @Output() Bikes = new EventEmitter<void>();
+  // @Output() oldSchool = new EventEmitter<void>();
+  // @Output() newModels = new EventEmitter<void>();
+  // @Output() legendary = new EventEmitter<void>();
+  // @Output() leMans = new EventEmitter<void>();
+  // @Output() electric = new EventEmitter<void>();
+  // @Output() newMillenial = new EventEmitter<void>();
+  // @Output() Bikes = new EventEmitter<void>();
 
-  constructor() {
+  constructor(private AScars : AScarsService) {
   }
 
   active: boolean = false
@@ -23,33 +25,34 @@ export class CategoriesBarComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  categOldSchool() {
-    this.oldSchool.emit()
+  NewModels() {
+    this.AScars.giveValue(CategoryCars.NEWMODEL);
   }
 
-  categNewModels() {
-    this.newModels.emit()
+  OldSchool() {
+    this.AScars.giveValue(CategoryCars.OLDSCHOOL);
   }
 
-  categLegendary() {
-    this.legendary.emit()
+  Legend() {
+    this.AScars.giveValue(CategoryCars.LEGEND);
   }
 
-  categLeMans() {
-    this.leMans.emit()
+  LeMans() {
+    this.AScars.giveValue(CategoryCars.LEMANS);
   }
 
-  categElectric() {
-    this.electric.emit()
+  Electric() {
+    this.AScars.giveValue(CategoryCars.ELECTRIC);
   }
 
-  categNewMillenal() {
-    this.newMillenial.emit()
+  Bikes() {
+    this.AScars.giveValue(CategoryCars.BIKES);
   }
 
-  categBikes() {
-    this.Bikes.emit()
-  }
+  // NewMillenal() {
+  //   this.newMillenial.emit()
+  // }
+
 
   toggleActive() {
     // if (this.active == false) {

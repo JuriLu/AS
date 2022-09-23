@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {BmwModel} from "../../Models/bmw.model";
-import {BmwService} from "../../services/bmw.service";
-import {Observable} from "rxjs";
+import {AScarsModel} from "../../Models/AScars.model";
+import {AScarsService} from "../../services/AScars.service";
+import {Observable, Subscription} from "rxjs";
 
 @Component({
   selector: 'app-bmw-list',
@@ -9,34 +9,36 @@ import {Observable} from "rxjs";
   styleUrls: ['./bmw-list.component.scss']
 })
 export class BmwListComponent implements OnInit {
-  @Input() category: string
-
-  BMWs: BmwModel[];
-  newModels$?: Observable<BmwModel[]>;
-  oldSchool$?: Observable<BmwModel[]>;
-  legendary$?: Observable<BmwModel[]>;
-  leMans$?: Observable<BmwModel[]>;
-  electric$?: Observable<BmwModel[]>;
-  newMillenial$?: Observable<BmwModel[]>;
-  bikes$?: Observable<BmwModel[]>;
+  category = this.ASCarsService.category$
 
 
-  constructor(private bmwService: BmwService) {
+  BMWs: AScarsModel[];
+  newModels$?: Observable<AScarsModel[]>;
+  oldSchool$?: Observable<AScarsModel[]>;
+  legendary$?: Observable<AScarsModel[]>;
+  leMans$?: Observable<AScarsModel[]>;
+  electric$?: Observable<AScarsModel[]>;
+  newMillenial$?: Observable<AScarsModel[]>;
+  bikes$?: Observable<AScarsModel[]>;
+
+
+  constructor(private ASCarsService: AScarsService) {
   }
 
   ngOnInit(): void {
     this.reloadBMW()
-
+    console.log(this.category)
   }
 
   reloadBMW(){
-    this.newModels$ = this.bmwService.loadBMWByCategory('NewModel')
-    this.oldSchool$ = this.bmwService.loadBMWByCategory('OldSchool')
-    this.legendary$ = this.bmwService.loadBMWByCategory('Legendary')
-    this.leMans$ = this.bmwService.loadBMWByCategory('LeMans')
-    this.electric$ = this.bmwService.loadBMWByCategory('Electric')
-    this.newMillenial$ = this.bmwService.loadBMWByCategory('NewMillenial')
-    this.bikes$ = this.bmwService.loadBMWByCategory('Bikes')
+
+    this.newModels$ = this.ASCarsService.loadBMWByCategory('NewModel')
+    this.oldSchool$ = this.ASCarsService.loadBMWByCategory('OldSchool')
+    this.legendary$ = this.ASCarsService.loadBMWByCategory('Legendary')
+    this.leMans$ = this.ASCarsService.loadBMWByCategory('LeMans')
+    this.electric$ = this.ASCarsService.loadBMWByCategory('Electric')
+    this.newMillenial$ = this.ASCarsService.loadBMWByCategory('NewMillenial')
+    this.bikes$ = this.ASCarsService.loadBMWByCategory('Bikes')
   }
 
 

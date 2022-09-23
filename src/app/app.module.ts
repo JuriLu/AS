@@ -11,13 +11,13 @@ import {HeaderBarComponent} from './Shared/header-bar/header-bar.component';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatCardModule} from "@angular/material/card";
-import {BmwService} from "./services/bmw.service";
+import {AScarsService} from "./services/AScars.service";
 import {HttpClientModule} from "@angular/common/http";
 import {MatIconModule} from "@angular/material/icon";
 import {DragDropModule} from "@angular/cdk/drag-drop";
 import {MatButtonModule} from "@angular/material/button";
 import {MatDialogModule} from "@angular/material/dialog";
-import {DialogComponent} from "./Components/AddBMWDialog/dialog-component";
+import {AddDialogComponent} from "./Components/AddBMWDialog/add-dialog-component";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
@@ -34,7 +34,7 @@ import {MatDatepickerModule} from "@angular/material/datepicker";
     BmwListComponent,
     BmwDescriptionComponent,
     BmwSingleItemComponent,
-    DialogComponent
+    AddDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +54,7 @@ import {MatDatepickerModule} from "@angular/material/datepicker";
     MatSelectModule,
     MatDatepickerModule
   ],
-  providers: [BmwService],
+  providers: [AScarsService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
