@@ -6,11 +6,11 @@ import {CategoryService} from "../../services/category.service";
 
 
 @Component({
-  selector: 'app-bmw-list',
-  templateUrl: './bmw-list.component.html',
-  styleUrls: ['./bmw-list.component.scss']
+  selector: 'app-ASCars-list',
+  templateUrl: './ASCars-list.component.html',
+  styleUrls: ['./ASCars-list.component.scss']
 })
-export class BmwListComponent implements OnInit {
+export class ASCarsListComponent implements OnInit {
   category = this.categoryService.category$
 
 

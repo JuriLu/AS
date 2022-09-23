@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {News} from "../../Models/news.model";
-import {NewsService} from "../../services/news.service";
+import {News} from "../../Models/ASnews.model";
+import {ASnewsService} from "../../services/ASnews.service";
 import {MatDialog} from "@angular/material/dialog";
 import {AddDialogComponent} from "../../Components/ASCarsAddDialog/add-dialog-component";
 import {AScarsService} from "../../services/AScars.service";
@@ -21,7 +21,7 @@ export class HeaderBarComponent implements OnInit {
   News: News[] = []
 
   constructor(
-    private newsService: NewsService,
+    private newsService: ASnewsService,
     public dialog: MatDialog,
     private bmwService: AScarsService) {
   }

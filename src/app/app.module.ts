@@ -3,9 +3,9 @@ import {BrowserModule} from '@angular/platform-browser';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {BmwListComponent} from './Components/bmw-list/bmw-list.component';
+import {ASCarsListComponent} from './Components/ASCars-list/ASCars-list.component';
 import {ASCarsDescriptionComponent} from './Components/ASCars-description/ASCars-description.component';
-import {BmwSingleItemComponent} from './Components/bmw-list/bmw-single-item/bmw-single-item.component';
+import {ASCarsSingleItemComponent} from './Components/ASCars-list/ASCars-single-item/ASCars-single-item.component';
 import {CategoriesBarComponent} from './Shared/categories-bar/categories-bar.component';
 import {HeaderBarComponent} from './Shared/header-bar/header-bar.component';
 
@@ -30,9 +30,9 @@ import {MatDatepickerModule} from "@angular/material/datepicker";
     AppComponent,
     HeaderBarComponent,
     CategoriesBarComponent,
-    BmwListComponent,
+    ASCarsListComponent,
     ASCarsDescriptionComponent,
-    BmwSingleItemComponent,
+    ASCarsSingleItemComponent,
     AddDialogComponent
   ],
   imports: [
