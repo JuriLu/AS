@@ -137,10 +137,9 @@
 
 .menu li a:hover {
   color: #8F00FF;
+  border: #8F00FF 2px solid;
 }
-.menu li a.active {
-  color: #8F00FF;
-}
+
 
 .toggle {
   position: absolute;

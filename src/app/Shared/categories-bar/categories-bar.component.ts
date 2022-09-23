@@ -21,6 +21,8 @@ export class CategoriesBarComponent implements OnInit {
     {label:'LeMans',category: CategoryCars.LEMANS},
     {label:'Electric',category: CategoryCars.ELECTRIC},
     {label:'Bikes',category: CategoryCars.BIKES},
+    {label:'...',category: CategoryCars.BIKES},
+    {label:'...',category: CategoryCars.BIKES},
   ]
 
   constructor(private categoryService: CategoryService) {
