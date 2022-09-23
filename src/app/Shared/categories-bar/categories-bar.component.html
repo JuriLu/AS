@@ -3,30 +3,34 @@
     <div [ngClass]="{'active':active}" class="toggle" (click)="toggleActive()"><img [ngClass]="{'activeImg':active}"
                                                                                     src="assets/AS.png" alt="menu-logo">
     </div>
-    <li style="--i:0">
-      <a (click)="NewModels()"><span class="mx-2">New Model</span></a>
+    <li *ngFor="let menu of menuItems; index as i"
+    [style.--i]="i">
+      <a  (click)="navigateCategory(menu.category)"><span class="mx-2">{{menu.label}}</span></a >
     </li>
-    <li style="--i:1">
-      <a (click)="OldSchool()"><span class="mx-2">Old School</span></a>
-    </li>
-    <li style="--i:2">
-      <a (click)="Legend()"><span class="mx-2">Legend</span></a>
-    </li>
-    <li style="--i:3">
-      <a (click)="LeMans()"><span class="mx-2">LEMans</span></a>
-    </li>
-    <li style="--i:4">
-      <a (click)="Electric()"><span class="mx-2">Electric</span></a>
-    </li>
-    <li style="--i:5">
-      <a (click)="Bikes()">Bikes</a>
-    </li>
-    <li style="--i:6">
-      <a><span class="mx-2">...</span></a>
-    </li>
-    <li style="--i:7">
-      <a>...</a>
-    </li>
+<!--    <li style="&#45;&#45;i:0">-->
+<!--      <a  (click)="NewModels()"><span class="mx-2">New Model</span></a >-->
+<!--    </li>-->
+<!--    <li style="&#45;&#45;i:1">-->
+<!--      <a (click)="OldSchool()"><span class="mx-2">Old School</span></a>-->
+<!--    </li>-->
+<!--    <li style="&#45;&#45;i:2">-->
+<!--      <a (click)="Legend()"><span class="mx-2">Legend</span></a>-->
+<!--    </li>-->
+<!--    <li style="&#45;&#45;i:3">-->
+<!--      <a (click)="LeMans()"><span class="mx-2">LEMans</span></a>-->
+<!--    </li>-->
+<!--    <li style="&#45;&#45;i:4">-->
+<!--      <a (click)="Electric()"><span class="mx-2">Electric</span></a>-->
+<!--    </li>-->
+<!--    <li style="&#45;&#45;i:5">-->
+<!--      <a (click)="Bikes()">Bikes</a>-->
+<!--    </li>-->
+<!--    <li style="&#45;&#45;i:6">-->
+<!--      <a><span class="mx-2">...</span></a>-->
+<!--    </li>-->
+<!--    <li style="&#45;&#45;i:7">-->
+<!--      <a>...</a>-->
+<!--    </li>-->
   </div>
 </div>
 

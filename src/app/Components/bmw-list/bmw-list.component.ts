@@ -1,8 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {AScarsModel} from "../../Models/AScars.model";
 import {AScarsService} from "../../services/AScars.service";
-import {Observable, switchMap} from "rxjs";
+import {switchMap, tap} from "rxjs";
 import {CategoryService} from "../../services/category.service";
+
 
 @Component({
   selector: 'app-bmw-list',
@@ -13,15 +14,7 @@ export class BmwListComponent implements OnInit {
   category = this.categoryService.category$
 
 
-  BMWs: AScarsModel[];
-  newModels$?: Observable<AScarsModel[]>;
-  oldSchool$?: Observable<AScarsModel[]>;
-  legendary$?: Observable<AScarsModel[]>;
-  leMans$?: Observable<AScarsModel[]>;
-  electric$?: Observable<AScarsModel[]>;
-  newMillenial$?: Observable<AScarsModel[]>;
-  bikes$?: Observable<AScarsModel[]>;
-
+  cars: AScarsModel[];
 
   constructor(
     private ASCarsService: AScarsService,
@@ -30,19 +23,26 @@ export class BmwListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.reloadBMW()
+    // this.reloadBMW()
+    // this.tap(this.consoleLog);
+    this.categoryService.category$
+      .pipe(
+        // tap(this.consoleLog),
+        switchMap(category => {
+          return this.ASCarsService.loadBMWByCategory(category)
+        }),
+      )
+      .subscribe(cars => this.cars = cars)
   }
 
-  reloadBMW() {
-
-    this.newModels$ = this.ASCarsService.loadBMWByCategory('NewModel')
-    this.oldSchool$ = this.ASCarsService.loadBMWByCategory('OldSchool')
-    this.legendary$ = this.ASCarsService.loadBMWByCategory('Legendary')
-    this.leMans$ = this.ASCarsService.loadBMWByCategory('LeMans')
-    this.electric$ = this.ASCarsService.loadBMWByCategory('Electric')
-    this.newMillenial$ = this.ASCarsService.loadBMWByCategory('NewMillenial')
-    this.bikes$ = this.ASCarsService.loadBMWByCategory('Bikes')
-  }
+  // consoleLog(...values:any[]){
+  //   console.log(...values)
+  // }
+  //
+  // tap(fn:(value:any) => void){
+  //   const value = 'test';
+  //   fn(value);
+  // }
 
 
 }
