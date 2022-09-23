@@ -4,7 +4,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {BmwListComponent} from './Components/bmw-list/bmw-list.component';
-import {BmwDescriptionComponent} from './Components/bmw-description/bmw-description.component';
+import {ASCarsDescriptionComponent} from './Components/ASCars-description/ASCars-description.component';
 import {BmwSingleItemComponent} from './Components/bmw-list/bmw-single-item/bmw-single-item.component';
 import {CategoriesBarComponent} from './Shared/categories-bar/categories-bar.component';
 import {HeaderBarComponent} from './Shared/header-bar/header-bar.component';
@@ -17,7 +17,7 @@ import {MatIconModule} from "@angular/material/icon";
 import {DragDropModule} from "@angular/cdk/drag-drop";
 import {MatButtonModule} from "@angular/material/button";
 import {MatDialogModule} from "@angular/material/dialog";
-import {AddDialogComponent} from "./Components/AddBMWDialog/add-dialog-component";
+import {AddDialogComponent} from "./Components/ASCarsAddDialog/add-dialog-component";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
@@ -31,7 +31,7 @@ import {MatDatepickerModule} from "@angular/material/datepicker";
     HeaderBarComponent,
     CategoriesBarComponent,
     BmwListComponent,
-    BmwDescriptionComponent,
+    ASCarsDescriptionComponent,
     BmwSingleItemComponent,
     AddDialogComponent
   ],
