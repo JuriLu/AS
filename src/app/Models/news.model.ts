@@ -1,4 +1,4 @@
 export interface News {
   header: string;
-  content:string;
+  content: string;
 }

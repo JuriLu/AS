@@ -23,7 +23,7 @@ export class HeaderBarComponent implements OnInit {
   constructor(
     private newsService: NewsService,
     public dialog: MatDialog,
-    private bmwService:AScarsService) {
+    private bmwService: AScarsService) {
   }
 
   openDialog() {
@@ -36,9 +36,8 @@ export class HeaderBarComponent implements OnInit {
 
   ngOnInit(): void {
     this.newsService.loadNews()
-      .subscribe( newsList => this.News = newsList)
+      .subscribe(newsList => this.News = newsList)
   }
-
 
 
   //Ready for Future Implementation

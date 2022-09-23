@@ -10,10 +10,12 @@ import {CategoryCars} from "../../Models/AScars.model";
 export class CategoriesBarComponent implements OnInit {
   active: boolean = false
 
-  constructor(private AScars : AScarsService) {}
+  constructor(private AScars: AScarsService) {
+  }
 
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
 
   NewModels() {
     this.AScars.selectingCategory(CategoryCars.NEWMODEL);

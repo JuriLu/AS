@@ -28,8 +28,9 @@
   <div class="row">
 
     <!--  engine combustion-->
-    <mat-form-field class="{{bmwForm.get('engineCombustion').value ==='hybrid' || bmwForm.get('engineCombustion').value ==='electric' ? 'col-6':'col-12'}}"
-                    appearance="outline">
+    <mat-form-field
+      class="{{bmwForm.get('engineCombustion').value ==='hybrid' || bmwForm.get('engineCombustion').value ==='electric' ? 'col-6':'col-12'}}"
+      appearance="outline">
       <mat-label>Engine Type</mat-label>
       <select matNativeControl required formControlName="engineCombustion">
         <option value="diesel">Diesel</option>
@@ -44,7 +45,9 @@
     </mat-form-field>
 
     <!--  engine kWH-->
-    <mat-form-field class="col-6" *ngIf="bmwForm.get('engineCombustion').value ==='hybrid' || bmwForm.get('engineCombustion').value ==='electric' " appearance="outline">
+    <mat-form-field class="col-6"
+                    *ngIf="bmwForm.get('engineCombustion').value ==='hybrid' || bmwForm.get('engineCombustion').value ==='electric' "
+                    appearance="outline">
       <mat-label>Battery Capacity KWH</mat-label>
       <input matInput placeholder="No." formControlName="engineKWH">
       <mat-hint *ngIf="bmwForm.get('engineKWH').hasError('pattern') && bmwForm.get('engineKWH').touched">Only Numbers
@@ -61,7 +64,8 @@
   <div class="row">
 
     <!--  generation-->
-    <mat-form-field class="{{bmwForm.get('engineCombustion').value ==='electric' ? 'col-12':'col-6'}}" appearance="outline">
+    <mat-form-field class="{{bmwForm.get('engineCombustion').value ==='electric' ? 'col-12':'col-6'}}"
+                    appearance="outline">
       <mat-label>Generation</mat-label>
       <input matInput placeholder="G22 e.g" formControlName="generation">
       <mat-hint *ngIf="bmwForm.get('generation').hasError('required') && bmwForm.get('generation').touched">Required
@@ -70,7 +74,7 @@
 
 
     <!--  engine cm3-->
-    <mat-form-field *ngIf="bmwForm.get('engineCombustion').value !=='electric'"  class="col-6"  appearance="outline">
+    <mat-form-field *ngIf="bmwForm.get('engineCombustion').value !=='electric'" class="col-6" appearance="outline">
       <mat-label>Engine Cm3</mat-label>
       <input matInput placeholder="2998 e.g" formControlName="engineCm3">
       <mat-hint *ngIf="bmwForm.get('engineCm3').hasError('pattern') && bmwForm.get('engineCm3').touched">Only Numbers
@@ -93,7 +97,7 @@
       <mat-label>YOP</mat-label>
       <input matInput [matDatepicker]="dp" formControlName="YOP" placeholder="Year of Production">
       <mat-hint *ngIf="bmwForm.get('YOP').hasError('required') && bmwForm.get('YOP').touched">Required</mat-hint>
-      <mat-datepicker-toggle matSuffix [for]="dp" ></mat-datepicker-toggle>
+      <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
       <mat-datepicker #dp
                       startView="multi-year"
                       (monthSelected)="setMonthAndYear($event, dp)"
@@ -125,27 +129,27 @@
   <!--  Body Type and Power-->
   <div class="row">
 
-      <!--  bodyType-->
-      <mat-form-field class="col-6" appearance="outline">
-        <mat-label>Body Type</mat-label>
-        <input matInput placeholder="Coupe e.g" formControlName="bodyType">
-        <mat-hint *ngIf="bmwForm.get('bodyType').hasError('required') && bmwForm.get('bodyType').touched">Required
-        </mat-hint>
-      </mat-form-field>
+    <!--  bodyType-->
+    <mat-form-field class="col-6" appearance="outline">
+      <mat-label>Body Type</mat-label>
+      <input matInput placeholder="Coupe e.g" formControlName="bodyType">
+      <mat-hint *ngIf="bmwForm.get('bodyType').hasError('required') && bmwForm.get('bodyType').touched">Required
+      </mat-hint>
+    </mat-form-field>
 
 
-      <!--  power-->
-      <mat-form-field class="col-6"appearance="outline">
-        <mat-label>HP</mat-label>
-        <input matInput placeholder="400 e.g" formControlName="power">
-        <mat-hint *ngIf="bmwForm.get('power').hasError('pattern') && bmwForm.get('power').touched">Only Numbers
-          allowed
-        </mat-hint>
-        <mat-hint *ngIf="bmwForm.get('power').hasError('required') && bmwForm.get('power').touched">Required</mat-hint>
+    <!--  power-->
+    <mat-form-field class="col-6" appearance="outline">
+      <mat-label>HP</mat-label>
+      <input matInput placeholder="400 e.g" formControlName="power">
+      <mat-hint *ngIf="bmwForm.get('power').hasError('pattern') && bmwForm.get('power').touched">Only Numbers
+        allowed
+      </mat-hint>
+      <mat-hint *ngIf="bmwForm.get('power').hasError('required') && bmwForm.get('power').touched">Required</mat-hint>
 
-      </mat-form-field>
-      <br>
-    </div>
+    </mat-form-field>
+    <br>
+  </div>
 
 
   <!--  description-->

@@ -98,20 +98,25 @@ img {
   bottom: 3rem;
   z-index: 10;
 }
+
 /* Declare heights because of positioning of img element */
 //Lap Top 1024px
 @media (min-width: 1024px) {
   .carousel-item {
     height: 22rem;
-  };
+  }
+;
 
   h1 {
     font-size: 33px;
-  };
+  }
+;
   p {
     font-size: 18px;
-  };
+  }
+;
 }
+
 //Lap Top 1440px
 @media (min-width: 1440px) {
   // Nothing Needed
@@ -136,9 +141,9 @@ img {
   // Not Needed
 }
 
-  //.carousel-item {
-  //  height: 21rem;
-  //}
+//.carousel-item {
+//  height: 21rem;
+//}
 
 /* MARKETING CONTENT
 -------------------------------------------------- */
@@ -198,6 +203,6 @@ img {
   border: white 2px solid;
 }
 
-a{
+a {
   cursor: pointer;
 }

@@ -44,7 +44,7 @@ export const MY_FORMATS = {
 })
 export class AddDialogComponent {
 
-  date = new FormControl(moment(),[Validators.required] );
+  date = new FormControl(moment(), [Validators.required]);
 
   setMonthAndYear(normalizedMonthAndYear: Moment, datepicker: MatDatepicker<Moment>) {
     const ctrlValue = this.date.value!;
@@ -56,23 +56,23 @@ export class AddDialogComponent {
 
   bmwForm: FormGroup;
 
-  constructor(private bmwService:AScarsService) {
+  constructor(private bmwService: AScarsService) {
     this.bmwForm = new FormGroup({
-      img: new FormControl('',[Validators.required]),
-      cModel: new FormControl('',[Validators.required]),
-      generation: new FormControl('',[Validators.required]),
-      engineCm3: new FormControl('',[Validators.pattern('(\\d{1,}).*(\\d{1,})')]),
-      engineKWH: new FormControl('',[Validators.pattern('(\\d{1,}).*(\\d{1,})')]),
-      engineCombustion: new FormControl('',[Validators.required]),
+      img: new FormControl('', [Validators.required]),
+      cModel: new FormControl('', [Validators.required]),
+      generation: new FormControl('', [Validators.required]),
+      engineCm3: new FormControl('', [Validators.pattern('(\\d{1,}).*(\\d{1,})')]),
+      engineKWH: new FormControl('', [Validators.pattern('(\\d{1,}).*(\\d{1,})')]),
+      engineCombustion: new FormControl('', [Validators.required]),
       YOP: this.date,
-      bodyType: new FormControl('',[Validators.required]),
-      power: new FormControl('',[Validators.required,Validators.pattern('(\\d{1,}).*(\\d{1,})')]),
-      description: new FormControl('',[Validators.required]),
-      category: new FormControl('',[Validators.required]),
+      bodyType: new FormControl('', [Validators.required]),
+      power: new FormControl('', [Validators.required, Validators.pattern('(\\d{1,}).*(\\d{1,})')]),
+      description: new FormControl('', [Validators.required]),
+      category: new FormControl('', [Validators.required]),
     })
   }
 
-  sendForm(){
+  sendForm() {
     this.bmwService.AddBmw(this.bmwForm.value).subscribe()
     this.bmwService.loadBMWByCategory('NewModel')
     console.log(this.bmwForm.value);

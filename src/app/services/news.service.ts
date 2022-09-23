@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {Observable, shareReplay} from "rxjs";
 import {News} from "../Models/news.model";
 import {HttpClient} from "@angular/common/http";
@@ -9,9 +9,10 @@ import {environment} from "../../environments/environment";
 })
 export class NewsService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+  }
 
-  loadNews():Observable<News[]>{
+  loadNews(): Observable<News[]> {
     return this.http.get<News[]>(environment.apiUrlNews)
       .pipe(
         shareReplay()

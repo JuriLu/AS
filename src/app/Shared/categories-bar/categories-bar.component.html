@@ -1,6 +1,8 @@
 <div class="fixed-top initPos" cdkDrag>
   <div [ngClass]="{'active':active}" class="menu">
-    <div [ngClass]="{'active':active}" class="toggle" (click)="toggleActive()"><img [ngClass]="{'activeImg':active}" src="assets/AS.png" alt="menu-logo"></div>
+    <div [ngClass]="{'active':active}" class="toggle" (click)="toggleActive()"><img [ngClass]="{'activeImg':active}"
+                                                                                    src="assets/AS.png" alt="menu-logo">
+    </div>
     <li style="--i:0">
       <a (click)="NewModels()"><span class="mx-2">New Model</span></a>
     </li>
@@ -20,7 +22,7 @@
       <a (click)="Bikes()">Bikes</a>
     </li>
     <li style="--i:6">
-      <a ><span class="mx-2">...</span></a>
+      <a><span class="mx-2">...</span></a>
     </li>
     <li style="--i:7">
       <a>...</a>

@@ -8,9 +8,10 @@ import {AScarsModel} from "../../../Models/AScars.model";
 })
 export class BmwSingleItemComponent implements OnInit {
 
-    @Input() bmwItem: AScarsModel[]
+  @Input() bmwItem: AScarsModel[]
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

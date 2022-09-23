@@ -29,7 +29,7 @@ export class BmwListComponent implements OnInit {
     this.reloadBMW()
   }
 
-  reloadBMW(){
+  reloadBMW() {
 
     this.newModels$ = this.ASCarsService.loadBMWByCategory('NewModel')
     this.oldSchool$ = this.ASCarsService.loadBMWByCategory('OldSchool')
