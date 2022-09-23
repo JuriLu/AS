@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {AScarsService} from "../../services/AScars.service";
 import {CategoryCars} from "../../Models/AScars.model";
+import {CategoryService} from "../../services/category.service";
 
 @Component({
   selector: 'app-categories-bar',
@@ -10,7 +11,7 @@ import {CategoryCars} from "../../Models/AScars.model";
 export class CategoriesBarComponent implements OnInit {
   active: boolean = false
 
-  constructor(private AScars: AScarsService) {
+  constructor(private categoryService: CategoryService) {
   }
 
 
@@ -18,27 +19,27 @@ export class CategoriesBarComponent implements OnInit {
   }
 
   NewModels() {
-    this.AScars.selectingCategory(CategoryCars.NEWMODEL);
+    this.categoryService.selectingCategory(CategoryCars.NEWMODEL);
   }
 
   OldSchool() {
-    this.AScars.selectingCategory(CategoryCars.OLDSCHOOL);
+    this.categoryService.selectingCategory(CategoryCars.OLDSCHOOL);
   }
 
   Legend() {
-    this.AScars.selectingCategory(CategoryCars.LEGEND);
+    this.categoryService.selectingCategory(CategoryCars.LEGEND);
   }
 
   LeMans() {
-    this.AScars.selectingCategory(CategoryCars.LEMANS);
+    this.categoryService.selectingCategory(CategoryCars.LEMANS);
   }
 
   Electric() {
-    this.AScars.selectingCategory(CategoryCars.ELECTRIC);
+    this.categoryService.selectingCategory(CategoryCars.ELECTRIC);
   }
 
   Bikes() {
-    this.AScars.selectingCategory(CategoryCars.BIKES);
+    this.categoryService.selectingCategory(CategoryCars.BIKES);
   }
 
   // NewMillenal() {

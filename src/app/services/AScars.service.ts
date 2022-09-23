@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {BehaviorSubject, map, Observable, shareReplay, tap} from "rxjs";
-import {AScarsModel} from "../Models/AScars.model";
+import {AScarsModel, CategoryCars} from "../Models/AScars.model";
 import {environment} from "../../environments/environment";
 
 @Injectable({
@@ -9,8 +9,7 @@ import {environment} from "../../environments/environment";
 })
 export class AScarsService {
 
-  private categorySubject = new BehaviorSubject('NewModel')
-  category$: Observable<string> = this.categorySubject.asObservable()
+
 
   constructor(private http: HttpClient) {
   }
@@ -27,10 +26,6 @@ export class AScarsService {
 
   AddBmw(model: Partial<AScarsModel>): Observable<Partial<AScarsModel>> {
     return this.http.post<Partial<AScarsModel>>(environment.apiUrlBMWs, model)
-  }
-
-  selectingCategory(category) {
-    this.categorySubject.next(category)
   }
 
 

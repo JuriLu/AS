@@ -5,8 +5,8 @@ import {AddDialogComponent} from "./Components/AddBMWDialog/add-dialog-component
 import {BmwListComponent} from "./Components/bmw-list/bmw-list.component";
 
 const routes: Routes = [
-  // {path:'',pathMatch:'full',redirectTo:'home'},
-  // {path:'home',component:BmwListComponent}
+  {path:'',pathMatch:'full',redirectTo:'home'},
+  {path:'home',component:BmwListComponent}
   // {path:'new',component:AddDialogComponent}
 
 ];

@@ -1,5 +1,5 @@
-<mat-card>
-  <mat-card-title class="text-white">{{category | async}}</mat-card-title>
+<mat-card >
+  <mat-card-title class="text-white px-5">{{category | async}}</mat-card-title>
 
   <div class="list" *ngIf="(category | async) === 'NewModel'">
     <app-bmw-single-item [bmwItem]="newModels$ | async"></app-bmw-single-item>

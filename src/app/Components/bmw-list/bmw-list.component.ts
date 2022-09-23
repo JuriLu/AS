@@ -1,7 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {AScarsModel} from "../../Models/AScars.model";
 import {AScarsService} from "../../services/AScars.service";
-import {Observable} from "rxjs";
+import {Observable, switchMap} from "rxjs";
+import {CategoryService} from "../../services/category.service";
 
 @Component({
   selector: 'app-bmw-list',
@@ -9,7 +10,7 @@ import {Observable} from "rxjs";
   styleUrls: ['./bmw-list.component.scss']
 })
 export class BmwListComponent implements OnInit {
-  category = this.ASCarsService.category$
+  category = this.categoryService.category$
 
 
   BMWs: AScarsModel[];
@@ -22,7 +23,10 @@ export class BmwListComponent implements OnInit {
   bikes$?: Observable<AScarsModel[]>;
 
 
-  constructor(private ASCarsService: AScarsService) {
+  constructor(
+    private ASCarsService: AScarsService,
+    private categoryService: CategoryService
+    ) {
   }
 
   ngOnInit(): void {
