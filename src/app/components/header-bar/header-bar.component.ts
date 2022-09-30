@@ -4,6 +4,7 @@ import {ASnewsService} from "../../core/services/ASnews.service";
 import {MatDialog} from "@angular/material/dialog";
 import {AddDialogComponent} from "../ASCarsAddDialog/add-dialog-component";
 import {AScarsService} from "../../core/services/AScars.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-header-bar',
@@ -14,16 +15,17 @@ export class HeaderBarComponent implements OnInit {
 
   loggedUser = true
 
-  toggleUser() {
-    this.loggedUser = !this.loggedUser
-  }
+  // toggleUser() {
+  //   this.loggedUser = !this.loggedUser
+  // }
 
   News: News[] = []
 
   constructor(
     private newsService: ASnewsService,
     public dialog: MatDialog,
-    private bmwService: AScarsService) {
+    private bmwService: AScarsService,
+    private router:Router) {
   }
 
   openDialog() {
@@ -41,11 +43,18 @@ export class HeaderBarComponent implements OnInit {
 
 
   //Ready for Future Implementation
-  logout() {
+  signOut() {
+    this.loggedUser = false
   }
 
   //Ready for Future Implementation
-  login() {
+  signInNavigation() {
+    this.router.navigateByUrl('/auth/signin')
+    this.loggedUser = true
+  }
+
+  signUpNavigation() {
+    this.router.navigateByUrl('/auth/signup')
   }
 
 }

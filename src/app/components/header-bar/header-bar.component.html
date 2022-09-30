@@ -14,7 +14,7 @@
             <a class="nav-link active" aria-current="page" (click)="openDialog()">New Model</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" routerLink="auth/signin">Link</a>
           </li>
           <li class="nav-item">
             <a class="nav-link disabled">Disabled</a>
@@ -39,7 +39,7 @@
               <li>
                 <hr class="dropdown-divider">
               </li>
-              <li><a class="dropdown-item" (click)="toggleUser()">Sign out</a></li>
+              <li><a class="dropdown-item" (click)="signOut()">Sign out</a></li>
             </ul>
           </div>
         </div>
@@ -48,8 +48,8 @@
         <div *ngIf="!loggedUser" class="mt-3">
           <div class="d-flex align-items-center">
             <ul>
-              <button type="button" class="btn btn-outline-light me-2" (click)="toggleUser()">Login</button>
-              <button type="button" class="btn btn-warning">Sign-up</button>
+              <button type="button" class="btn btn-outline-light me-2" (click)="signInNavigation()">Login</button>
+              <button type="button" class="btn btn-warning" (click)="signUpNavigation()">Sign-up</button>
             </ul>
           </div>
         </div>

@@ -6,8 +6,8 @@ import {ASCarsListComponent} from "./components/ASCars-list/ASCars-list.componen
 
 const routes: Routes = [
   {path:'',pathMatch:'full',redirectTo:'home'},
+  {path:'auth',loadChildren:()=> import('./auth/auth.module').then(m=>m.AuthModule) },
   {path:'home',component:ASCarsListComponent}
-  // {path:'new',component:AddDialogComponent}
 
 ];
 
