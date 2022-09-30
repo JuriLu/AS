@@ -6,5 +6,9 @@
 
 .bg-custom{
   background-color: rgba(251, 250, 249, 0.95);
+}
 
+//Maybe just for this screen  1536px WIDTH  TODO:Must check for other screens
+.row{
+  --bs-gutter-x: 1.0 rem !important;
 }
