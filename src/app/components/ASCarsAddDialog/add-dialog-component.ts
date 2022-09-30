@@ -1,6 +1,6 @@
 import {Component} from "@angular/core";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
-import {AScarsService} from "../../services/AScars.service";
+import {AScarsService} from "../../core/services/AScars.service";
 
 import * as _moment from 'moment';
 // tslint:disable-next-line:no-duplicate-imports

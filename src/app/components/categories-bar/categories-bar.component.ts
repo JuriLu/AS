@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {CategoryCars} from "../../Models/AScars.model";
-import {CategoryService} from "../../services/category.service";
+import {CategoryCars} from "../../core/Models/AScars.model";
+import {CategoryService} from "../../core/services/category.service";
 
 interface MenuItem {
   label: string,

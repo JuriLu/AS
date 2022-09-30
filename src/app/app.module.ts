@@ -6,12 +6,12 @@ import {AppComponent} from './app.component';
 import {ASCarsListComponent} from './components/ASCars-list/ASCars-list.component';
 import {ASCarsDescriptionComponent} from './components/ASCars-description/ASCars-description.component';
 import {ASCarsSingleItemComponent} from './components/ASCars-list/ASCars-single-item/ASCars-single-item.component';
-import {CategoriesBarComponent} from './shared/categories-bar/categories-bar.component';
-import {HeaderBarComponent} from './shared/header-bar/header-bar.component';
+import {CategoriesBarComponent} from './components/categories-bar/categories-bar.component';
+import {HeaderBarComponent} from './components/header-bar/header-bar.component';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatCardModule} from "@angular/material/card";
-import {AScarsService} from "./services/AScars.service";
+import {AScarsService} from "./core/services/AScars.service";
 import {HttpClientModule} from "@angular/common/http";
 import {MatIconModule} from "@angular/material/icon";
 import {DragDropModule} from "@angular/cdk/drag-drop";
@@ -23,7 +23,7 @@ import {MatInputModule} from "@angular/material/input";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatSelectModule} from "@angular/material/select";
 import {MatDatepickerModule} from "@angular/material/datepicker";
-import { FooterComponent } from './shared/footer/footer.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({

@@ -1,9 +1,9 @@
 import {Component, OnInit} from '@angular/core';
-import {News} from "../../Models/ASnews.model";
-import {ASnewsService} from "../../services/ASnews.service";
+import {News} from "../../core/Models/ASnews.model";
+import {ASnewsService} from "../../core/services/ASnews.service";
 import {MatDialog} from "@angular/material/dialog";
-import {AddDialogComponent} from "../../components/ASCarsAddDialog/add-dialog-component";
-import {AScarsService} from "../../services/AScars.service";
+import {AddDialogComponent} from "../ASCarsAddDialog/add-dialog-component";
+import {AScarsService} from "../../core/services/AScars.service";
 
 @Component({
   selector: 'app-header-bar',
