@@ -18,7 +18,6 @@ import {MatInputModule} from "@angular/material/input";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatSelectModule} from "@angular/material/select";
 import {MatDatepickerModule} from "@angular/material/datepicker";
-import {BrowserModule} from "@angular/platform-browser";
 import {ASCarsAddComponent} from "./ASCars-add/ASCars-add.component";
 
 

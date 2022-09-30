@@ -1,9 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {News} from "../../core/models/ASnews.model";
 import {ASnewsService} from "../../core/services/ASnews.service";
-import {MatDialog} from "@angular/material/dialog";
-import {AddDialogComponent} from "../ASCars-add/add-dialog/add-dialog-component";
-import {AScarsService} from "../../core/services/AScars.service";
+
 import {Router} from "@angular/router";
 
 @Component({
@@ -27,7 +25,7 @@ export class HeaderBarComponent implements OnInit {
     private router:Router) {
   }
 
-  openDialog() {
+  navigateToAddDialog() {
     this.router.navigateByUrl('/home/ASCarAdd')
   }
 
@@ -37,7 +35,7 @@ export class HeaderBarComponent implements OnInit {
   }
 
 
-  //Ready for Future Implementation
+
   signOut() {
     this.loggedUser = false
   }
