@@ -55,9 +55,9 @@ MEDIA QUERIES FOR ALL DEVICES
 
 1.Make a logic to load all cars after adding a new car
 2.Make a logic to show all card of single vehcicle in 1 row of 3 columns
-3.Change name of files and functions, and project.
+
 4.Must Add Footer
-5.Idea what to set on both sides
+5.Idea what to set on both sides                  1/2
 6.Idea what to do with the category name on top
 7.Make Routing separations
 8.Make Module Separations
@@ -65,4 +65,4 @@ MEDIA QUERIES FOR ALL DEVICES
 10.Add Guard , Interceptor, Resolvers
 11.Category AS QueryParam?
 
-THIS IS NOW PROJECT    "ALBANIA SHOWROOM"
+"ALBANIA SHOWROOM"

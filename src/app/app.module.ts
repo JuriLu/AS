@@ -23,6 +23,7 @@ import {MatInputModule} from "@angular/material/input";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatSelectModule} from "@angular/material/select";
 import {MatDatepickerModule} from "@angular/material/datepicker";
+import { FooterComponent } from './Shared/footer/footer.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import {MatDatepickerModule} from "@angular/material/datepicker";
     ASCarsListComponent,
     ASCarsDescriptionComponent,
     ASCarsSingleItemComponent,
-    AddDialogComponent
+    AddDialogComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

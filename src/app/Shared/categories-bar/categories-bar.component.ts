@@ -2,9 +2,9 @@ import {Component, OnInit} from '@angular/core';
 import {CategoryCars} from "../../Models/AScars.model";
 import {CategoryService} from "../../services/category.service";
 
-interface MenuItem{
+interface MenuItem {
   label: string,
-  category:CategoryCars;
+  category: CategoryCars;
 }
 
 @Component({
@@ -14,15 +14,15 @@ interface MenuItem{
 })
 export class CategoriesBarComponent implements OnInit {
   active: boolean = false
-  menuItems:MenuItem[] = [
-    {label:'New Model',category: CategoryCars.NEWMODEL},
-    {label:'Old School',category: CategoryCars.OLDSCHOOL},
-    {label:'Legend',category: CategoryCars.LEGEND},
-    {label:'LeMans',category: CategoryCars.LEMANS},
-    {label:'Electric',category: CategoryCars.ELECTRIC},
-    {label:'Bikes',category: CategoryCars.BIKES},
-    {label:'...',category: CategoryCars.BIKES},
-    {label:'...',category: CategoryCars.BIKES},
+  menuItems: MenuItem[] = [
+    {label: 'New Model', category: CategoryCars.NEWMODEL},
+    {label: 'Old School', category: CategoryCars.OLDSCHOOL},
+    {label: 'Legend', category: CategoryCars.LEGEND},
+    {label: 'LeMans', category: CategoryCars.LEMANS},
+    {label: 'Electric', category: CategoryCars.ELECTRIC},
+    {label: 'Bikes', category: CategoryCars.BIKES},
+    {label: '...', category: CategoryCars.BIKES},
+    {label: '...', category: CategoryCars.BIKES},
   ]
 
   constructor(private categoryService: CategoryService) {
@@ -31,7 +31,7 @@ export class CategoriesBarComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  navigateCategory(category:CategoryCars):void{
+  navigateCategory(category: CategoryCars): void {
     this.categoryService.selectingCategory(category);
   }
 
