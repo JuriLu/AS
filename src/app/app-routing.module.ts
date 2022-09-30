@@ -1,7 +1,7 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {AppComponent} from "./app.component";
-import {AddDialogComponent} from "./components/add-dialog/add-dialog-component";
+import {AddDialogComponent} from "./components/ASCars-add/add-dialog/add-dialog-component";
 import {ASCarsListComponent} from "./components/ASCars-list/ASCars-list.component";
 
 const routes: Routes = [

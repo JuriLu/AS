@@ -5,7 +5,7 @@ import {CategoriesBarComponent} from "./categories-bar/categories-bar.component"
 import {ASCarsListComponent} from "./ASCars-list/ASCars-list.component";
 import {ASCarsDescriptionComponent} from "./ASCars-description/ASCars-description.component";
 import {ASCarsSingleItemComponent} from "./ASCars-list/ASCars-single-item/ASCars-single-item.component";
-import {AddDialogComponent} from "./add-dialog/add-dialog-component";
+import {AddDialogComponent} from "./ASCars-add/add-dialog/add-dialog-component";
 import {FooterComponent} from "./footer/footer.component";
 import {MainRoutingModule} from "./main.routing.module";
 import {MatCardModule} from "@angular/material/card";
