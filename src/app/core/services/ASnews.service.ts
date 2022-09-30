@@ -1,12 +1,10 @@
 import {Injectable} from '@angular/core';
 import {Observable, shareReplay} from "rxjs";
-import {News} from "../Models/ASnews.model";
+import {News} from "../models/ASnews.model";
 import {HttpClient} from "@angular/common/http";
 import {environment} from "../../../environments/environment";
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class ASnewsService {
 
   constructor(private http: HttpClient) {

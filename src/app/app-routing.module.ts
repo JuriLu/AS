@@ -1,13 +1,13 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {AppComponent} from "./app.component";
-import {AddDialogComponent} from "./components/ASCarsAddDialog/add-dialog-component";
+import {AddDialogComponent} from "./components/add-dialog/add-dialog-component";
 import {ASCarsListComponent} from "./components/ASCars-list/ASCars-list.component";
 
 const routes: Routes = [
-  {path:'',pathMatch:'full',redirectTo:'home'},
+  {path:'',pathMatch:'full',redirectTo:'home/ASCarList'},
   {path:'auth',loadChildren:()=> import('./auth/auth.module').then(m=>m.AuthModule) },
-  {path:'home',component:ASCarsListComponent}
+  {path:'home',loadChildren:()=> import('./components/main.routing.module').then(m=>m.MainRoutingModule)}
 
 ];
 

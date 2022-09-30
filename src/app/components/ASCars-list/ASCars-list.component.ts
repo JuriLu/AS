@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {AScarsModel} from "../../core/Models/AScars.model";
+import {AScarsModel} from "../../core/models/AScars.model";
 import {AScarsService} from "../../core/services/AScars.service";
 import {switchMap} from "rxjs";
 import {CategoryService} from "../../core/services/category.service";

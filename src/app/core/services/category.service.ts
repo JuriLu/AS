@@ -1,10 +1,8 @@
 import {Injectable} from '@angular/core';
 import {BehaviorSubject, Observable} from "rxjs";
-import {CategoryCars} from "../Models/AScars.model";
+import {CategoryCars} from "../models/AScars.model";
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class CategoryService {
 
   private categorySubject = new BehaviorSubject(CategoryCars.NEWMODEL);

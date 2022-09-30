@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {AScarsModel} from "../../../core/Models/AScars.model";
+import {AScarsModel} from "../../../core/models/AScars.model";
 
 @Component({
   selector: 'app-ASCars-single-item',

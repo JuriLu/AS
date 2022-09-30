@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {News} from "../../core/Models/ASnews.model";
+import {News} from "../../core/models/ASnews.model";
 import {ASnewsService} from "../../core/services/ASnews.service";
 import {MatDialog} from "@angular/material/dialog";
-import {AddDialogComponent} from "../ASCarsAddDialog/add-dialog-component";
+import {AddDialogComponent} from "../add-dialog/add-dialog-component";
 import {AScarsService} from "../../core/services/AScars.service";
 import {Router} from "@angular/router";
 
@@ -23,17 +23,12 @@ export class HeaderBarComponent implements OnInit {
 
   constructor(
     private newsService: ASnewsService,
-    public dialog: MatDialog,
-    private bmwService: AScarsService,
+
     private router:Router) {
   }
 
   openDialog() {
-    const dialogRef = this.dialog.open(AddDialogComponent);
-
-    dialogRef.afterClosed().subscribe(() => {
-      this.bmwService.loadBMWByCategory('NewModel').subscribe()
-    });
+    this.router.navigateByUrl('/home/ASCarAdd')
   }
 
   ngOnInit(): void {
