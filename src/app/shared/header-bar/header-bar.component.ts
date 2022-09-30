@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {News} from "../../Models/ASnews.model";
 import {ASnewsService} from "../../services/ASnews.service";
 import {MatDialog} from "@angular/material/dialog";
-import {AddDialogComponent} from "../../Components/ASCarsAddDialog/add-dialog-component";
+import {AddDialogComponent} from "../../components/ASCarsAddDialog/add-dialog-component";
 import {AScarsService} from "../../services/AScars.service";
 
 @Component({

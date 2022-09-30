@@ -1,8 +1,8 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {AppComponent} from "./app.component";
-import {AddDialogComponent} from "./Components/ASCarsAddDialog/add-dialog-component";
-import {ASCarsListComponent} from "./Components/ASCars-list/ASCars-list.component";
+import {AddDialogComponent} from "./components/ASCarsAddDialog/add-dialog-component";
+import {ASCarsListComponent} from "./components/ASCars-list/ASCars-list.component";
 
 const routes: Routes = [
   {path:'',pathMatch:'full',redirectTo:'home'},
