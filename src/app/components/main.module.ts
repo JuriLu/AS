@@ -19,6 +19,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatSelectModule} from "@angular/material/select";
 import {MatDatepickerModule} from "@angular/material/datepicker";
 import {ASCarsAddComponent} from "./ASCars-add/ASCars-add.component";
+import {ImageModule} from "primeng/image";
 
 
 @NgModule({
@@ -46,7 +47,8 @@ import {ASCarsAddComponent} from "./ASCars-add/ASCars-add.component";
     FormsModule,
     ReactiveFormsModule,
     MatSelectModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    ImageModule
   ],
   exports:[]
 })
