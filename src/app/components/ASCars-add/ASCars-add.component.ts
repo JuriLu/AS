@@ -44,7 +44,7 @@ export class ASCarsAddComponent implements OnInit {
     const dialogRef = this.dialog.open(AddDialogComponent);
 
     dialogRef.afterClosed().subscribe(() => {
-      this.ASCarsService.loadBMWByCategory('NewModel').subscribe()
+      this.ASCarsService.loadASCarsyCategory('NewModel').subscribe() //TODO: Change function Name
       this.router.navigateByUrl('home/ASCarList')
     });
   }

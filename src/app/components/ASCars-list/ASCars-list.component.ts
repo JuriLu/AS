@@ -27,7 +27,7 @@ export class ASCarsListComponent implements OnInit {
     this.categoryService.category$
       .pipe(
         switchMap(category => {
-          return this.ASCarsService.loadBMWByCategory(category)
+          return this.ASCarsService.loadASCarsyCategory(category) //TODO: Change function Name
         }),
       )
       .subscribe(cars => this.cars = cars)

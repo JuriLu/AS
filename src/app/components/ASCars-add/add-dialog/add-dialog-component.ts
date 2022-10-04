@@ -73,8 +73,8 @@ export class AddDialogComponent {
   }
 
   sendForm() {
-    this.bmwService.AddBmw(this.bmwForm.value).subscribe()
-    this.bmwService.loadBMWByCategory('NewModel')
+    this.bmwService.addASCar(this.bmwForm.value).subscribe()
+    this.bmwService.loadASCarsyCategory('NewModel') //TODO: Change function Name
     console.log(this.bmwForm.value);
   }
 }

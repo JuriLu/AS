@@ -1,19 +1,17 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {BehaviorSubject, map, Observable, shareReplay, tap} from "rxjs";
-import {AScarsModel, CategoryCars} from "../models/AScars.model";
+import {map, Observable, shareReplay, tap} from "rxjs";
+import {AScarsModel} from "../models/AScars.model";
 import {environment} from "../../../environments/environment";
 
 @Injectable()
 export class AScarsService {
 
-
-
   constructor(private http: HttpClient) {
   }
 
 
-  loadBMWByCategory(category): Observable<AScarsModel[]> {
+  loadASCarsyCategory(category): Observable<AScarsModel[]> {
     return this.http.get<AScarsModel[]>(environment.apiUrlBMWs)
       .pipe(
         tap(res => console.log('res', res)),
@@ -22,7 +20,7 @@ export class AScarsService {
       )
   }
 
-  AddBmw(model: Partial<AScarsModel>): Observable<Partial<AScarsModel>> {
+  addASCar(model: Partial<AScarsModel>): Observable<Partial<AScarsModel>> {
     return this.http.post<Partial<AScarsModel>>(environment.apiUrlBMWs, model)
   }
 
