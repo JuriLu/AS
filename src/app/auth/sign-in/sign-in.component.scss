@@ -1,10 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap');
 
-#example1 {
-  background: url("../../../../src/assets/LoginPhoto.jpg");
-  background-repeat:no-repeat;
-  background-size:contain;
-  background-position:center;}
+img {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius:15px;
+  border-bottom-left-radius:15px;
+}
+
+.borderRadiusContainer1{
+  border-radius: 20px;
+}
+
+.borderRadiusContainer2{
+  border-top-right-radius:15px;
+  border-bottom-right-radius:15px;
+}
 
 
 //body {
