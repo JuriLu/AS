@@ -5,6 +5,7 @@ import {SignUpComponent} from './sign-up/sign-up.component';
 import {RouterModule} from "@angular/router";
 import {AuthRoutingModule} from "./auth-routing.module";
 import {SharedModule} from "../shared/shared.module";
+import {CardModule} from "primeng/card";
 
 
 @NgModule({
@@ -12,12 +13,13 @@ import {SharedModule} from "../shared/shared.module";
     SignInComponent,
     SignUpComponent
   ],
-  imports: [
-    CommonModule,
-    RouterModule,
-    SharedModule,
-    AuthRoutingModule,
-  ]
+    imports: [
+        CommonModule,
+        RouterModule,
+        SharedModule,
+        AuthRoutingModule,
+        CardModule,
+    ]
 })
 export class AuthModule {
 }

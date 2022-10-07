@@ -1,133 +1,49 @@
-<!--<body>-->
-<!--<mat-card>-->
-<!--  <div class="colCustom ">-->
-
-<!--    <div class="photo-container">-->
-<!--      <a [routerLink]="['/home/ASCarList']" >-->
-<!--        <img alt="Event App" src="assets/AS.png" width="250px" height="230px">-->
-<!--      </a>-->
-<!--    </div>-->
-
-<!--    <div class=" login-container">-->
-<!--      <div>-->
-
-<!--        <form [formGroup]="loginForm">-->
-<!--          <mat-card-title>Login</mat-card-title>-->
-<!--          <mat-card-content>-->
-
-<!--            <mat-form-field class="email" appearance="outline">-->
-<!--              <mat-label>Email</mat-label>-->
-<!--              <input matInput placeholder="email@example.com" formControlName="email" required>-->
-<!--            </mat-form-field>-->
-<!--            <mat-error *ngIf="loginForm.get('email').invalid && loginForm.get('email').touched">{{emailErrorMessage()}}</mat-error>-->
-
-<!--            <div>-->
-<!--              <mat-form-field class="password" appearance="outline">-->
-<!--                <mat-label>Password</mat-label>-->
-<!--                <input matInput type={{type}} formControlName="password">-->
-<!--                <button type="button" mat-icon-button matSuffix (click)="getType()" [attr.aria-label]="'Hide password'"-->
-<!--                        [attr.aria-pressed]="hide">-->
-<!--                  <mat-icon>{{hide}}</mat-icon>-->
-<!--                </button>-->
-<!--              </mat-form-field>-->
-<!--              <mat-error *ngIf="loginForm.get('password').hasError('required')&& loginForm.get('password').touched">{{"Password required"}}</mat-error>-->
-<!--            </div>-->
-<!--            <br>-->
-<!--            <button-->
-<!--              class="authButton"-->
-<!--              mat-raised-button-->
-<!--              color="primary"-->
-<!--              (click)="Login()"-->
-<!--              [disabled]="!loginForm.valid"-->
-<!--            >Login-->
-<!--            </button>-->
-
-<!--          </mat-card-content>-->
-<!--        </form>-->
-<!--        <div class="signup_link">-->
-<!--          <a class="home_link" [routerLink]="['/home/ASCarList']">-->
-<!--            Home-->
-<!--          </a>-->
-<!--            <i class="pi pi-home"></i>-->
-<!--          <a [routerLink]="['/auth/signup']">-->
-<!--            Create Account-->
-<!--            <i class="pi pi-user-plus"></i>-->
-<!--          </a>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</mat-card>-->
-
-
-<!--</body>-->
-<!--              Entire Card-->
-<div class="row justify-content-center">
-  <div class="col-5 ">
-    <mat-card class="mt-3 borderRadius">
-
-      <!--      Image-->
-      <div class="row justify-content-center ">
-        <div class="col-4 cuMargin justify-content-center">
-          <a [routerLink]="['/home/ASCarList']">
-            <img class="borderRadius" alt="Event App" src="assets/AS.png" width="250px" height="230px">
-          </a>
-        </div>
-      </div>
-
-      <!--      Login Form-->
-      <form [formGroup]="loginForm" class="justify-content-center">
-        <div class="row justify-content-center mt-5">
-          <div class="col-12 justify-content-center">
-
-            <!--            Login Title-->
-            <div class="row justify-content-center ">
-              <div class="col-1">
-                <mat-card-title>Login</mat-card-title>
-              </div>
-            </div>
-
-            <mat-card-content>
-              <div class="row justify-content-center">
-                <div class="col-4">
-                  <mat-form-field class="email" appearance="outline">
-                    <mat-label>Email</mat-label>
-                    <input matInput placeholder="email@example.com" formControlName="email" required>
-                  </mat-form-field>
-                  <mat-error
-                    *ngIf="loginForm.get('email').invalid && loginForm.get('email').touched">{{emailErrorMessage()}}</mat-error>
-                </div>
-              </div>
-
-              <div>
-                <mat-form-field class="password" appearance="outline">
-                  <mat-label>Password</mat-label>
-                  <input matInput type={{type}} formControlName="password">
-                  <button type="button" mat-icon-button matSuffix (click)="getType()"
-                          [attr.aria-label]="'Hide password'"
-                          [attr.aria-pressed]="hide">
-                    <mat-icon>{{hide}}</mat-icon>
-                  </button>
-                </mat-form-field>
-                <mat-error
-                  *ngIf="loginForm.get('password').hasError('required')&& loginForm.get('password').touched">{{"Password required"}}</mat-error>
-              </div>
-              <br>
-              <button
-                class="authButton"
-                mat-raised-button
-                color="primary"
-                (click)="Login()"
-                [disabled]="!loginForm.valid"
-              >Login
-              </button>
-
-            </mat-card-content>
-
-
+<div class="card bg-dark">
+  <div class="flex flex-row card-container indigo-container p-7">
+    <div id="example1" class="flex-1 bg-transparent  text-white font-bold text-center p-4 border-round">
+      <mat-card class="bg-transparent text-white border-0">
+        <div class="row">
+          <div class="col-3">
+        <mat-card-title>ASCars</mat-card-title>
           </div>
         </div>
-      </form>
-    </mat-card>
+        <mat-card-content>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+        </mat-card-content>
+        <mat-card-footer class="d-flex justify-content-end">ASCars is an e-showroom for choosing the car of your dreams</mat-card-footer>
+      </mat-card>
+    </div>
+    <div class="flex-1 bg-indigo-500 text-black font-bold text-center p-4 border-round">
+
+    </div>
   </div>
 </div>

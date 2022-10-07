@@ -70,6 +70,5 @@ function isAuthorized(req) {
 
 function readUsers() {
   const dbRaw = fs.readFileSync('./server/db.json');
-  const users = JSON.parse(dbRaw).users
-  return users;
+  return JSON.parse(dbRaw).users;
 }

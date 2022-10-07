@@ -1,16 +1,12 @@
-//@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap');
-//
-.cuMargin{
-  margin-right: 28px;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap');
 
-.borderRadius{
-  border-radius: 15px;
-}
-//
-//
-//
-//
+#example1 {
+  background: url("../../../../src/assets/LoginPhoto.jpg");
+  background-repeat:no-repeat;
+  background-size:contain;
+  background-position:center;}
+
+
 //body {
 //  background: transparent;
 //  height: 100vh;
@@ -169,5 +165,4 @@
 //.moveDown{
 //  transform: translateY(5px)
 //}
-//
 //
