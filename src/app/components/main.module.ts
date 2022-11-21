@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {CommonModule, NgOptimizedImage} from '@angular/common';
 import {HeaderBarComponent} from "./header-bar/header-bar.component";
 import {CategoriesBarComponent} from "./categories-bar/categories-bar.component";
 import {ASCarsListComponent} from "./ASCars-list/ASCars-list.component";
@@ -10,6 +10,7 @@ import {FooterComponent} from "./footer/footer.component";
 import {MainRoutingModule} from "./main.routing.module";
 import {ASCarsAddComponent} from "./ASCars-add/ASCars-add.component";
 import {SharedModule} from "../shared/shared.module";
+import {ASCarsAdsComponent} from "./ascars-ads/ascars-ads.component";
 
 
 @NgModule({
@@ -21,12 +22,13 @@ import {SharedModule} from "../shared/shared.module";
     ASCarsSingleItemComponent,
     AddDialogComponent,
     FooterComponent,
-    ASCarsAddComponent
+    ASCarsAddComponent,
+    ASCarsAdsComponent
   ],
   imports: [
     CommonModule,
     MainRoutingModule,
-    SharedModule,
+    SharedModule
   ],
   exports:[]
 })

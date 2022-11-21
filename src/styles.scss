@@ -27,7 +27,8 @@ body {
   margin-bottom: 170px;
 }
 
-/* TODO(mdc-migration): The following rule targets internal classes of dialog that may no longer apply for the MDC version.*/
-mat-dialog-container{
-  padding: 30px !important;
+.mdc-dialog .mdc-dialog__content {
+  padding: 0 !important;
+  overflow-x: hidden;
+  min-height: calc(100% - 10px) !important;
 }

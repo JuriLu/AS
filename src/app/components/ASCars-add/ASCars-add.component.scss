@@ -1,4 +1,6 @@
 *{
+  margin: 0;
+  padding: 0;
   //font-family: BMWTypeNextLatin, "Helvetica", "Arial", "Hiragino", "Kaku", "Gothic", "ProN", "Hiragino", "Sans", "Meiryo", sans-serif;
 }
 
@@ -7,8 +9,14 @@ mat-card-content{
   font-size: 20px;
   color: #16588E;
 }
-img{
+
+
+mat-card img{
+  object-fit: cover; /*this makes the image in src fit to the size specified below*/
+  width: 100%; /* Here you can use wherever you want to specify the width and also the height of the <img>*/
+  height: 100%;
   border-radius: 50px;
   margin-left: 0;
+  padding-top: 20px;
   padding-right: 15px;
 }
