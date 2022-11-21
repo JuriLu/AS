@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {AddDialogComponent} from "./add-dialog/add-dialog-component";
-import {MatDialog} from "@angular/material/dialog";
+import {MatLegacyDialog as MatDialog} from "@angular/material/legacy-dialog";
 import {AScarsService} from "../../core/services/AScars.service";
 import {Router} from "@angular/router";
 
