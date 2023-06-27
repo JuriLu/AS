@@ -10,7 +10,7 @@ export class AScarsService {
   constructor(private http: HttpClient) {
   }
 
-  loadASCarsyCategory(category): Observable<AScarsModel[]> {
+  loadASCarsCategory(category): Observable<AScarsModel[]> {
     return this.http.get<AScarsModel[]>(environment.apiUrlBMWs)
       .pipe(
         tap((res: AScarsModel[]) => console.log('res', res)),
