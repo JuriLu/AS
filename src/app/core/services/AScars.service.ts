@@ -10,12 +10,11 @@ export class AScarsService {
   constructor(private http: HttpClient) {
   }
 
-
   loadASCarsyCategory(category): Observable<AScarsModel[]> {
     return this.http.get<AScarsModel[]>(environment.apiUrlBMWs)
       .pipe(
-        tap(res => console.log('res', res)),
-        map(bmws => bmws.filter(bmw => bmw.category === category)),
+        tap((res: AScarsModel[]) => console.log('res', res)),
+        map((bmws: AScarsModel[]) => bmws.filter((bmw: AScarsModel): boolean => bmw.category === category)),
         shareReplay()
       )
   }

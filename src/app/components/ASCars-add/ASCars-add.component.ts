@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {AddDialogComponent} from "./add-dialog/add-dialog-component";
+import {ASCarsAddDialogComponent} from "./ASCars-add-dialog/ASCars-add-dialog-component";
 import {MatDialog} from "@angular/material/dialog";
 import {AScarsService} from "../../core/services/AScars.service";
 import {Router} from "@angular/router";
@@ -39,7 +39,7 @@ export class ASCarsAddComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    const dialogRef = this.dialog.open(AddDialogComponent);
+    const dialogRef = this.dialog.open(ASCarsAddDialogComponent);
 
     dialogRef.afterClosed().subscribe(() => {
       this.ASCarsService.loadASCarsyCategory('NewModel').subscribe() //TODO: Change function Name

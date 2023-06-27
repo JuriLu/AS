@@ -10,6 +10,10 @@ import {MatInputModule} from "@angular/material/input";
 import {ReactiveFormsModule} from "@angular/forms";
 import {MatSelectModule} from "@angular/material/select";
 import {MatDatepickerModule} from "@angular/material/datepicker";
+import {HeaderBarComponent} from "./components/header-bar/header-bar.component";
+import {CategoriesBarComponent} from "./components/categories-bar/categories-bar.component";
+import {FooterComponent} from "./components/footer/footer.component";
+import {RouterOutlet} from "@angular/router";
 
 const MaterialComponents = [
   MatCardModule,
@@ -27,11 +31,16 @@ const MaterialComponents = [
 ]
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    HeaderBarComponent,
+    CategoriesBarComponent,
+    FooterComponent
+  ],
   imports: [
     CommonModule,
-    MaterialComponents
+    MaterialComponents,
+    RouterOutlet
   ],
-  exports:[MaterialComponents]
+  exports: [MaterialComponents, HeaderBarComponent, CategoriesBarComponent, FooterComponent]
 })
 export class SharedModule { }

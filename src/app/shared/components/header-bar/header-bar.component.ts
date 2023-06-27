@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {News} from "../../core/models/ASnews.model";
-import {ASnewsService} from "../../core/services/ASnews.service";
 
 import {Router} from "@angular/router";
+import { News } from 'src/app/core/models/ASnews.model';
+import {ASnewsService} from "../../../core/services/ASnews.service";
 
 @Component({
   selector: 'app-header-bar',

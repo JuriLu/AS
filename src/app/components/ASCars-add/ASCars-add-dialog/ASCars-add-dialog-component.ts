@@ -27,8 +27,8 @@ export const MY_FORMATS = {
 
 @Component({
   selector: 'dialog-component',
-  templateUrl: 'add-dialog-component.html',
-  styleUrls: ['./add-dialog.component.scss'],
+  templateUrl: 'ASCars-add-dialog-component.html',
+  styleUrls: ['./ASCars-add-dialog.component.scss'],
   providers: [
     // `MomentDateAdapter` can be automatically provided by importing `MomentDateModule` in your
     // application's root module. We provide it at the component level here, due to limitations of
@@ -42,7 +42,7 @@ export const MY_FORMATS = {
     {provide: MAT_DATE_FORMATS, useValue: MY_FORMATS},
   ],
 })
-export class AddDialogComponent {
+export class ASCarsAddDialogComponent {
 
   date = new FormControl(moment(), [Validators.required]);
 

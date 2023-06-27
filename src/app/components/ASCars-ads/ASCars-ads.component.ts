@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 import {Ad} from "../ASCars-add/ASCars-add.component";
 
 @Component({
-  selector: 'app-ascars-ads',
-  templateUrl: './ascars-ads.component.html',
-  styleUrls: ['./ascars-ads.component.scss']
+  selector: 'app-ASCars-ads',
+  templateUrl: './ASCars-ads.component.html',
+  styleUrls: ['./ASCars-ads.component.scss']
 })
 export class ASCarsAdsComponent {
   public Ads:Ad[]=[
