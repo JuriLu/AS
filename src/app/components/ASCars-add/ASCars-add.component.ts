@@ -6,7 +6,6 @@ import {Router} from "@angular/router";
 import {Ad} from "../../shared/interfaces/ads.interface";
 
 
-
 @Component({
   selector: 'app-ASCars-add',
   templateUrl: './ASCars-add.component.html',
@@ -14,16 +13,16 @@ import {Ad} from "../../shared/interfaces/ads.interface";
 })
 export class ASCarsAddComponent implements OnInit {
 
-  private Ads:Ad[]=[
+  private Ads: Ad[] = [
     {
-      title:'Mercedes AD',
-    description:'Mercedes CLS 2015 AMG EDITION 200.000$',
-      source:'https://group-media.mercedes-benz.com/marsMediaSite/scr/1459409669000/7998852v1tv3m3/D248074.jpg'
+      title: 'Mercedes AD',
+      description: 'Mercedes CLS 2015 AMG EDITION 200.000$',
+      source: 'https://group-media.mercedes-benz.com/marsMediaSite/scr/1459409669000/7998852v1tv3m3/D248074.jpg'
     },
     {
-      title:'BMW AD',
-      description:'BMW 6 Series M POWER 250.000$',
-      source:'https://i.pinimg.com/originals/2a/ea/5d/2aea5dc44c5cfab452d1c91fcaaf8037.jpg'
+      title: 'BMW AD',
+      description: 'BMW 6 Series M POWER 250.000$',
+      source: 'https://i.pinimg.com/originals/2a/ea/5d/2aea5dc44c5cfab452d1c91fcaaf8037.jpg'
     },
   ]
 
@@ -36,18 +35,17 @@ export class ASCarsAddComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    const dialogRef = this.dialog.open(ASCarsAddDialogComponent);
-
-    dialogRef.afterClosed().subscribe(() => {
-      this.ASCarsService.loadASCarsyCategory('NewModel').subscribe() //TODO: Change function Name
-      this.router.navigateByUrl('home/ASCarList')
-    });
+    // const dialogRef = this.dialog.open(ASCarsAddDialogComponent);
+    //
+    // dialogRef.afterClosed().subscribe((): void => {
+    //   this.ASCarsService.loadASCarsCategory('NewModel').subscribe()
+    //   this.router.navigateByUrl('home/ASCarList')
+    // });
   }
 
-  get AD(){
+  get AD() {
     return this.Ads
   }
-
 
 
 }

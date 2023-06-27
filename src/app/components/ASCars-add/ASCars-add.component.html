@@ -1,26 +1,23 @@
 <div class="row">
-
-    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 mt-5 mx-5">
-      <mat-card appearance="raised">
-        <mat-card-title class="text-center">{{AD[0].title}}</mat-card-title>
-        <mat-card-content class="text-center mat-subtitle-2">{{AD[0].description}}</mat-card-content>
-        <img
-          [src]="AD[0].source"
-          alt="Albania Showroom AD"
-        >
-      </mat-card>
-    </div>
-    <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3">
-
-    </div>
-    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 mt-5 mx-2">
-      <mat-card appearance="raised">
-        <mat-card-title class="text-center">{{AD[1].title}}</mat-card-title>
-        <mat-card-content class="text-center mat-subtitle-2">{{AD[1].description}}</mat-card-content>
-        <img
-          [src]=AD[1].source
-          alt="Albania Showroom AD">
-      </mat-card>
-    </div>
-
+  <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 mt-5 mx-5">
+    <mat-card appearance="raised">
+      <mat-card-title class="text-center">{{AD[0].title}}</mat-card-title>
+      <mat-card-content class="text-center mat-subtitle-2">{{AD[0].description}}</mat-card-content>
+      <img
+        [src]="AD[0].source"
+        alt="Albania Showroom AD"
+      >
+    </mat-card>
   </div>
+  <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3"></div>
+  <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 mt-5 mx-2">
+    <mat-card appearance="raised">
+      <mat-card-title class="text-center">{{AD[1].title}}</mat-card-title>
+      <mat-card-content class="text-center mat-subtitle-2">{{AD[1].description}}</mat-card-content>
+      <img
+        [src]=AD[1].source
+        alt="Albania Showroom AD">
+    </mat-card>
+  </div>
+</div>
+<app-ASCars-dialog-component></app-ASCars-dialog-component>

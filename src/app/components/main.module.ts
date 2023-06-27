@@ -8,6 +8,11 @@ import {MainRoutingModule} from "./main.routing.module";
 import {ASCarsAddComponent} from "./ASCars-add/ASCars-add.component";
 import {SharedModule} from "../shared/shared.module";
 import {ASCarsAdsComponent} from "./ASCars-ads/ASCars-ads.component";
+import {DialogModule} from "primeng/dialog";
+import {ButtonModule} from "primeng/button";
+import {InputTextModule} from "primeng/inputtext";
+import {CalendarModule} from "primeng/calendar";
+import {InputNumberModule} from "primeng/inputnumber";
 
 
 @NgModule({
@@ -22,7 +27,12 @@ import {ASCarsAdsComponent} from "./ASCars-ads/ASCars-ads.component";
   imports: [
     CommonModule,
     MainRoutingModule,
-    SharedModule
+    SharedModule,
+    DialogModule,
+    ButtonModule,
+    InputTextModule,
+    CalendarModule,
+    InputNumberModule
   ],
   exports:[]
 })
