@@ -92,7 +92,6 @@
   background: transparent;
   animation-duration: 0.5s;
   animation-fill-mode: both;
-
 }
 
 .menu.active {
@@ -121,8 +120,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #716360;
-  border: #716360 1px solid;
+  background: #16588E;
+  //border: #716360 1px solid;
   width: 50px;
   height: 50px;
   font-size: 55%;
@@ -136,7 +135,6 @@
 }
 
 .menu li a:hover {
-  color: #8F00FF;
   border: #8F00FF 2px solid;
 }
 
@@ -173,7 +171,7 @@ img {
 .activeImg {
   width: 80px;
   height: 80px;
-  border: #716360 3px solid;
+  border: #16588E 2px solid;
   transition: 0.8s;
 }
 

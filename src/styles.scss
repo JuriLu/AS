@@ -5,30 +5,5 @@
   src: url(assets/BMWTypeNextLatin.woff2);
 }
 
-html, body {
-  height: 100%
-}
-
-body {
-  margin: 0;
-  padding-right: 0;
-  //background-image: url("https://www.bmw-motorsport.com/content/dam/bmw/marketBMWSPORTS/bmw-motorsport_com/assets/fascination/wallpaper/2021/M4GT3/Naming/Wallpaper_3840x2401px_5.jpg.asset.1622633724201.jpg");
-  background-image: url("assets/AS.png");
-  background-repeat: repeat;
-  //background-size: 1522px 952px;
-  font-family: BMWTypeNextLatin, "Helvetica", "Arial", "Hiragino", "Kaku", "Gothic", "ProN", "Hiragino", "Sans", "Meiryo", sans-serif;
-}
-
-.material-icons {
-  font-family: 'Material Icons' !important;
-}
-
-.carousel-control-prev, .carousel-control-next {
-  margin-bottom: 170px;
-}
-
-.mdc-dialog .mdc-dialog__content {
-  padding: 0 !important;
-  overflow-x: hidden;
-  min-height: calc(100% - 10px) !important;
-}
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
