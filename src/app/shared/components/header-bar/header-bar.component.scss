@@ -6,6 +6,16 @@
   margin-top: 150px;
 }
 
+.bg-Custom {
+  background: linear-gradient(270deg, #81C4FF, #16588E, #E7222E);
+}
+
+rect {
+  cursor: pointer;
+  shape-rendering: crispEdges;
+  fill: url(#MyGradient);
+}
+
 
 // Bootstrap Header Template Styles
 .bd-placeholder-img {
