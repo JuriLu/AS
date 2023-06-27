@@ -1,100 +1,34 @@
-//mat-card.example-card {
-//  background-color: white;
-//  margin-bottom: 15px;
-//}
-
 .All {
   font-family: BMWTypeNextLatin, "Helvetica", "Arial", "Hiragino", "Kaku", "Gothic", "ProN", "Hiragino", "Sans", "Meiryo", sans-serif;
-  //margin-left: 250px;
 }
 
-.card {
-  opacity: 95%;
+.overflowY {
+  overflow-y: scroll;
 }
 
-img {
-  width: 60%;
-  height: 60%;
-  margin-left: 80px;
-  //border: #1c75c0 2px solid;
-  padding: 0;
-  border-radius: 10px;
-}
-
-
-.CUcontainer {
-  min-width: 700px;
-  position: relative;
+.containerCustom{
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 20px auto
 }
 
-.CUcontainer .CUcard {
-  position: relative;
+.cardCustom{
+  width: 27rem;
+  margin: 10px;
+  height: 45rem;
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 4px 3px 8px 0px rgb(231, 34, 46);
+  transition-duration: 0.3s;
+  cursor: pointer;
+
+  &:hover{
+    box-shadow: 4px 3px 8px 11px rgb(231, 34, 46);
+    transform: translateY(-3px);
+  }
 }
-
-
-.CUcontainer .CUcard .face.face1 {
-  position: relative;
-  background: #333;
-  z-index: 1;
-  transform: translateY(100px);
-}
-
-
-.CUcontainer .CUcard:hover .face.face1 {
-  transform: translateY(0);
-  box-shadow: inset 0 0 60px whitesmoke,
-  inset 20px 0 80px #f0f,
-  inset -20px 0 80px #0ff,
-  inset 20px 0 300px #f0f,
-  inset -20px 0 300px #0ff,
-  0 0 50px #fff,
-  -10px 0 80px #f0f,
-  10px 0 80px #0ff;
-}
-
-.CUcontainer .CUcard:hover .face.face1 .CUcontent {
-  opacity: .8;
-  transition: 0.5s;
-  text-align: center;
-}
-
-.CUcontainer .CUcard .face.face1 .CUcontent mat-icon {
-  font-size: 3em;
-  color: white;
-  display: inline-block;
-}
-
-.CUcontainer .CUcard .face.face1 .CUcontent h3 {
-  font-size: 1em;
-  color: white;
-  text-align: center;
-}
-
-.CUcontainer .CUcard .face.face1 .CUcontent a {
-  transition: 0.5s;
-}
-
-.CUcontainer .CUcard .face.face2 {
-  position: relative;
-  background: whitesmoke;
-  //display: flex;
-  //align-items: center;
-  //justify-content: center;
-  padding: 20px;
-  box-sizing: border-box;
-  box-shadow: 0 20px 50px rgba(0,0,0,.8);
-  transform: translateY(-100px);
-}
-
-.CUcontainer .CUcard:hover .face.face2 {
- transform: translateY(0);
-}
-
-.CUcontainer .CUcard .face.face2 .CUcontent p, a {
-font-size: 10pt}
-
 
 

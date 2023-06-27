@@ -1,30 +1,25 @@
-<div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 mt-3 px-5 All" *ngFor="let bmw of bmwItem">
-  <div class="CUcontainer">
-    <div class="CUcard ">
-      <div class="face face1">
-        <div class="CUcontent">
-          <h3>{{bmw.cModel}} {{bmw.generation}}</h3>
-          <img class=" col-md-12 card-img-top justify-content-center align-items-center mt-3" src="{{bmw.img}}"
-               alt="{{bmw.cModel + bmw.generation}}">
-        </div>
+<div class="container">
+   <div class="cardCustom All overflowY">
+     <div class="align-content-center">
+       <h3>{{carModel.cModel}} {{carModel.generation}}</h3>
+       <img class=" col-md-12 card-img-top justify-content-center align-items-center mt-3" src="{{carModel.img}}"
+            alt="{{carModel.cModel + carModel.generation}}">
+     </div>
 
-        <div class="face face2">
-          <div class="CUcontent">
-            <p class="card-text">{{bmw.description}}</p>
-            <ul class="mt-2">
-              <li *ngIf="bmw.engineCm3">Engine: {{bmw.engineCm3}} cm3</li>
-              <li *ngIf="bmw.engineKWH">Electric Engine: {{bmw.engineKWH}} Kwh</li>
-              <li>Fuel Type: {{bmw.engineCombustion | titlecase}}</li>
-              <li>Power: {{bmw.power}} HP</li>
-              <li>First Production year: {{bmw.YOP | date:'MM/YYYY' }}</li>
-              <li>Body Type: {{bmw.bodyType | titlecase}}</li>
-            </ul>
-            <a type="button" class="btn btn-sm btn-outline-secondary">View <strong>HC</strong></a>
-            <a type="button" class="btn btn-sm btn-outline-secondary">❤ <strong>HC</strong></a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
+     <div class="align-content-center pt-2 px-2">
+       <p class="card-text">{{carModel.description}}</p>
+       <ul class="mt-2">
+         <li *ngIf="carModel.engineCm3">Engine: {{carModel.engineCm3}} cm3</li>
+         <li *ngIf="carModel.engineKWH">Electric Engine: {{carModel.engineKWH}} Kwh</li>
+         <li>Fuel Type: {{carModel.engineCombustion | titlecase}}</li>
+         <li>Power: {{carModel.power}} HP</li>
+         <li>First Production year: {{carModel.YOP | date:'MM/YYYY' }}</li>
+         <li>Body Type: {{carModel.bodyType | titlecase}}</li>
+       </ul>
+       <a type="button" class="btn btn-sm btn-outline-secondary">View <strong>HC</strong></a>
+       <a type="button" class="btn btn-sm btn-outline-secondary">❤ <strong>HC</strong></a>
+     </div>
+   </div>
 </div>
+
+

@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {AScarsModel} from "../../core/models/AScars.model";
 import {AScarsService} from "../../core/services/AScars.service";
-import {switchMap} from "rxjs";
+import {Observable, switchMap} from "rxjs";
 import {CategoryService} from "../../core/services/category.service";
 
 
@@ -11,7 +11,7 @@ import {CategoryService} from "../../core/services/category.service";
   styleUrls: ['./ASCars-list.component.scss']
 })
 export class ASCarsListComponent implements OnInit {
-  category = this.categoryService.category$
+  category: Observable<string> = this.categoryService.category$
 
 
   cars: AScarsModel[];
@@ -19,7 +19,7 @@ export class ASCarsListComponent implements OnInit {
   constructor(
     private ASCarsService: AScarsService,
     private categoryService: CategoryService
-    ) {
+  ) {
   }
 
   ngOnInit(): void {
@@ -30,7 +30,7 @@ export class ASCarsListComponent implements OnInit {
           return this.ASCarsService.loadASCarsyCategory(category) //TODO: Change function Name
         }),
       )
-      .subscribe(cars => this.cars = cars)
+      .subscribe((cars: AScarsModel[]) => this.cars = cars)
   }
 
 }

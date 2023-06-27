@@ -8,7 +8,7 @@ import {AScarsModel} from "../../../core/models/AScars.model";
 })
 export class ASCarsSingleItemComponent implements OnInit {
 
-  @Input() bmwItem: AScarsModel[]
+  @Input() carModel: AScarsModel
 
   constructor() {
   }
