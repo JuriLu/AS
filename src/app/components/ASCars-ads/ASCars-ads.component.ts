@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {Ad} from "../ASCars-add/ASCars-add.component";
+import {Ad} from "../../shared/interfaces/ads.interface";
 
 @Component({
   selector: 'app-ASCars-ads',

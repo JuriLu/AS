@@ -6,6 +6,11 @@
   overflow-y: scroll;
 }
 
+img {
+  width:480px;
+  height:320px
+}
+
 .containerCustom{
   display: flex;
   flex-wrap: wrap;
@@ -15,18 +20,18 @@
 }
 
 .cardCustom{
-  width: 27rem;
+  width: 30rem;
   margin: 10px;
   height: 45rem;
   overflow: hidden;
   border-radius: 5px;
   background-color: white;
-  box-shadow: 4px 3px 8px 0px rgb(231, 34, 46);
+  box-shadow: 4px 3px 8px 0px #E7222E;
   transition-duration: 0.3s;
   cursor: pointer;
 
   &:hover{
-    box-shadow: 4px 3px 8px 11px rgb(231, 34, 46);
+    box-shadow: 4px 3px 8px 11px #E7222E;
     transform: translateY(-3px);
   }
 }

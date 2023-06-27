@@ -9,11 +9,12 @@ import {AScarsModel} from "../../../core/models/AScars.model";
 export class ASCarsSingleItemComponent implements OnInit {
 
   @Input() carModel: AScarsModel
-
+  title:string = ''
   constructor() {
   }
 
   ngOnInit(): void {
+    this.title = this.carModel.cModel + ' '+ this.carModel.generation
   }
 
 }

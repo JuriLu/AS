@@ -2,7 +2,7 @@
 
 <mat-card-title class="text-white text-md-center">{{category | async}}</mat-card-title>
 <div class="row">
-  <div *ngFor="let car of cars" class="list col-md-3">
+  <div *ngFor="let car of cars" class="list col-md-4">
     <app-ASCars-single-item [carModel]="car"></app-ASCars-single-item>
   </div>
 </div>

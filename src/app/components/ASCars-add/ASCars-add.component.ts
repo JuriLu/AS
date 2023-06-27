@@ -3,12 +3,9 @@ import {ASCarsAddDialogComponent} from "./ASCars-add-dialog/ASCars-add-dialog-co
 import {MatDialog} from "@angular/material/dialog";
 import {AScarsService} from "../../core/services/AScars.service";
 import {Router} from "@angular/router";
+import {Ad} from "../../shared/interfaces/ads.interface";
 
-export interface Ad {
-  title:string;
-  description:string;
-  source:string
-}
+
 
 @Component({
   selector: 'app-ASCars-add',
