@@ -325,36 +325,18 @@
       "id": "h1l-hKp"
     },
     {
-      "img": "rqwe",
-      "cModel": "qwer",
-      "generation": "qwer",
-      "engineCm3": 33,
+      "img": "https://www.bentleymotors.com/content/dam/bentley/Master/Models/derivative-strategy-/continental-gt/continental-gt-base/24-my/1920x960_GT_hero_updated.jpg/_jcr_content/renditions/original.image_file.1920.960.file/1920x960_GT_hero_updated.jpg",
+      "cModel": "Bently",
+      "generation": "Continental GT",
+      "engineCm3": "4000",
       "engineKWH": "",
-      "engineCombustion": [
-        {
-          "name": "diesel",
-          "code": "DSL"
-        }
-      ],
-      "YOP": "2019-12-31T23:00:00.000Z",
-      "bodyType": "qwer",
-      "power": 234,
-      "description": "qwer",
-      "category": "Legendary",
-      "id": "icumXaq"
-    },
-    {
-      "img": "aaaa",
-      "cModel": "aaa",
-      "generation": "aaa",
-      "engineCm3": 234,
-      "engineKWH": "",
-      "YOP": "1989-12-31T23:00:00.000Z",
-      "bodyType": "aaaaa",
-      "power": 234,
-      "description": "aaaaaaa",
+      "engineCombustion": "petrol",
+      "YOP": "2021-12-31T23:00:00.000Z",
+      "bodyType": "Coupe",
+      "power": "582",
+      "description": "Bently Continental Gt 2022",
       "category": "NewModel",
-      "id": "H8HzxOt"
+      "id": "AFrloq1"
     }
   ],
   "news": [

@@ -105,8 +105,8 @@
   position: absolute;
   list-style: none;
   transform: rotate(calc(360deg / 8 * var(--i)));
-  transform-origin: 100px;
-  left: 15px;
+  transform-origin: 110px;
+  left: 5px;
   transition: 0.5s;
   transition-delay: calc(0.05s * var(--i));
   transform: rotate(0deg) translateX(70px);
@@ -116,22 +116,30 @@
   transform: rotate(calc(360deg / 8 * var(--i))) translateX(10px);
 }
 
+.menu li a.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 0.5s, opacity 0.5s linear;
+}
+
 .menu li a {
   display: flex;
   justify-content: center;
   align-items: center;
   background: #16588E;
   //border: #716360 1px solid;
-  width: 50px;
-  height: 50px;
-  font-size: 55%;
+  width: 60px;
+  height: 60px;
+  font-size: 60%;
   border-radius: 50%;
   transform: rotate(calc(360deg / -8 * var(--i))); // number here changes for as many elements there are
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
   text-decoration: none;
   color: white;
-  transition: 0.5s;
   cursor: pointer;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.5s linear
 }
 
 .menu li a:hover {
@@ -143,8 +151,8 @@
   position: absolute;
   width: 70px;
   height: 70px;
-  background: #fff;
-  border: #16588E 4px solid;
+  background: transparent;
+  border: transparent 4px solid;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -152,7 +160,7 @@
   border-radius: 50%;
   cursor: pointer;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
-  font-size: 2em;
+  font-size: 3rem;
   transition: 0.75s;
 }
 
@@ -161,17 +169,17 @@
 }
 
 img {
-  width: 70px;
-  height: 70px;
-  border: white 2px solid;
+  width: 5.313rem;
+  height: 5.313rem;
+  border: transparent 2px solid;
   border-radius: 50%;
   transition: 0.5s;
 }
 
 .activeImg {
-  width: 80px;
-  height: 80px;
-  border: #16588E 2px solid;
+  width: 6.25rem;
+  height: 6.25rem;
+  border: transparent 2px solid;
   transition: 0.8s;
 }
 
