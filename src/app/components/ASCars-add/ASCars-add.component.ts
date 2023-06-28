@@ -1,17 +1,17 @@
-import {Component, OnInit} from '@angular/core';
-import {ASCarsAddDialogComponent} from "./ASCars-add-dialog/ASCars-add-dialog-component";
-import {MatDialog} from "@angular/material/dialog";
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {AScarsService} from "../../core/services/AScars.service";
-import {Router} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {Ad} from "../../shared/interfaces/ads.interface";
-
-
+import {Subscription} from "rxjs";
+import {FormControl, FormGroup, Validators} from "@angular/forms";
 @Component({
   selector: 'app-ASCars-add',
   templateUrl: './ASCars-add.component.html',
   styleUrls: ['./ASCars-add.component.scss']
 })
-export class ASCarsAddComponent implements OnInit {
+export class ASCarsAddComponent implements OnInit,OnDestroy {
+  subs: Subscription[] = []
+  bmwForm: FormGroup;
 
   private Ads: Ad[] = [
     {
@@ -28,24 +28,40 @@ export class ASCarsAddComponent implements OnInit {
 
 
   constructor(
-    public dialog: MatDialog,
-    private ASCarsService: AScarsService,
-    private router: Router
+    private bmwService: AScarsService,
+    private router: Router,
+    private activeRoute: ActivatedRoute
   ) {
+    this.bmwForm = new FormGroup({
+        img: new FormControl('', [Validators.required]),
+        cModel: new FormControl('', [Validators.required]),
+        generation: new FormControl('', [Validators.required]),
+        engineCm3: new FormControl('', [Validators.pattern('(\\d{1,}).*(\\d{1,})')]),
+        engineKWH: new FormControl('', [Validators.pattern('(\\d{1,}).*(\\d{1,})')]),
+        engineCombustion: new FormControl('', [Validators.required]),
+        YOP: new FormControl('', [Validators.required]),
+        bodyType: new FormControl('', [Validators.required]),
+        power: new FormControl('', [Validators.required, Validators.pattern('(\\d{1,}).*(\\d{1,})')]),
+        description: new FormControl('', [Validators.required,Validators.maxLength(300)]),
+        category: new FormControl('', [Validators.required])
+      })
   }
 
-  ngOnInit(): void {
-    // const dialogRef = this.dialog.open(ASCarsAddDialogComponent);
-    //
-    // dialogRef.afterClosed().subscribe((): void => {
-    //   this.ASCarsService.loadASCarsCategory('NewModel').subscribe()
-    //   this.router.navigateByUrl('home/ASCarList')
-    // });
+  ngOnInit(): void {}
+
+  ngOnDestroy() :void{
+    this.subs.length > 0 && this.subs.forEach((s:Subscription) => s.unsubscribe())
   }
 
+  sendForm(): void {
+    this.subs.push(this.bmwService.addASCar(this.bmwForm.value).subscribe())
+    console.log('Object pushed: ',this.bmwForm.value);
+  }
   get AD() {
     return this.Ads
   }
 
-
+  navigateBack():void{
+    this.router.navigate(['../'])
+  }
 }
