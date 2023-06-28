@@ -37,27 +37,28 @@
     <div class="row justify-content-center">
 
       <!--  engine combustion-->
-      <mat-form-field
-        class="{{bmwForm.get('engineCombustion').value ==='hybrid' || bmwForm.get('engineCombustion').value ==='electric' ? 'col-5':'col-10'}}"
-        appearance="outline">
-        <mat-label>Engine Type</mat-label>
-        <select matNativeControl required formControlName="engineCombustion">
-          <option value="diesel">Diesel</option>
-          <option value="petrol">Petrol</option>
-          <option value="hybrid">Hybrid</option>
-          <option value="electric">Electric</option>
-        </select>
-        <mat-hint
-          *ngIf="bmwForm.get('engineCombustion').hasError('required') && bmwForm.get('engineCombustion').touched">
-          Required
-        </mat-hint>
-      </mat-form-field>
+      <div class="{{bmwForm.get('engineCombustion').value.name ==='hybrid' || bmwForm.get('engineCombustion').value.name ==='electric' ? 'col-5':'col-10'}}">
+        <div class="row">
+          <label htmlFor="engineCombustion">Engine Combustion</label>
+        </div>
+        <p-multiSelect
+          matNativeControl
+          id="engineCombustion"
+          formControlName="engineCombustion"
+          [options]="engType"
+          optionLabel="name"
+          size="10"
+          [ngClass]="{'ng-valid ng-dirty' : bmwForm.get('engineCombustion').hasError('required') && bmwForm.get('engineCombustion').touched }"
+        >
+        </p-multiSelect>
+        <p *ngIf="bmwForm.get('engineCombustion').hasError('required') && bmwForm.get('engineCombustion').touched">Required</p>
+      </div>
 
       <!--  engine kWH-->
       <div
         class="col-5"
-        *ngIf="bmwForm.get('engineCombustion').value ==='hybrid' || bmwForm.get('engineCombustion').value ==='electric' "
-        appearance="outline">
+        *ngIf="bmwForm.get('engineCombustion').value.name ==='hybrid' || bmwForm.get('engineCombustion').value.name ==='electric' "
+        >
         <label htmlFor="KWH">Battery Capacity KWH</label>
         <input
           pInputText
@@ -65,8 +66,7 @@
           aria-describedby="KWH"
           placeholder="122"
           formControlName="engineKWH"
-          [ngClass]="{
-          'ng-valid ng-dirty' : bmwForm.get('engineKWH').hasError('pattern') && bmwForm.get('engineKWH').touched }"
+          [ngClass]="{'ng-valid ng-dirty' : bmwForm.get('engineKWH').hasError('pattern') && bmwForm.get('engineKWH').touched }"
         >
         <p *ngIf="bmwForm.get('engineKWH').hasError('pattern') && bmwForm.get('engineKWH').touched">Only Numbers
           allowed</p>
@@ -79,7 +79,7 @@
     <div class="row justify-content-center">
 
       <!--  generation-->
-      <div class="{{bmwForm.get('engineCombustion').value ==='electric' ? 'col-10':'col-5'}}">
+      <div class="{{bmwForm.get('engineCombustion').value.name ==='electric' ? 'col-10':'col-5'}}">
         <div class="row">
           <label htmlFor="Generation">Generation</label>
         </div>
@@ -89,23 +89,22 @@
           aria-describedby="Generation"
           placeholder="G22"
           formControlName="generation"
-          [ngClass]="{'ng-valid ng-dirty' : bmwForm.get('generation').hasError('required') && bmwForm.get('generation').touched }"
-        >
+          [ngClass]="{'ng-valid ng-dirty' : bmwForm.get('generation').hasError('required') && bmwForm.get('generation').touched }">
         <p *ngIf="bmwForm.get('generation').hasError('required') && bmwForm.get('generation').touched">Required</p>
       </div>
 
 
       <!--  engine cm3-->
-      <div *ngIf="bmwForm.get('engineCombustion').value !=='electric'" class="col-5" appearance="outline">
+      <div *ngIf="bmwForm.get('engineCombustion').value.name !=='electric'" class="col-5" appearance="outline">
         <label htmlFor="engine">Engine Cm3</label>
-        <input
-          pInputText
+        <p-inputNumber
+          inputId="integeronly"
           id="engine"
           aria-describedby="engine"
           placeholder="2998"
           formControlName="engineCm3"
           [ngClass]="{'ng-valid ng-dirty' : bmwForm.get('engineCm3').hasError('pattern') && bmwForm.get('engineCm3').touched }"
-        >
+        ></p-inputNumber>
         <p *ngIf="bmwForm.get('engineCm3').hasError('pattern') && bmwForm.get('engineCm3').touched">Only Numbers
           allowed</p>
         <!--        <mat-hint *ngIf="bmwForm.get('engineCm3').hasError('required') && bmwForm.get('engineCm3').touched">Required-->
@@ -157,7 +156,7 @@
     <div class="row justify-content-center">
 
       <!--  bodyType-->
-      <div class="col-5" appearance="outline">
+      <div class="col-5">
         <label htmlFor="Body">Body Type</label>
 
         <input
@@ -173,7 +172,7 @@
 
 
       <!--  power-->
-      <div class="col-5" appearance="outline">
+      <div class="col-5">
         <div class="row">
           <label htmlFor="integeronly">HP</label>
         </div>
@@ -190,7 +189,7 @@
 
     <!--  Description-->
     <div class="row justify-content-center">
-      <div class="col-10" >
+      <div class="col-10">
         <div class="row">
           <label htmlFor="Description">Description</label>
         </div>

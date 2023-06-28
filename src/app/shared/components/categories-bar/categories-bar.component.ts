@@ -1,10 +1,10 @@
 import {Component, OnInit} from '@angular/core';
-import {CategoryCars} from "../../../core/models/AScars.model";
 import {CategoryService} from "../../../core/services/category.service";
+import {CategoryCarsEnum} from "../../enum/categoryCars.enum";
 
 interface MenuItem {
   label: string,
-  category: CategoryCars;
+  category: CategoryCarsEnum;
 }
 
 @Component({
@@ -15,14 +15,14 @@ interface MenuItem {
 export class CategoriesBarComponent implements OnInit {
   active: boolean = false
   menuItems: MenuItem[] = [
-    {label: 'New Model', category: CategoryCars.NEWMODEL},
-    {label: 'Old School', category: CategoryCars.OLDSCHOOL},
-    {label: 'Legend', category: CategoryCars.LEGEND},
-    {label: 'LeMans', category: CategoryCars.LEMANS},
-    {label: 'Electric', category: CategoryCars.ELECTRIC},
-    {label: 'Bikes', category: CategoryCars.BIKES},
-    {label: '...', category: CategoryCars.BIKES},
-    {label: '...', category: CategoryCars.BIKES},
+    {label: 'New Model', category: CategoryCarsEnum.NEWMODEL},
+    {label: 'Old School', category: CategoryCarsEnum.OLDSCHOOL},
+    {label: 'Legend', category: CategoryCarsEnum.LEGEND},
+    {label: 'LeMans', category: CategoryCarsEnum.LEMANS},
+    {label: 'Electric', category: CategoryCarsEnum.ELECTRIC},
+    {label: 'Bikes', category: CategoryCarsEnum.BIKES},
+    {label: '...', category: CategoryCarsEnum.BIKES},
+    {label: '...', category: CategoryCarsEnum.BIKES},
   ]
 
   constructor(private categoryService: CategoryService) {
@@ -31,7 +31,7 @@ export class CategoriesBarComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  navigateCategory(category: CategoryCars): void {
+  navigateCategory(category: CategoryCarsEnum): void {
     this.categoryService.selectingCategory(category);
   }
 

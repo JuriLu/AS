@@ -1,14 +1,4 @@
 export type engComb = 'diesel' | 'petrol' | 'hybrid' | 'electric'
-
-export enum CategoryCars {
-  NEWMODEL = 'NewModel',
-  OLDSCHOOL = 'OldSchool',
-  LEGEND = 'Legendary',
-  LEMANS = 'LeMans',
-  ELECTRIC = 'Electric',
-  BIKES = 'Bikes'
-}
-
 export interface AScarsModel {
   img: string
   cModel: string,
@@ -16,7 +6,7 @@ export interface AScarsModel {
   engineCm3?: number,
   engineKWH?: number
   engineCombustion: engComb
-  YOP: Date,                  //Year of production
+  YOP: Date,
   bodyType: string,
   power: number,
   description: string,

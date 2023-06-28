@@ -13,6 +13,7 @@ import {ButtonModule} from "primeng/button";
 import {InputTextModule} from "primeng/inputtext";
 import {CalendarModule} from "primeng/calendar";
 import {InputNumberModule} from "primeng/inputnumber";
+import {MultiSelectModule} from "primeng/multiselect";
 
 
 @NgModule({
@@ -24,16 +25,17 @@ import {InputNumberModule} from "primeng/inputnumber";
     ASCarsAddComponent,
     ASCarsAdsComponent
   ],
-  imports: [
-    CommonModule,
-    MainRoutingModule,
-    SharedModule,
-    DialogModule,
-    ButtonModule,
-    InputTextModule,
-    CalendarModule,
-    InputNumberModule
-  ],
+    imports: [
+        CommonModule,
+        MainRoutingModule,
+        SharedModule,
+        DialogModule,
+        ButtonModule,
+        InputTextModule,
+        CalendarModule,
+        InputNumberModule,
+        MultiSelectModule
+    ],
   exports:[]
 })
 export class MainModule { }

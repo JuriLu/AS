@@ -1,10 +1,10 @@
 import {Injectable} from '@angular/core';
 import {BehaviorSubject, Observable} from "rxjs";
-import {CategoryCars} from "../models/AScars.model";
+import {CategoryCarsEnum} from "../../shared/enum/categoryCars.enum";
 
 @Injectable()
 export class CategoryService {
-  private categorySubject: BehaviorSubject<CategoryCars> = new BehaviorSubject(CategoryCars.NEWMODEL);
+  private categorySubject: BehaviorSubject<CategoryCarsEnum> = new BehaviorSubject(CategoryCarsEnum.NEWMODEL);
   category$: Observable<string> = this.categorySubject.asObservable();
 
   constructor() {}
