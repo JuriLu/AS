@@ -126,7 +126,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #16588E;
+  background: white;
   //border: #716360 1px solid;
   width: 60px;
   height: 60px;
@@ -135,7 +135,8 @@
   transform: rotate(calc(360deg / -8 * var(--i))); // number here changes for as many elements there are
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
   text-decoration: none;
-  color: white;
+  color: #16588E;
+  font-weight: bold;
   cursor: pointer;
   visibility: visible;
   opacity: 1;
@@ -143,7 +144,9 @@
 }
 
 .menu li a:hover {
-  border: #8F00FF 2px solid;
+  background: #16588E;
+  color: white;
+  transition: 0.7s
 }
 
 
