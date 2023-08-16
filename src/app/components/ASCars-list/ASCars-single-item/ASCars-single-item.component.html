@@ -2,7 +2,7 @@
    <div class="cardCustom All overflowY">
      <div class="align-content-center">
        <h3 class="text-center pt-2">{{title}}</h3>
-       <img class=" col-md-12 card-img-top justify-content-center align-items-center mt-2" src="{{carModel.img}}"
+       <img class=" col-md-12 card-img-top justify-content-center align-items-center mt-2" [src]="carModel.img ?? '../../../assets/placeholder.png'"
             alt="{{title}}">
      </div>
 

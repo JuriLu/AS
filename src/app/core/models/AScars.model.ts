@@ -1,6 +1,6 @@
 export type engComb = 'diesel' | 'petrol' | 'hybrid' | 'electric'
 export interface AScarsModel {
-  img: string
+  img?: string,
   cModel: string,
   generation: string,
   engineCm3?: number,

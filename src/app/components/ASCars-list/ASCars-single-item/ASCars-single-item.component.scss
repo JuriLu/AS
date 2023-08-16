@@ -20,9 +20,13 @@ img {
   max-width: 1200px;
   margin: 20px auto
 }
+ul{
+  list-style: none;
+}
 
 .cardCustom{
-  width: 30rem;
+  //width: 30rem;
+  text-align:center;
   margin: 10px;
   height: 45rem;
   overflow: hidden;

@@ -1,15 +1,20 @@
-<div class="container bg-white mt-5 rounded-3 pt-3 pb-3" [formGroup]="bmwForm">
-  <!--  Image and Model-->
+<div class="container bg-custom mt-5 mb-5 rounded-3 pt-3 pb-3" [formGroup]="bmwForm">
+  <div class="row justify-content-center mb-4">
+    <div class="col-md-5">
+      <h1>Car Details Form</h1>
+    </div>
+  </div>
+  <!--  Image-->
   <div class="row justify-content-center">
-
-    <!--  Image-->
     <mat-form-field class="col-5" appearance="outline">
       <mat-label>Image</mat-label>
       <input matInput placeholder="URL" formControlName="img">
       <mat-hint *ngIf="bmwForm.get('img').hasError('required') && bmwForm.get('img').touched">Required</mat-hint>
     </mat-form-field>
+  </div>
 
-    <!--  Model-->
+  <!--  Model-->
+  <div class="row justify-content-center">
     <mat-form-field class="col-5" appearance="outline">
       <mat-label>Model</mat-label>
       <input matInput placeholder="M4 e.g" formControlName="cModel">
@@ -17,16 +22,12 @@
       </mat-hint>
     </mat-form-field>
     <br>
-
-
   </div>
 
-  <!--  Engine Type and kWh-->
+  <!--  Engine Type-->
   <div class="row justify-content-center">
-
-    <!--  engine combustion-->
     <mat-form-field
-      class="{{bmwForm.get('engineCombustion').value ==='hybrid' || bmwForm.get('engineCombustion').value ==='electric' ? 'col-5':'col-10'}}"
+      class="col-5"
       appearance="outline">
       <mat-label>Engine Type</mat-label>
       <select matNativeControl required formControlName="engineCombustion">
@@ -40,8 +41,10 @@
         Required
       </mat-hint>
     </mat-form-field>
+  </div>
 
-    <!--  engine kWH-->
+  <!--  engine kWH-->
+  <div class="row justify-content-center">
     <mat-form-field class="col-5"
                     *ngIf="bmwForm.get('engineCombustion').value ==='hybrid' || bmwForm.get('engineCombustion').value ==='electric' "
                     appearance="outline">
@@ -57,10 +60,8 @@
 
   </div>
 
-  <!--  Generation and Engine-->
+  <!--  Generation-->
   <div class="row justify-content-center">
-
-    <!--  generation-->
     <mat-form-field class="{{bmwForm.get('engineCombustion').value ==='electric' ? 'col-10':'col-5'}}"
                     appearance="outline">
       <mat-label>Generation</mat-label>
@@ -68,7 +69,10 @@
       <mat-hint *ngIf="bmwForm.get('generation').hasError('required') && bmwForm.get('generation').touched">Required
       </mat-hint>
     </mat-form-field>
+  </div>
 
+  <!--  engine cm3-->
+  <div class="row justify-content-center">
     <!--  engine cm3-->
     <mat-form-field *ngIf="bmwForm.get('engineCombustion').value !=='electric'" class="col-5" appearance="outline">
       <mat-label>Engine Cm3</mat-label>
@@ -80,14 +84,11 @@
       </mat-hint>
     </mat-form-field>
     <br>
-
   </div>
 
-  <!--  YOP and Category-->
+  <!--  Year of production + category -->
   <div class="row justify-content-center">
-
-    <!--  Year of production-->
-    <div class="col-5">
+    <div class="col-md-2">
       <p-calendar
         id="YOP"
         aria-describedby="YOP"
@@ -101,8 +102,7 @@
       </div>
     </div>
 
-    <!--  Category-->
-    <mat-form-field class="col-5" appearance="outline">
+    <mat-form-field class="col-3" appearance="outline">
       <mat-label>Category</mat-label>
       <select matNativeControl required formControlName="category">
         <option value="NewModel">New Models</option>
@@ -116,15 +116,10 @@
       <mat-hint *ngIf="bmwForm.get('category').hasError('required') && bmwForm.get('category').touched">Required
       </mat-hint>
     </mat-form-field>
-
-    <br>
-
   </div>
 
-  <!--  Body Type and Power-->
+  <!--  Body Type-->
   <div class="row justify-content-center">
-
-
     <!--  bodyType-->
     <mat-form-field class="col-5" appearance="outline">
       <mat-label>Body Type</mat-label>
@@ -132,8 +127,10 @@
       <mat-hint *ngIf="bmwForm.get('bodyType').hasError('required') && bmwForm.get('bodyType').touched">Required
       </mat-hint>
     </mat-form-field>
+  </div>
 
-    <!--  power-->
+  <!--  Power-->
+  <div class="row justify-content-center">
     <mat-form-field class="col-5" appearance="outline">
       <mat-label>HP</mat-label>
       <input matInput placeholder="400 e.g" formControlName="power">
@@ -143,33 +140,34 @@
       <mat-hint *ngIf="bmwForm.get('power').hasError('required') && bmwForm.get('power').touched">Required</mat-hint>
 
     </mat-form-field>
-    <br>
 
 
   </div>
 
+  <!--  Description-->
   <div class="row justify-content-center">
-    <!--  description-->
-    <mat-form-field class="col-10 " appearance="outline">
+    <mat-form-field class="col-7 " appearance="outline">
       <mat-label>History</mat-label>
       <textarea rows="6" matInput placeholder="Description" formControlName="description"></textarea>
-      <mat-hint *ngIf="bmwForm.get('description').hasError('required') && bmwForm.get('description').touched">Required</mat-hint>
-      <mat-hint *ngIf="bmwForm.get('description').hasError('maxLength') && bmwForm.get('description').touched">Max Length :300 chars</mat-hint>
+      <mat-hint *ngIf="bmwForm.get('description').hasError('required') && bmwForm.get('description').touched">Required
+      </mat-hint>
+      <mat-hint *ngIf="bmwForm.get('description').hasError('maxLength') && bmwForm.get('description').touched">Max
+        Length :300 chars
+      </mat-hint>
     </mat-form-field>
   </div>
 
-  <p-button
-    label="Add"
-    styleClass="p-button-raised p-button-text"
-    (click)="sendForm()"
-    [disabled]="bmwForm.invalid"
-  ></p-button>
-  <p-button
-    label="Close Modal"
-    styleClass="p-button-raised p-button-text p-button-danger"
-    (click)=" navigateBack()"
-  ></p-button>
+  <div class="cuBtns">
+    <p-button
+      label="Add"
+      styleClass="p-button-rounded p-button-text"
+      (click)="sendForm()"
+      [disabled]="bmwForm.invalid"
+    ></p-button>
+    <p-button
+      label="Close Modal"
+      styleClass=" p-button-rounded p-button-text p-button-danger"
+      (click)=" navigateBack()"
+    ></p-button>
+  </div>
 </div>
-
-
-<!--<app-ASCars-dialog-component></app-ASCars-dialog-component>-->

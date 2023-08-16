@@ -1,7 +1,27 @@
-mat-hint{
-  color:red
+.container {
+  overflow-y: scroll;
+  height: calc(100vh - 96px);
+  //max-height: 40rem;
+  max-width: 70rem;
 }
 
-p-calendar{
-  width:100% !important;
+.bg-custom {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+mat-hint {
+  color: red
+}
+
+.p-inputtext {
+  background-color: transparent !important;
+}
+
+.cuBtns{
+  display:flex;
+  justify-content: space-evenly;
+}
+
+p-button{
+  background-color: white;
 }
